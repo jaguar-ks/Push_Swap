@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/24 01:10:10 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/24 18:04:06 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,15 @@ int main(int ac, char **av)
 {
 	t_list	*stack;
     
-	if (ac <= 2)
+	stack = take_stack(ac, av);
+	if (!stack || ac <= 2)
+	{
 		ft_putstr_fd("Error\n", 2);
-	else
-		stack = take_stack(ac, av);
+		exit(0);
+	}
+	while (stack)
+	{
+		printf("%d\n", stack->content);
+		stack = stack->next;
+	}
 }
