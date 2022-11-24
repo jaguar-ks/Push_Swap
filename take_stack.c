@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/24 18:04:34 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/11/24 18:27:19 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 {
 	int	i;
 	int	y;
+	int	j;
 
 	tab = (long *)malloc(sizeof(long) * (ac - 1));
 	if (!tab)
@@ -81,13 +82,24 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 	y = 0;
 	while (i < ac && y < ac)
 	{
+		j = -1;
+		while (av[i][++j])
+		{
+			if (av[i][j] == '-' || av[i][j] == '+')
+				j++;
+			if (!ft_isdigit(av[i][j]))
+				return (free(tab), NULL);
+		}
 		tab[y] = ft_atoi(av[i]);
 		if (tab[y] <= -2147483648 && tab[y] >= 2147483647)
-			return (NULL);
+			return (free(tab), NULL);
 		i++;
 		y++;
 	}
-	return (tab);
+	if (check_duplicates(tab))
+		return (tab);
+	else
+		return (free(tab), NULL);
 }
 
 t_list	*take_stack(int ac, char **av)
@@ -104,8 +116,6 @@ t_list	*take_stack(int ac, char **av)
 	// 	printf("--> indix %d :=> %ld\n", i, tab[i]);
 	if (!tab)
 		return (NULL);
-	if (!check_duplicates(tab))
-		return (NULL);
 	tmp = head;
 	i = -1;
 	while (++i < ac - 1)
@@ -113,5 +123,5 @@ t_list	*take_stack(int ac, char **av)
 		tmp = ft_lstnew(tab[i]);
 		ft_lstadd_back(&head, tmp);
 	}
-	return (head);
+	return (free(tab), head);
 }
