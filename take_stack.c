@@ -3,53 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   take_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/24 18:27:19 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/11/25 00:58:41 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 #include"./LIBFT_42/libft.h"
 #include"./ft_printf/ft_printf.h"
-
-t_list	*ft_lstnew(int content)
-{
-	t_list	*new;
-
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
-}
-
-t_list	*ft_lstlast(t_list *lst)
-{
-	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-		lst = lst->next;
-	return (lst);
-}
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list	*cr;
-
-	if (lst)
-	{
-		if (*lst)
-		{
-			cr = ft_lstlast(*lst);
-			cr->next = new;
-		}
-		else
-			*lst = new;
-	}
-}
 
 static int	check_duplicates(long *tab)
 {
@@ -104,13 +67,13 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 
 t_list	*take_stack(int ac, char **av)
 {
-	t_list	*head;
+	t_list	*head = NULL;
 	t_list	*tmp;
 	long		*tab = NULL;
 	int	i;
 
 	tab = converte_to_int(av, ac, tab);
-	// printf("|The taked int table :\n|");
+	// printf("|The taked int table :|\n");
 	// i = -1;
 	// while (++i < ac - 1)
 	// 	printf("--> indix %d :=> %ld\n", i, tab[i]);
