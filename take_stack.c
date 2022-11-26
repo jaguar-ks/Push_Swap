@@ -6,13 +6,12 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/25 00:58:41 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/26 23:52:58 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
-#include"./LIBFT_42/libft.h"
-#include"./ft_printf/ft_printf.h"
+#include"LIBFT_42/libft.h"
 
 static int	check_duplicates(long *tab)
 {
@@ -41,9 +40,9 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 	tab = (long *)malloc(sizeof(long) * (ac - 1));
 	if (!tab)
 		return (NULL);
-	i = 1;
+	i = ac - 1;
 	y = 0;
-	while (i < ac && y < ac)
+	while (i > 0 && y < ac)
 	{
 		j = -1;
 		while (av[i][++j])
@@ -56,7 +55,7 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 		tab[y] = ft_atoi(av[i]);
 		if (tab[y] <= -2147483648 && tab[y] >= 2147483647)
 			return (free(tab), NULL);
-		i++;
+		i--;
 		y++;
 	}
 	if (check_duplicates(tab))

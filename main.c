@@ -6,13 +6,11 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/25 01:01:13 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/26 23:54:08 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
-#include"./LIBFT_42/libft.h"
-#include"./ft_printf/ft_printf.h"
 
 void walo(int t)
 {
@@ -21,16 +19,18 @@ void walo(int t)
 
 int main(int ac, char **av)
 {
-	t_list	*stack;
+	t_list	*stack_a;
+	//t_list	*stack_b = NULL;
 	t_list	*tmp;
     int i = 0;
-	stack = take_stack(ac, av);
-	tmp = stack;
-	if (!stack || ac <= 2)
+	stack_a = take_stack(ac, av);
+	tmp = stack_a;
+	if (!stack_a || ac <= 2)
 	{
 		ft_putstr_fd("Error\n", 2);
 		exit(0);
 	}
+	sa(stack_a, 'a');
 	ft_printf("\t\t\t~|the stack taken|~\n\n");
 	ft_printf("\t-~-~-~-~--~-~-~-~--~-~-~-~--~-~-~-~--~-~-~-~-~-~--~-~-~-~-~-\n");
 	while (tmp)
@@ -39,6 +39,6 @@ int main(int ac, char **av)
 		tmp = tmp->next;
 	}
 	ft_printf("\t-~-~-~-~--~-~-~-~--~-~-~-~--~-~-~-~--~-~-~-~-~-~--~-~-~-~-~-\n");
-	ft_lstclear(&stack, walo);
+	ft_lstclear(&stack_a, walo);
 	//system("leaks push_swap");
 }
