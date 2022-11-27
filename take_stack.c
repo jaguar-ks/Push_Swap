@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/26 23:52:58 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/27 01:50:17 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@ static int	check_duplicates(long *tab)
 	int j;
 
 	i = 0;
-	while (tab[i++])
+	while (tab[i])
 	{
 		j = i + 1;
-		while (tab[j++])
+		while (tab[j])
 		{
-			if (tab[i] == tab[j])
+			if (tab[i] == tab[j++])
 				return (0);
 		}
+		i++;
 	}
 	return (1);
 }
@@ -72,6 +73,7 @@ t_list	*take_stack(int ac, char **av)
 	int	i;
 
 	tab = converte_to_int(av, ac, tab);
+
 	// printf("|The taked int table :|\n");
 	// i = -1;
 	// while (++i < ac - 1)
