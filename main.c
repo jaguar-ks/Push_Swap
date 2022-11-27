@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 01:30:55 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/27 05:12:15 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int walo(int t)
 {
-	return (t+1);
+	return (t*10);
 }
 
 void	print_stack(t_list *sa, t_list *sb)
@@ -24,17 +24,21 @@ void	print_stack(t_list *sa, t_list *sb)
 
 	ft_printf("~|stack A|~\t~|stack B|~\n");
 	ft_printf("-~-~-~-~--~-~-~-~--~-~-~-~--~-~-~-~-\n");
-	while (tmp)
+	while (tmp || tmp1)
 	{
-		printf("|%d|", tmp->content);
+		// if(!tmp || !tmp1)
+		// 	printf("|none|.");
+		if (tmp)
+		{
+			printf("|%d|.", tmp->content);
+			tmp = tmp->next;
+		}
 		if (tmp1)
 		{
-			printf("\t\t|%d|.\n", tmp1->content);
+			printf("\t\t|%d|.", tmp1->content);
 			tmp1 = tmp1->next;
 		}
-		else
-			printf("\t\t|no element|.\n");
-		tmp = tmp->next;
+		printf("\n");
 	}
 	ft_printf("-~-~-~-~--~-~-~-~--~-~-~-~--~-~-~-~-\n");
 }
@@ -57,10 +61,16 @@ int main(int ac, char **av)
 	}
 	print_stack(stack_a, stack_b);
 	ft_printf("~~ the operations made ~~\n");
-	sa(stack_a, 'a');
-	pa(&stack_b, &stack_a, 'a');
+	ss(stack_a, stack_b);
+	print_stack(stack_a, stack_b);
+	pa(&stack_a, &stack_b, 'a');
+	print_stack(stack_a, stack_b);
+	ra(&stack_b, 'b');
+	print_stack(stack_a, stack_b);
+	rr(&stack_a, &stack_b);
 	print_stack(stack_a, stack_b);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);
+	print_stack(stack_a, stack_b);
 	system("leaks push_swap");
 }

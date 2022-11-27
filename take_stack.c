@@ -6,28 +6,27 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 01:50:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/27 04:06:45 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 #include"LIBFT_42/libft.h"
 
-static int	check_duplicates(long *tab)
+static int	check_duplicates(long *tab, int y)
 {
 	int	i;
 	int j;
 
-	i = 0;
-	while (tab[i])
+	i = y;
+	while (--i > 0)
 	{
-		j = i + 1;
-		while (tab[j])
+		j = i;
+		while (tab[--j])
 		{
-			if (tab[i] == tab[j++])
+			if (tab[i] == tab[j])
 				return (0);
 		}
-		i++;
 	}
 	return (1);
 }
@@ -59,7 +58,7 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 		i--;
 		y++;
 	}
-	if (check_duplicates(tab))
+	if (check_duplicates(tab, ac))
 		return (tab);
 	else
 		return (free(tab), NULL);
