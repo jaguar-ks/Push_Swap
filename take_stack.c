@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 04:06:45 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/27 05:39:10 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 	int	y;
 	int	j;
 
-	tab = (long *)malloc(sizeof(long) * (ac - 1));
+	tab = (long *)malloc(sizeof(long) * (ac));
 	if (!tab)
 		return (NULL);
-	i = ac - 1;
+	i = ac;
 	y = 0;
-	while (i > 0 && y < ac)
+	while (--i > 0 && y < ac)
 	{
 		j = -1;
 		while (av[i][++j])
@@ -55,7 +55,6 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 		tab[y] = ft_atoi(av[i]);
 		if (tab[y] <= -2147483648 && tab[y] >= 2147483647)
 			return (free(tab), NULL);
-		i--;
 		y++;
 	}
 	if (check_duplicates(tab, ac))
@@ -68,7 +67,7 @@ t_list	*take_stack(int ac, char **av)
 {
 	t_list	*head = NULL;
 	t_list	*tmp;
-	long		*tab = NULL;
+	long	*tab = NULL;
 	int	i;
 
 	tab = converte_to_int(av, ac, tab);
@@ -80,11 +79,11 @@ t_list	*take_stack(int ac, char **av)
 	if (!tab)
 		return (NULL);
 	tmp = head;
-	i = -1;
-	while (++i < ac - 1)
+	i = ac - 1;
+	while (--i >= 0)
 	{
 		tmp = ft_lstnew(tab[i]);
-		ft_lstadd_back(&head, tmp);
+		ft_lstadd_front(&head, tmp);
 	}
 	return (free(tab), head);
 }

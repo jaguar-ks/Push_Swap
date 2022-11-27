@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 05:12:15 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/27 05:25:08 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,12 @@ void	print_stack(t_list *sa, t_list *sb)
 int main(int ac, char **av)
 {
 	t_list	*stack_a;
-	t_list	*stack_b;
+	t_list	*stack_b = NULL;
 	t_list	*tmp;
 	t_list	*tmp1;
 
 	stack_a = take_stack(ac, av);
-	stack_b = ft_lstmap(stack_a, walo);
+	//stack_b = ft_lstmap(stack_a, walo);
 	tmp = stack_a;
 	tmp1 = stack_b;
 	if (!stack_a || ac <= 2)
@@ -64,10 +64,16 @@ int main(int ac, char **av)
 	ss(stack_a, stack_b);
 	print_stack(stack_a, stack_b);
 	pa(&stack_a, &stack_b, 'a');
+	pa(&stack_a, &stack_b, 'a');
+	pa(&stack_a, &stack_b, 'a');
 	print_stack(stack_a, stack_b);
 	ra(&stack_b, 'b');
 	print_stack(stack_a, stack_b);
 	rr(&stack_a, &stack_b);
+	print_stack(stack_a, stack_b);
+	pa(&stack_b, &stack_a, 'b');
+	pa(&stack_b, &stack_a, 'b');
+	pa(&stack_b, &stack_a, 'b');
 	print_stack(stack_a, stack_b);
 	ft_lstclear(&stack_a);
 	ft_lstclear(&stack_b);

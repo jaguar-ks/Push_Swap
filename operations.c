@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 22:34:23 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 05:12:07 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/27 05:28:40 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,17 @@ void    ss(t_list *stack_a, t_list *stack_b)
 
 void    pa(t_list **sa, t_list **sb, char c)
 {
-    //t_list  *tmp;
+    t_list  *tmp = NULL;
 
     if (sa && sb)
     {
         if (*sa)
         {
             ft_lstadd_front(sb, ft_lstnew((*sa)->content));
-            if (*sa)
-                *sa = (*sa)->next;
+            if ((*sa)->next)
+                tmp = (*sa)->next;
+            ft_lstdelone(*sa);
+            *sa = tmp;
             ft_printf("p%c\n", c);
         }
     }
@@ -54,13 +56,17 @@ void    pa(t_list **sa, t_list **sb, char c)
 
 void ra(t_list **stack, char c)
 {
+    t_list  *tmp = NULL;
+    
     if (stack)
     {
         if (*stack)
         {
             ft_lstadd_back(stack, ft_lstnew((*stack)->content));
             if ((*stack)->next)
-                (*stack) = (*stack)->next;
+                tmp = (*stack)->next;
+		    ft_lstdelone(*stack);
+		    *stack = tmp;
             if (c == 'a' || c == 'b')
                 ft_printf("r%c\n", c);
         }
