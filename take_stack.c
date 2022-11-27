@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 05:39:10 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/27 05:44:35 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 	tab = (long *)malloc(sizeof(long) * (ac));
 	if (!tab)
 		return (NULL);
-	i = ac;
-	y = 0;
-	while (--i > 0 && y < ac)
+	i = 0;
+	y = -1;
+	while (++i < ac && ++y < ac)
 	{
 		j = -1;
 		while (av[i][++j])
@@ -55,7 +55,6 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 		tab[y] = ft_atoi(av[i]);
 		if (tab[y] <= -2147483648 && tab[y] >= 2147483647)
 			return (free(tab), NULL);
-		y++;
 	}
 	if (check_duplicates(tab, ac))
 		return (tab);
@@ -83,7 +82,7 @@ t_list	*take_stack(int ac, char **av)
 	while (--i >= 0)
 	{
 		tmp = ft_lstnew(tab[i]);
-		ft_lstadd_front(&head, tmp);
+		ft_lstadd_back(&head, tmp);
 	}
 	return (free(tab), head);
 }
