@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 05:44:35 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/27 20:42:46 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static int	check_duplicates(long *tab, int y)
 {
 	int	i;
-	int j;
+	int	j;
 
 	i = y;
 	while (--i > 0)
@@ -40,9 +40,9 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 	tab = (long *)malloc(sizeof(long) * (ac));
 	if (!tab)
 		return (NULL);
-	i = 0;
+	i = ac;
 	y = -1;
-	while (++i < ac && ++y < ac)
+	while (--i > 0 && ++y < ac)
 	{
 		j = -1;
 		while (av[i][++j])
@@ -64,17 +64,14 @@ static long	*converte_to_int(char **av, int ac, long *tab)
 
 t_list	*take_stack(int ac, char **av)
 {
-	t_list	*head = NULL;
+	t_list	*head;
 	t_list	*tmp;
-	long	*tab = NULL;
-	int	i;
+	long	*tab;
+	int		i;
 
+	head = NULL;
+	tab = NULL;
 	tab = converte_to_int(av, ac, tab);
-
-	// printf("|The taked int table :|\n");
-	// i = -1;
-	// while (++i < ac - 1)
-	// 	printf("--> indix %d :=> %ld\n", i, tab[i]);
 	if (!tab)
 		return (NULL);
 	tmp = head;
