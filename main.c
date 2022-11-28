@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 02:46:08 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/28 04:45:03 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,26 +64,32 @@ int	main(int ac, char **av)
 	// print_stack(stack_a, stack_b);
 	print_stack(stack_a, stack_b);
 	ft_printf("~~ the operations made ~~\n");
-	ss(stack_a, stack_b);
+	sort_stack(stack_a, stack_b);
 	print_stack(stack_a, stack_b);
-	pa(&stack_a, &stack_b, 'a');
-	pa(&stack_a, &stack_b, 'a');
-	pa(&stack_a, &stack_b, 'a');
-	print_stack(stack_a, stack_b);
-	ra(&stack_b, 'b');
-	print_stack(stack_a, stack_b);
-	rra(&stack_b, 'b');
-	print_stack(stack_a, stack_b);
-	rr(&stack_a, &stack_b);
-	print_stack(stack_a, stack_b);
-	pa(&stack_b, &stack_a, 'b');
-	pa(&stack_b, &stack_a, 'b');
-	pa(&stack_b, &stack_a, 'b');
-	print_stack(stack_a, stack_b);
-	rrr(&stack_a, &stack_b);
-	print_stack(stack_a, stack_b);
+	// ss(stack_a, stack_b);
+	// print_stack(stack_a, stack_b);
+	// pa(&stack_a, &stack_b, 'a');
+	// pa(&stack_a, &stack_b, 'a');
+	// pa(&stack_a, &stack_b, 'a');
+	// print_stack(stack_a, stack_b);
+	// ra(&stack_b, 'b');
+	// print_stack(stack_a, stack_b);
+	// rra(&stack_b, 'b');
+	// print_stack(stack_a, stack_b);
+	// rr(&stack_a, &stack_b);
+	// print_stack(stack_a, stack_b);
+	// pa(&stack_b, &stack_a, 'b');
+	// pa(&stack_b, &stack_a, 'b');
+	// pa(&stack_b, &stack_a, 'b');
+	// print_stack(stack_a, stack_b);
+	// rrr(&stack_a, &stack_b);
+	// print_stack(stack_a, stack_b);
+	// ft_lstclear(&stack_a);
+	if (check_sort(stack_a))
+		printf("stack is sorted\n");
+	else
+		printf("stack is NOT sorted\n");
 	ft_lstclear(&stack_a);
-	ft_lstclear(&stack_b);
 	print_stack(stack_a, stack_b);
 	system("leaks push_swap");
 }
