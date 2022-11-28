@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 20:36:30 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/28 02:46:08 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int	main(int ac, char **av)
 		ft_putstr_fd("Error\n", 2);
 		exit(1);
 	}
+	// print_stack(stack_a, stack_b);
 	print_stack(stack_a, stack_b);
 	ft_printf("~~ the operations made ~~\n");
 	ss(stack_a, stack_b);

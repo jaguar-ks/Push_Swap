@@ -6,12 +6,12 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/11/26 23:07:00 by faksouss         ###   ########.fr        #
+#    Updated: 2022/11/28 03:04:29 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS_MD = take_stack.c main.c operations.c
+SRCS_MD = take_stack.c swap.c push.c rotate.c reverse_rotate.c  main.c
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -33,19 +33,19 @@ ${NAME} : ${OBJS_MD} ${makelib}
 	${CC} ${FLAGS} $^ -o $@
 
 %.o : %.c ${HEADER}
-	@${CC} ${FLAGS} -c $< -o $@
+	${CC} ${FLAGS} -c $< -o $@
 
 ${makelib} :
-	cd LIBFT_42; make bonus; cd ..;
+	cd LIBFT_42; make ; cd ..;
 
 clean :
-	${RM} ${OBJS_MD} LIBFT_42/*.o ft_printf/*.o
+	${RM} ${OBJS_MD} LIBFT_42/*.o
 
 fclean : clean
-	${RM} ${NAME} LIBFT_42/*.a ft_printf/*.a
+	${RM} ${NAME} LIBFT_42/*.a
 
 re : fclean all
 
 .PHONY : all clean fclean re
 
-.SILENT : $(NAME) ${makeft} ${makelib} clean fclean
+.SILENT : ${makelib} clean fclean
