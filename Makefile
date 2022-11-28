@@ -6,7 +6,7 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/11/28 22:10:04 by faksouss         ###   ########.fr        #
+#    Updated: 2022/11/28 22:18:50 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,13 +36,13 @@ ${NAME} : ${OBJS_MD} ${makelib}
 	${CC} ${FLAGS} -c $< -o $@
 
 ${makelib} :
-	cd LIBFT_42; make ; cd ..;
+	cd libtool; make ; cd ..;
 
 clean :
-	${RM} ${OBJS_MD} LIBFT_42/*.o
+	${RM} ${OBJS_MD} libtool/*.o
 
 fclean : clean
-	${RM} ${NAME} LIBFT_42/*.a
+	${RM} ${NAME} libtool/*.a
 
 re : fclean all
 
