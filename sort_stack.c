@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 05:29:16 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/28 07:57:04 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,7 @@ void    sort_stack(t_list *stack_a, t_list *stack_b)
     tmp = stack_a;
     tmp1 = stack_b;
     if (check_sort(stack_a))
-    {
-        printf("stack is sorted\n");
         return ;
-    }
-    else
-		printf("stack is NOT sorted\n");
     if (ft_lstsize(stack_a) == 2)
         sort_two(stack_a, 'a');
     if (ft_lstsize(stack_a) == 3)
