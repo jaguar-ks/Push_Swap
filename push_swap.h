@@ -6,14 +6,14 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 06:10:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/28 22:10:13 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 #define PUSH_SWAP_H
 
-#include"LIBFT_42/libft.h"
+#include"libtool/libft.h"
 
 t_list	*take_stack(int ac, char **av);
 void    sa(t_list *stack, char c);

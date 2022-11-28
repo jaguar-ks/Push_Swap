@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 07:57:04 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/28 22:10:38 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,19 +48,19 @@ int max_val(t_list *stack)
     return (max);
 }
 
-void    sort_three(t_list *stack)
+void    sort_three(t_list *stack, char c)
 {
     int max;
 
     max = max_val(stack);
     if (stack->content == max)
-        ra(stack, 'a');
+        ra(stack, c);
     else if (stack->next->content == max)
-        rra(stack, 'a');
+        rra(stack, c);
     if (ft_lstlast(stack)->content == max)
     {
         if (!check_sort(stack))
-            sort_two(stack, 'a');
+            sort_two(stack, c);
         return ;
     }
 }
@@ -77,5 +77,5 @@ void    sort_stack(t_list *stack_a, t_list *stack_b)
     if (ft_lstsize(stack_a) == 2)
         sort_two(stack_a, 'a');
     if (ft_lstsize(stack_a) == 3)
-        sort_three(stack_a);
+        sort_three(stack_a, 'a');
 }

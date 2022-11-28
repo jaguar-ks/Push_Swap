@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 02:55:59 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/28 22:16:21 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,7 @@ t_list	*take_stack(int ac, char **av)
 			return (ft_lstclear(&head), deallocate(r), NULL);
 		deallocate(r);
 	}
+	if (ft_lstsize(head) < 2)
+		return (NULL);
 	return (head);
 }

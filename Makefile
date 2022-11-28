@@ -6,7 +6,7 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/11/28 05:41:22 by faksouss         ###   ########.fr        #
+#    Updated: 2022/11/28 22:10:04 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ NAME = push_swap
 
 RM = rm -f
 
-makelib = LIBFT_42/libft.a
+makelib = libtool/libft.a
 
 all : ${NAME}
 

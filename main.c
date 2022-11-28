@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 07:50:45 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/28 22:15:00 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	tmp = stack_a;
 	tmp1 = stack_b;
-	if (!stack_a || ac <= 2)
+	if (!stack_a || ac < 2)
 	{
 		ft_putstr_fd("Error\n", 2);
 		exit(1);
