@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 22:16:21 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/28 23:13:56 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ static int	check_arg(char *r)
 			return (0);
 	return (1);
 }
-
-
 
 // static long	*converte_to_int(char **av, int ac, long *tab)
 // {
