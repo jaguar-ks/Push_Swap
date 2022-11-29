@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/29 00:36:44 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/29 03:52:55 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,14 @@ void	sort_three(t_list *stack, char c)
 		return ;
 	}
 }
+
+// void	sort_4_to_6(t_list *sa, t_list *b)
+// {
+// 	t_list	*ta;
+// 	t_list	*tb;
+
+	
+// }
 
 void	sort_stack(t_list *stack_a, t_list *stack_b)
 {

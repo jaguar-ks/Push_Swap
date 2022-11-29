@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/29 01:54:42 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/29 03:27:31 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,21 @@ t_list	*stack_dup(t_list *src)
 		tmp = tmp->next;
 	}
 	return (dst);
+}
+
+void	stack_rev(t_list *stack)
+{
+	t_list	*tmp;
+	int		*tab;
+	int		i;
+
+	tmp = stack;
+	tab = stack_to_arr(stack);
+	i = ft_lstsize(stack);
+	while (--i >= 0 && tmp)
+	{
+		tmp->content = tab[i];
+		tmp = tmp->next;
+	}
+	free(tab);
 }
