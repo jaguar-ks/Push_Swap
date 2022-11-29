@@ -6,12 +6,20 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/11/28 22:18:50 by faksouss         ###   ########.fr        #
+#    Updated: 2022/11/29 00:59:35 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS_MD = take_stack.c swap.c push.c rotate.c reverse_rotate.c sort_stack.c main.c
+SRCS_MD = take_stack.c\
+ 				swap.c\
+				 push.c\
+				rotate.c\
+				reverse_rotate.c\
+				sort_stack.c\
+				find_min_max.c\
+				stack_manupilation.c\
+				main.c\
 
 FLAGS = -Wall -Wextra -Werror
 

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 21:46:11 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 06:41:26 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/29 00:15:49 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,14 @@ void	sa(t_list *stack, char c)
 
 void	ss(t_list *stack_a, t_list *stack_b)
 {
-	sa(stack_a, 's');
-	sa(stack_b, 's');
-	ft_printf("ss\n");
+	if (stack_a && !stack_b)
+		sa(stack_a, 'a');
+	else if (stack_b && !stack_a)
+		sa(stack_b, 'b');
+	else if (stack_a && stack_b)
+	{
+		sa(stack_a, 's');
+		sa(stack_b, 's');
+		ft_printf("ss\n");
+	}
 }

@@ -6,18 +6,20 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 23:16:49 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/29 00:36:44 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-int	check_sort(t_list *stack)
+int	check_sort(t_list *stack, int size_tocheck)
 {
 	t_list	*tmp;
+	int		i;
 
 	tmp = stack;
-	while (tmp->next)
+	i = -1;
+	while (tmp->next && ++i < size_tocheck)
 	{
 		if (tmp->content > tmp->next->content)
 			return (0);
@@ -34,16 +36,19 @@ void	sort_two(t_list *stack, char c)
 
 void	sort_three(t_list *stack, char c)
 {
-	int	max;
+	int		max;
+	t_list	*tmp;
 
+	tmp = stack;
 	max = max_val(stack);
-	if (stack->content == max)
+	if (tmp->content == max)
 		ra(stack, c);
-	else if (stack->next->content == max)
+	else if (tmp->next->content == max)
 		rra(stack, c);
-	if (ft_lstlast(stack)->content == max)
+	tmp = tmp->next->next;
+	if (tmp->content == max)
 	{
-		if (!check_sort(stack))
+		if (!check_sort(stack, 3))
 			sort_two(stack, c);
 		return ;
 	}
@@ -56,7 +61,7 @@ void	sort_stack(t_list *stack_a, t_list *stack_b)
 
 	tmp = stack_a;
 	tmp1 = stack_b;
-	if (check_sort(stack_a))
+	if (check_sort(stack_a, ft_lstsize(stack_a)))
 		return ;
 	if (ft_lstsize(stack_a) == 2)
 		sort_two(stack_a, 'a');

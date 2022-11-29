@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/28 22:15:00 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/29 01:57:28 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,33 +63,25 @@ int	main(int ac, char **av)
 	}
 	// print_stack(stack_a, stack_b);
 	print_stack(stack_a, stack_b);
-	ft_printf("~~ the operations made ~~\n");
-	sort_stack(stack_a, stack_b);
+	ft_printf("~>|:the size of the stack taken is := [%d]|\n", ft_lstsize(stack_a));
+	ft_printf("\t|~> the MIN_VAL =:>[%d]\n", min_val(stack_a));
 	print_stack(stack_a, stack_b);
-	// ss(stack_a, stack_b);
+	ft_printf("\t|~> the MID_VAL =:>[%d]\n", mid_val(stack_a));
+	print_stack(stack_a, stack_b);
+	ft_printf("\t|~> the MAX_VAL =:>[%d]\n", max_val(stack_a));
+	print_stack(stack_a, stack_b);
+	ft_printf("~~ the operations made ~~\n");
+	// sort_stack(stack_a, stack_b);
 	// print_stack(stack_a, stack_b);
-	// pa(&stack_a, &stack_b, 'a');
-	// pa(&stack_a, &stack_b, 'a');
-	// pa(&stack_a, &stack_b, 'a');
-	// print_stack(stack_a, stack_b);
-	// ra(&stack_b, 'b');
-	// print_stack(stack_a, stack_b);
-	// rra(&stack_b, 'b');
-	// print_stack(stack_a, stack_b);
-	// rr(&stack_a, &stack_b);
-	// print_stack(stack_a, stack_b);
-	// pa(&stack_b, &stack_a, 'b');
-	// pa(&stack_b, &stack_a, 'b');
-	// pa(&stack_b, &stack_a, 'b');
-	// print_stack(stack_a, stack_b);
-	// rrr(&stack_a, &stack_b);
-	// print_stack(stack_a, stack_b);
-	// ft_lstclear(&stack_a);
-	if (check_sort(stack_a))
+	ft_printf("~~ Sorting with the FORBIDEN method: ~~\n");
+	stack_fast_sort(stack_a);
+	print_stack(stack_a, stack_b);
+	if (check_sort(stack_a, ft_lstsize(stack_a)))
 		printf("stack is sorted\n");
 	else
 		printf("stack is NOT sorted\n");
 	ft_lstclear(&stack_a);
 	print_stack(stack_a, stack_b);
-	//system("leaks push_swap");
+	// system("leaks push_swap");
+	// exit(0);
 }
