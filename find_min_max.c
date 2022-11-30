@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/29 01:58:03 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 05:37:19 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,58 @@ int	find_position(t_list *stack, int (*f)(t_list *))
 		tmp = tmp->next;
 	}
 	return (i);
+}
+
+int	find_pst_of_elm(t_list *stack, int elm)
+{
+	int		i;
+	t_list	*tmp;
+
+	i = -1;
+	tmp = stack;
+	while (++i < ft_lstsize(stack) && tmp)
+	{
+		if (tmp->content == elm)
+			break ;
+		tmp = tmp->next;
+	}
+	return (i);
+}
+
+int	find_f_s(t_list *stack, int to_cmp)
+{
+	t_list	*tmp;
+	int		ps;
+
+	tmp = stack;
+	ps = 0;
+	while (tmp)
+	{
+		if (tmp->content <= to_cmp)
+			return (ps);
+		ps++;
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+int	find_l_s(t_list *stack, int to_cmp)
+{
+	t_list	*tmp;
+	int		ps;
+
+	stack_rev(stack);
+	tmp = stack;
+	ps = 0;
+	while (tmp)
+	{
+		if (tmp->content <= to_cmp)
+		{
+			stack_rev(stack);
+			return (ft_lstsize(stack) - ps - 1);
+		}
+		ps++;
+		tmp = tmp->next;
+	}
+	return (0);
 }

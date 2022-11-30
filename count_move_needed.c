@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   count_move_needed.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 22:37:02 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 06:29:20 by faksouss         ###   ########.fr       */
+/*   Created: 2022/11/30 02:31:15 by faksouss          #+#    #+#             */
+/*   Updated: 2022/11/30 05:11:03 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include"push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	how_many_r(int ps)
 {
-	t_list	*cr;
+	int		mv;
 
-	if (lst)
+	mv = 0;
+	while (ps > 0)
 	{
-		if (*lst)
-		{
-			cr = ft_lstlast(*lst);
-			cr->next = new;
-			new->prev = cr;
-		}
-		else
-			*lst = new;
+		mv++;
+		ps--;
 	}
+	return (mv);
+}
+
+int	how_many_rr(t_list *stack, int ps)
+{
+	int		mv;
+
+	mv = 0;
+	while (ps <= ft_lstsize(stack))
+	{
+		mv++;
+		ps++;
+	}
+	return (mv);
 }

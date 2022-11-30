@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/29 03:52:55 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 07:55:03 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ void	sort_two(t_list *stack, char c)
 		sa(stack, c);
 }
 
+void	rev_sort_two(t_list *stack, char c)
+{
+	if (stack->content < stack->next->content)
+		sa(stack, c);
+}
+
 void	sort_three(t_list *stack, char c)
 {
 	int		max;
@@ -54,13 +60,47 @@ void	sort_three(t_list *stack, char c)
 	}
 }
 
-// void	sort_4_to_6(t_list *sa, t_list *b)
-// {
-// 	t_list	*ta;
-// 	t_list	*tb;
+void	rev_sort_three(t_list *stack, char c)
+{
+	int		min;
+	t_list	*tmp;
 
-	
-// }
+	tmp = stack;
+	min = min_val(stack);
+	if (tmp->content == min)
+		ra(stack, c);
+	else if (tmp->next->content == min)
+		rra(stack, c);
+	tmp = tmp->next->next;
+	if (tmp->content == min)
+	{
+		if (!check_sort(stack, 3))
+			sort_two(stack, c);
+		return ;
+	}
+}
+
+void	sort_4_to_6(t_list *sa, t_list *sb)
+{
+	int	med;
+	int	cn;
+
+	med = mid_val(sa);
+	send_small(sa, sb, med);
+	printf("\n>>|HERE|<<\n");
+	print_stack(sa, sb);
+	if (ft_lstsize(sa) == 3)
+		sort_three(sa, 'a');
+	else if (ft_lstsize(sa) == 2)
+		sort_two(sa, 'a');
+	if (ft_lstsize(sb) == 3)
+		rev_sort_three(sb, 'b');
+	else if (ft_lstsize(sb) == 2)
+		rev_sort_two(sb, 'b');
+	cn = -1;
+	while (++cn < ft_lstsize(sb))
+		pa(sb, sa, 'b');
+}
 
 void	sort_stack(t_list *stack_a, t_list *stack_b)
 {
@@ -75,4 +115,6 @@ void	sort_stack(t_list *stack_a, t_list *stack_b)
 		sort_two(stack_a, 'a');
 	if (ft_lstsize(stack_a) == 3)
 		sort_three(stack_a, 'a');
+	if (ft_lstsize(stack_a) > 3 && ft_lstsize(stack_a) < 7)
+		sort_4_to_6(stack_a, stack_b);
 }

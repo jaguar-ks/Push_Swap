@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 21:47:00 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/29 01:58:20 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 04:04:27 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void	ra(t_list *stack, char c)
 
 void	rr(t_list *sa, t_list *sb)
 {
-	if (sa && !sb)
+	if (sa && (!sb || ft_lstsize(sb) < 2))
 		ra(sa, 'a');
-	else if (sb && !sa)
+	else if (sb && (!sa || ft_lstsize(sa) < 2))
 		ra(sb, 'b');
 	else if (sa && sb)
 	{
