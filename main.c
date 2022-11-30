@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 08:56:44 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 10:52:58 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,6 @@ int	main(int ac, char **av)
 		printf("stack is NOT sorted\n");
 	ft_lstclear(&stack_a);
 	print_stack(stack_a, stack_b);
-	// system("leaks push_swap");
+	system("leaks push_swap");
 	// exit(0);
 }
