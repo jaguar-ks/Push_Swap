@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/29 03:55:22 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 08:22:10 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,18 @@ int	main(int ac, char **av)
 	print_stack(stack_a, stack_b);
 	ft_printf("~>|:the size of the stack taken is := [%d]|\n", ft_lstsize(stack_a));
 	ft_printf("\t|~> the MIN_VAL =:>[%d]\n", min_val(stack_a));
+	ft_printf("\t|~> the MIN_PS =:>[%d]\n", find_pst_of_elm(stack_a, min_val(stack_a)));
 	ft_printf("\t|~> the MID_VAL =:>[%d]\n", mid_val(stack_a));
+	ft_printf("\t|~> the MID_PS =:>[%d]\n", find_pst_of_elm(stack_a, mid_val(stack_a)));
 	ft_printf("\t|~> the MAX_VAL =:>[%d]\n", max_val(stack_a));
+	ft_printf("\t|~> the MAX_PS =:>[%d]\n", find_pst_of_elm(stack_a, max_val(stack_a)));
+	ft_printf("\t|~> the psition of first small elm =:>[%d]\n", find_f_s(stack_a, mid_val(stack_a)));
+	ft_printf("\t|~> the psition of first small elm =:>[%d]\n", find_l_s(stack_a, mid_val(stack_a)));
+	ft_printf("\t|~> the RA action needed =:>[%d]\n", how_many_r(find_f_s(stack_a, mid_val(stack_a))));
+	ft_printf("\t|~> the RRA action needed =:>[%d]\n", how_many_rr(stack_a, find_l_s(stack_a, mid_val(stack_a))));
 	ft_printf("~~ the operations made ~~\n");
-	sort_stack(stack_a, stack_b);
+	send_small(stack_a, stack_b, mid_val(stack_a));
+	//sort_stack(stack_a, stack_b);
 	print_stack(stack_a, stack_b);
 	// ft_printf("~~ Sorting with the FORBIDEN method: ~~\n");
 	// stack_fast_sort(stack_a);

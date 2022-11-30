@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 02:31:15 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 05:11:03 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 08:23:06 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	how_many_rr(t_list *stack, int ps)
 	int		mv;
 
 	mv = 0;
-	while (ps <= ft_lstsize(stack))
+	while (ps < ft_lstsize(stack))
 	{
 		mv++;
 		ps++;

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 05:37:19 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 08:09:41 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,15 +92,12 @@ int	find_pst_of_elm(t_list *stack, int elm)
 int	find_f_s(t_list *stack, int to_cmp)
 {
 	t_list	*tmp;
-	int		ps;
 
 	tmp = stack;
-	ps = 0;
 	while (tmp)
 	{
 		if (tmp->content <= to_cmp)
-			return (ps);
-		ps++;
+			return (find_pst_of_elm(stack, tmp->content));
 		tmp = tmp->next;
 	}
 	return (0);
@@ -109,17 +106,20 @@ int	find_f_s(t_list *stack, int to_cmp)
 int	find_l_s(t_list *stack, int to_cmp)
 {
 	t_list	*tmp;
+	t_list	*tmp1;
 	int		ps;
 
 	stack_rev(stack);
-	tmp = stack;
+	tmp = stack_dup(stack);
+	stack_rev(stack);
 	ps = 0;
+	tmp1 = tmp;
 	while (tmp)
 	{
 		if (tmp->content <= to_cmp)
 		{
-			stack_rev(stack);
-			return (ft_lstsize(stack) - ps - 1);
+			ps = find_pst_of_elm(stack, tmp->content);
+			return (ft_lstclear(&tmp1), ps);
 		}
 		ps++;
 		tmp = tmp->next;

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 07:56:04 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 08:34:41 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,41 +92,35 @@ void	stack_rev(t_list *stack)
 
 void	send_small(t_list *sa, t_list *sb, int med)
 {
-	t_list	*ta;
-	t_list	*tb;
 	int	i;
 	int	j;
 
 	i = 0;
 	j = 0;
-	ta = sa;
-	tb = sb;
-	while (min_val(ta) <= med)
+	while (min_val(sa) <= med)
 	{
-		i = how_many_r(find_f_s(ta, med));
-		j = how_many_rr(ta, find_l_s(ta, med));
+		if (sa->content <= med)
+			pa(sa, sb, 'a');
+		print_stack(sa, sb);
+		i = how_many_r(find_f_s(sa, med));
+		j = how_many_rr(sa, find_l_s(sa, med));
 		if (i < j)
 		{
+			// printf("\n---->|mal had l9lawi|<----\n");
 			while (i > 0)
 			{
-				ra(ta, 'a');
+				ra(sa, 'a');
 				i--;
 			}
-			pa(sa, sb, 'a');
-			print_stack(sa, sb);
 		}
-		else
+		if(j < i)
 		{
-			printf("\n---->|mal had l9lawi|<----\n");
 			while (j > 0)
 			{
-				rra(ta, 'a');
+				rra(sa, 'a');
 				j--;
 			}
-			pa(sa, sb, 'a');
-			print_stack(sa, sb);
 		}
 	}
 	printf("\n>>|HERE|<<\n");
-	print_stack(sa, sb);
 }
