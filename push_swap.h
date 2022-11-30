@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 07:55:43 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 08:54:22 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 t_list	*take_stack(int ac, char **av);
 void	sa(t_list *stack, char c);
 void	ss(t_list *stack_a, t_list *stack_b);
-void	pa(t_list *a, t_list *b, char c);
+void	pa(t_list **a, t_list **b, char c);
 void	ra(t_list *stack, char c);
 void	rr(t_list *sa, t_list *sb);
 void	rra(t_list *stack, char c);
@@ -39,6 +39,6 @@ int	    find_f_s(t_list *stack, int to_cmp);
 int	    find_l_s(t_list *stack, int to_cmp);
 int	    how_many_rr(t_list *stack, int ps);
 int	    how_many_r(int ps);
-void	send_small(t_list *sa, t_list *sb, int med);
+void	send_small(t_list **sa, t_list **sb, int med);
 
 #endif

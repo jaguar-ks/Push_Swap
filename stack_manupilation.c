@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 08:34:41 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 10:50:40 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,37 +90,34 @@ void	stack_rev(t_list *stack)
 	free(tab);
 }
 
-void	send_small(t_list *sa, t_list *sb, int med)
+void	send_small(t_list **stack_a, t_list **stack_b, int med)
 {
 	int	i;
-	int	j;
 
 	i = 0;
-	j = 0;
-	while (min_val(sa) <= med)
+	while (min_val(*stack_a) <= med)
 	{
-		if (sa->content <= med)
-			pa(sa, sb, 'a');
-		print_stack(sa, sb);
-		i = how_many_r(find_f_s(sa, med));
-		j = how_many_rr(sa, find_l_s(sa, med));
-		if (i < j)
+		if (min_val(*stack_a) > med)
+			break ;
+		i = find_position(*stack_a, min_val);
+		if (i < ft_lstsize(*stack_a) / 2)
 		{
-			// printf("\n---->|mal had l9lawi|<----\n");
 			while (i > 0)
 			{
-				ra(sa, 'a');
+				ra(*stack_a, 'a');
 				i--;
 			}
 		}
-		if(j < i)
+		else if(i >= ft_lstsize(*stack_a) / 2)
 		{
-			while (j > 0)
+			while (i < ft_lstsize(*stack_a))
 			{
-				rra(sa, 'a');
-				j--;
+				rra(*stack_a, 'a');
+				i++;
 			}
 		}
+		if (ft_lstsize(*stack_b) > 1 && ((*stack_b)->content < (*stack_b)->next->content))
+			sa(*stack_b, 'b');
+		pa(stack_a, stack_b, 'a');
 	}
-	printf("\n>>|HERE|<<\n");
 }

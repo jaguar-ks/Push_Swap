@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 08:09:41 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 10:12:52 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,20 @@ int	find_l_s(t_list *stack, int to_cmp)
 			return (ft_lstclear(&tmp1), ps);
 		}
 		ps++;
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+int	check_elm(t_list *stack, int elm)
+{
+	t_list	*tmp;
+
+	tmp = stack;
+	while (tmp)
+	{
+		if (tmp->content == elm)
+			return (1);
 		tmp = tmp->next;
 	}
 	return (0);

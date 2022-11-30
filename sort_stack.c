@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 07:55:03 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 10:42:56 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,7 @@ void	sort_three(t_list *stack, char c)
 	tmp = tmp->next->next;
 	if (tmp->content == max)
 	{
-		if (!check_sort(stack, 3))
-			sort_two(stack, c);
+		sort_two(stack, c);
 		return ;
 	}
 }
@@ -74,8 +73,7 @@ void	rev_sort_three(t_list *stack, char c)
 	tmp = tmp->next->next;
 	if (tmp->content == min)
 	{
-		if (!check_sort(stack, 3))
-			sort_two(stack, c);
+		rev_sort_two(stack, c);
 		return ;
 	}
 }
@@ -83,12 +81,9 @@ void	rev_sort_three(t_list *stack, char c)
 void	sort_4_to_6(t_list *sa, t_list *sb)
 {
 	int	med;
-	int	cn;
 
 	med = mid_val(sa);
-	send_small(sa, sb, med);
-	printf("\n>>|HERE|<<\n");
-	print_stack(sa, sb);
+	send_small(&sa, &sb, med);
 	if (ft_lstsize(sa) == 3)
 		sort_three(sa, 'a');
 	else if (ft_lstsize(sa) == 2)
@@ -97,9 +92,8 @@ void	sort_4_to_6(t_list *sa, t_list *sb)
 		rev_sort_three(sb, 'b');
 	else if (ft_lstsize(sb) == 2)
 		rev_sort_two(sb, 'b');
-	cn = -1;
-	while (++cn < ft_lstsize(sb))
-		pa(sb, sa, 'b');
+	while (sb)
+		pa(&sb, &sa, 'b');
 }
 
 void	sort_stack(t_list *stack_a, t_list *stack_b)

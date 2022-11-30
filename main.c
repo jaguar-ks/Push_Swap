@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 08:22:10 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/11/30 08:56:44 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,8 +75,12 @@ int	main(int ac, char **av)
 	ft_printf("\t|~> the RA action needed =:>[%d]\n", how_many_r(find_f_s(stack_a, mid_val(stack_a))));
 	ft_printf("\t|~> the RRA action needed =:>[%d]\n", how_many_rr(stack_a, find_l_s(stack_a, mid_val(stack_a))));
 	ft_printf("~~ the operations made ~~\n");
-	send_small(stack_a, stack_b, mid_val(stack_a));
-	//sort_stack(stack_a, stack_b);
+	// pa(&stack_a, &stack_b, 'a');
+	// pa(&stack_a, &stack_b, 'a');
+	// pa(&stack_a, &stack_b, 'a');
+	// print_stack(stack_a, stack_b);
+	// send_small(&stack_a, &stack_b, mid_val(stack_a));
+	sort_stack(stack_a, stack_b);
 	print_stack(stack_a, stack_b);
 	// ft_printf("~~ Sorting with the FORBIDEN method: ~~\n");
 	// stack_fast_sort(stack_a);
