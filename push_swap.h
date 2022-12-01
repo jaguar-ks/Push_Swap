@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 08:54:22 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/01 22:15:14 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ void	rra(t_list *stack, char c);
 void	rrr(t_list *sa, t_list *sb);
 void	sort_stack(t_list *stack_a, t_list *stack_b);
 int		check_sort(t_list *stack, int size_tocheck);
+int	    check_rev_sort(t_list *stack, int size_tocheck);
 void	print_stack(t_list *sa, t_list *sb);
 int		max_val(t_list *stack);
 int		min_val(t_list *stack);
 int		mid_val(t_list *stack);
-int		find_position(t_list *stack, int (*f)(t_list *));
+int		find_position(t_list *stack, int elm);
 int		*stack_to_arr(t_list *stack);
 void	stack_fast_sort(t_list *stack);
 t_list	*stack_dup(t_list *src);
 void	stack_rev(t_list *stack);
-int	    find_pst_of_elm(t_list *stack, int elm);
 int	    find_f_s(t_list *stack, int to_cmp);
 int	    find_l_s(t_list *stack, int to_cmp);
 int	    how_many_rr(t_list *stack, int ps);

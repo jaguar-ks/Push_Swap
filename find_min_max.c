@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 10:12:52 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/01 22:23:26 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,23 +57,7 @@ int	mid_val(t_list *stack)
 	return (ft_lstclear(&dup), free(tab), mid);
 }
 
-int	find_position(t_list *stack, int (*f)(t_list *))
-{
-	int		i;
-	t_list	*tmp;
-
-	i = -1;
-	tmp = stack;
-	while (++i < ft_lstsize(stack) && tmp)
-	{
-		if (tmp->content == (f)(stack))
-			break ;
-		tmp = tmp->next;
-	}
-	return (i);
-}
-
-int	find_pst_of_elm(t_list *stack, int elm)
+int	find_position(t_list *stack, int elm)
 {
 	int		i;
 	t_list	*tmp;
@@ -97,7 +81,7 @@ int	find_f_s(t_list *stack, int to_cmp)
 	while (tmp)
 	{
 		if (tmp->content <= to_cmp)
-			return (find_pst_of_elm(stack, tmp->content));
+			return (find_position(stack, tmp->content));
 		tmp = tmp->next;
 	}
 	return (0);
@@ -118,24 +102,10 @@ int	find_l_s(t_list *stack, int to_cmp)
 	{
 		if (tmp->content <= to_cmp)
 		{
-			ps = find_pst_of_elm(stack, tmp->content);
+			ps = find_position(stack, tmp->content);
 			return (ft_lstclear(&tmp1), ps);
 		}
 		ps++;
-		tmp = tmp->next;
-	}
-	return (0);
-}
-
-int	check_elm(t_list *stack, int elm)
-{
-	t_list	*tmp;
-
-	tmp = stack;
-	while (tmp)
-	{
-		if (tmp->content == elm)
-			return (1);
 		tmp = tmp->next;
 	}
 	return (0);
