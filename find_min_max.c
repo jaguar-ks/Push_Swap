@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/01 22:23:26 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/01 22:54:12 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,24 +89,15 @@ int	find_f_s(t_list *stack, int to_cmp)
 
 int	find_l_s(t_list *stack, int to_cmp)
 {
-	t_list	*tmp;
-	t_list	*tmp1;
-	int		ps;
+	int	*tab;
+	int	i;
 
-	stack_rev(stack);
-	tmp = stack_dup(stack);
-	stack_rev(stack);
-	ps = 0;
-	tmp1 = tmp;
-	while (tmp)
+	tab = stack_to_arr(stack);
+	i = ft_lstsize(stack);
+	while (--i)
 	{
-		if (tmp->content <= to_cmp)
-		{
-			ps = find_position(stack, tmp->content);
-			return (ft_lstclear(&tmp1), ps);
-		}
-		ps++;
-		tmp = tmp->next;
+		if (tab[i] <= to_cmp)
+			return (free(tab), i);
 	}
-	return (0);
+	return (free(tab), i);
 }
