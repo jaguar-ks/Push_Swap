@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/01 22:16:59 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/02 05:06:11 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,4 +123,17 @@ void	sort_stack(t_list *stack_a, t_list *stack_b)
 		sort_three(stack_a, 'a');
 	if (ft_lstsize(stack_a) > 3 && ft_lstsize(stack_a) < 7)
 		sort_4_to_6(stack_a, stack_b);
+}
+
+void	sort_more(t_list **stack_a, t_list **stack_b)
+{
+	while (ft_lstsize(*stack_a) > 3)
+		send_small(stack_a, stack_b, mid_val(*stack_a));
+	// print_stack(*stack_a, NULL);
+	sort_three(*stack_a, 'a');
+	// print_stack(*stack_a, NULL);
+	while (ft_lstsize(*stack_b) > 3)
+		send_big(stack_b, stack_a, mid_val(*stack_b));
+	pa(stack_b, stack_a, 'a');
+	print_stack(*stack_a, *stack_b);
 }

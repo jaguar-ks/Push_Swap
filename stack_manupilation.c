@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/01 22:41:40 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/02 05:08:02 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	stack_rev(t_list *stack)
 
 void	send_small(t_list **stack_a, t_list **stack_b, int med)
 {
-	while (min_val(*stack_a) <= med)
+	while (min_val(*stack_a) <= med && ft_lstsize(*stack_a) > 3)
 	{
 		if (check_sort(*stack_a, ft_lstsize(*stack_a)) || min_val(*stack_a) > med)
 			break ;
@@ -115,4 +115,28 @@ void	send_small(t_list **stack_a, t_list **stack_b, int med)
 		}
 		pa(stack_a, stack_b, 'b');
 	}
+}
+
+void	send_big(t_list **stack_a, t_list **stack_b, int med)
+{
+	int	rm;
+	int	rrm;
+	if (!*stack_a)
+		return ;
+	while (max_val(*stack_a) >= med)
+	{
+		if (max_val(*stack_a) < med)
+			break ;
+		rm = find_prb(*stack_b);
+		rrm = rm + 1;
+		if ((*stack_b)->content > (*stack_b)->next->content)
+			ss(*stack_b, *stack_a);
+		if (find_f_b(*stack_a, med) < ft_lstsize(*stack_a) / 2 || rm > 0)
+			do_r_op(*stack_b, *stack_a, rm, find_f_b(*stack_a, med));
+		else if(find_l_b(*stack_a, med) >= ft_lstsize(*stack_a) / 2 || rrm > 0)
+			do_rr_op(*stack_b, *stack_a, rrm, find_l_b(*stack_a, med));
+		pa(stack_a, stack_b, 'a');
+	}
+	// print_stack(*stack_b, *stack_a);
+	// sleep(1);
 }

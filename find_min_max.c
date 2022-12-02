@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/01 22:54:12 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/02 05:13:11 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +100,106 @@ int	find_l_s(t_list *stack, int to_cmp)
 			return (free(tab), i);
 	}
 	return (free(tab), i);
+}
+
+int	find_f_b(t_list *stack, int to_cmp)
+{
+	t_list	*tmp;
+
+	tmp = stack;
+	while (tmp)
+	{
+		if (tmp->content >= to_cmp)
+			return (find_position(stack, tmp->content));
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+int	find_l_b(t_list *stack, int to_cmp)
+{
+	int	*tab;
+	int	i;
+
+	tab = stack_to_arr(stack);
+	i = ft_lstsize(stack);
+	while (--i)
+	{
+		if (tab[i] >= to_cmp)
+			return (free(tab), i);
+	}
+	return (free(tab), i);
+}
+
+int	find_prb(t_list *stack)
+{
+	int		ps;
+	t_list	*tmp;
+
+	ps = 0;
+	tmp = stack;
+	while (tmp)
+	{
+		if (check_sort(tmp, ft_lstsize(tmp)))
+			return (ps);
+		ps++;
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+void	do_r_op(t_list *sta, t_list *stb, int i, int j)
+{
+	while (i > 0 && j > 0)
+	{
+		rr(sta, stb);
+		i--;
+		j--;
+	}
+	if (i > 0)
+	{
+		while (i > 0)
+		{
+			ra(sta, 'a');
+			i--;
+		}
+	}
+	if (j > 0)
+	{
+		while (j > 0)
+		{
+			ra(stb, 'b');
+			j--;
+		}
+	}
+}
+
+void	do_rr_op(t_list *sta, t_list *stb, int i, int j)
+{
+	while (i > 0 && j > 0)
+	{
+		rrr(sta, stb);
+		if (!check_sort(sta->next, ft_lstsize(sta->next)))
+			sa(sta, 'a');
+		i--;
+		j--;
+	}
+	if (i > 0)
+	{
+		while (i > 0)
+		{
+			rra(sta, 'a');
+			if (sta->content > sta->next->content)
+				sa(sta, 'a');
+			i--;
+		}
+	}
+	if (j > 0)
+	{
+		while (j > 0)
+		{
+			rra(stb, 'b');
+			j--;
+		}
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/01 22:15:14 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/02 04:45:42 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,15 @@ t_list	*stack_dup(t_list *src);
 void	stack_rev(t_list *stack);
 int	    find_f_s(t_list *stack, int to_cmp);
 int	    find_l_s(t_list *stack, int to_cmp);
+int	    find_f_b(t_list *stack, int to_cmp);
+int	    find_l_b(t_list *stack, int to_cmp);
+int 	find_prb(t_list *stack);
 int	    how_many_rr(t_list *stack, int ps);
 int	    how_many_r(int ps);
 void	send_small(t_list **sa, t_list **sb, int med);
+void	send_big(t_list **stack_a, t_list **stack_b, int med);
+void	sort_more(t_list **stack_a, t_list **stack_b);
+void	do_r_op(t_list *sta, t_list *stb, int i, int j);
+void	do_rr_op(t_list *sta, t_list *stb, int i, int j);
 
 #endif
