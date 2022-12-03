@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 21:30:32 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 22:30:33 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,10 @@ int	main(int ac, char **av)
 	// // ft_printf("~~ Sorting with the FORBIDEN method: ~~\n");
 	// // stack_fast_sort(stack_a);
 	// print_stack(stack_a, stack_b);
-	if (check_sort(stack_a, ft_lstsize(stack_a)))
-		printf("stack is sorted\n");
-	else
-		printf("stack is NOT sorted\n");
+	// if (check_sort(stack_a, ft_lstsize(stack_a)))
+	// 	printf("stack is sorted\n");
+	// else
+	// 	printf("stack is NOT sorted\n");
 	// ft_lstclear(&stack_a);
 	//ft_lstclear(&stack_b);
 	//print_stack(stack_a, stack_b);

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 21:47:44 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 22:29:24 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,16 +219,20 @@ void	send_and_put_in_place(t_list **sta, t_list **stb, int med)
 	}
 }
 
-// void	finish_it(t_list **stack)
-// {
-// 	while ((*stack)->idx + 1 != (*stack)->next->idx)
-// 	{
-// 		if ((*stack)->idx < (*stack)->next->idx)
-// 			sa(*stack, 'a');
-// 		if ((*stack)->idx + 1 != (*stack)->next->idx)
-// 			ra(stack, 'a');
-// 	}
-// 	while (ft_lstlast(*stack)->content != max_val(*stack))
-// 		rra(stack, 'a');
-// 	// print_stack(*stack, NULL);
-// }
+void	finish_it(t_list **stack)
+{
+	while ((*stack)->idx + 1 != (*stack)->next->idx)
+	{
+		if ((*stack)->idx + 1 != (*stack)->next->idx)
+			sa(*stack, 'a');
+		if ((*stack)->idx + 1 != (*stack)->next->idx)
+			ra(stack, 'a');
+	}
+	while (ft_lstlast(*stack)->content != max_val(*stack, ft_lstsize(*stack)))
+	{
+		if ((*stack)->idx + 1 != (*stack)->next->idx)
+			sa(*stack, 'a');
+		rra(stack, 'a');
+	}
+	// print_stack(*stack, NULL);
+}
