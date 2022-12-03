@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/01 20:26:56 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 00:59:40 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ t_list	*take_stack(int ac, char **av)
 		while (r[++j])
 		{
 			if (check_arg(r[j]))
-				ft_lstadd_back(&head, ft_lstnew(ft_atoi(r[j])));
+				ft_lstadd_back(&head, ft_lstnew(ft_atoi(r[j]), 0));
 			else
 				return (ft_lstclear(&head), deallocate(r));
 		}

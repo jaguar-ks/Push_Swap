@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 03:52:08 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 20:31:45 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 00:57:32 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ t_list	*ft_lstmap(t_list *lst, int (*f)(int))
 
 	if (!lst || !f)
 		return (NULL);
-	new = ft_lstnew((f)(lst->content));
+	new = ft_lstnew((f)(lst->content), 0);
 	r = new;
 	lst = lst->next;
 	while (lst)
 	{
-		new = ft_lstnew((f)(lst->content));
+		new = ft_lstnew((f)(lst->content), 0);
 		if (!new)
 		{
 			ft_lstclear(&lst);

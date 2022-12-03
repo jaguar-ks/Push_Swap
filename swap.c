@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 21:46:11 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 10:01:15 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/02 23:06:35 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,16 @@
 void	sa(t_list *stack, char c)
 {
 	int	tmp;
+	int	im;
 
 	if (stack && stack->next)
 	{
 		tmp = stack->content;
 		stack->content = stack->next->content;
 		stack->next->content = tmp;
+		im = stack->next->idx;
+		stack->next->idx = stack->idx;
+		stack->idx = im;
 	}
 	if (c == 'a' || c == 'b')
 		ft_printf("s%c\n", c);

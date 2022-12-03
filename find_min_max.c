@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/02 05:13:11 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 01:06:50 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int	mid_val(t_list *stack)
 	t_list	*dup;
 
 	dup = stack_dup(stack);
-	stack_fast_sort(dup);
 	tab = stack_to_arr(dup);
+	fast_sort(tab, dup);
 	mid = tab[(ft_lstsize(stack) / 2) - 1];
 	return (ft_lstclear(&dup), free(tab), mid);
 }
@@ -141,28 +141,24 @@ int	find_prb(t_list *stack)
 	while (tmp)
 	{
 		if (check_sort(tmp, ft_lstsize(tmp)))
-			return (ps);
+			return (tmp->content);
 		ps++;
 		tmp = tmp->next;
 	}
 	return (0);
 }
 
-void	do_r_op(t_list *sta, t_list *stb, int i, int j)
+void	do_r_op(t_list **sta, t_list **stb, int i, int j)
 {
-	while (i > 0 && j > 0)
+	while ((*sta)->content != i && j > 0)
 	{
 		rr(sta, stb);
-		i--;
 		j--;
 	}
 	if (i > 0)
 	{
-		while (i > 0)
-		{
+		while ((*sta)->content != i)
 			ra(sta, 'a');
-			i--;
-		}
 	}
 	if (j > 0)
 	{
@@ -174,13 +170,13 @@ void	do_r_op(t_list *sta, t_list *stb, int i, int j)
 	}
 }
 
-void	do_rr_op(t_list *sta, t_list *stb, int i, int j)
+void	do_rr_op(t_list **sta, t_list **stb, int i, int j)
 {
 	while (i > 0 && j > 0)
 	{
 		rrr(sta, stb);
-		if (!check_sort(sta->next, ft_lstsize(sta->next)))
-			sa(sta, 'a');
+		if (!check_sort((*sta)->next, ft_lstsize((*sta)->next)))
+			sa(*sta, 'a');
 		i--;
 		j--;
 	}
@@ -188,9 +184,9 @@ void	do_rr_op(t_list *sta, t_list *stb, int i, int j)
 	{
 		while (i > 0)
 		{
+			if ((*sta)->content > (*sta)->next->content)
+				sa(*sta, 'a');
 			rra(sta, 'a');
-			if (sta->content > sta->next->content)
-				sa(sta, 'a');
 			i--;
 		}
 	}

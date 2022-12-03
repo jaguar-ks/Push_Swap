@@ -6,13 +6,13 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 20:42:10 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/30 06:26:10 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 00:54:16 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-t_list	*ft_lstnew(long content)
+t_list	*ft_lstnew(long content, int idx)
 {
 	t_list	*new;
 
@@ -20,7 +20,7 @@ t_list	*ft_lstnew(long content)
 	if (!new)
 		return (NULL);
 	new->content = content;
+	new->idx = idx;
 	new->next = NULL;
-	new->prev = NULL;
 	return (new);
 }

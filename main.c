@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/02 02:07:28 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 01:10:18 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ void	print_stack(t_list *sa, t_list *sb)
 	{
 		if (tmp)
 		{
-			ft_printf("|%d|.", tmp->content);
+			ft_printf("|%d|->%d.", tmp->content, tmp->idx);
 			tmp = tmp->next;
 		}
 		if (tmp1)
 		{
-			ft_printf("\t\t|%d|.", tmp1->content);
+			ft_printf("\t\t|%d|->%d.", tmp1->content, tmp->idx);
 			tmp1 = tmp1->next;
 		}
 		ft_printf("\n");
@@ -53,6 +53,7 @@ int	main(int ac, char **av)
 	t_list	*stack_b;
 	t_list	*tmp;
 	t_list	*tmp1;
+	int		*tab;
 
 	stack_a = take_stack(ac, av);
 	stack_b = NULL;
@@ -82,8 +83,11 @@ int	main(int ac, char **av)
 	// pa(&stack_a, &stack_b, 'a');
 	// print_stack(stack_a, stack_b);
 	// send_small(&stack_a, &stack_b, mid_val(stack_a));
-	sort_more(&stack_a, &stack_b);
-	// print_stack(stack_a, stack_b);
+	tab = stack_to_arr(stack_a);
+	fast_sort(tab, stack_a);
+	get_idx(&stack_a, tab);
+	// sort_more(&stack_a, &stack_b);
+	print_stack(stack_a, stack_b);
 	// // ft_printf("~~ Sorting with the FORBIDEN method: ~~\n");
 	// // stack_fast_sort(stack_a);
 	// print_stack(stack_a, stack_b);

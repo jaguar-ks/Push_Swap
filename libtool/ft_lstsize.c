@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 22:11:16 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/27 20:32:23 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 02:31:08 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int		i;
+	t_list	*tmp;
 
 	i = 0;
-	while (lst)
+	tmp = lst;
+	while (tmp)
 	{
 		i++;
-		lst = lst->next;
+		tmp = tmp->next;
 	}
 	return (i);
 }

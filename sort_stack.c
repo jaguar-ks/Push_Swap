@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/02 05:06:11 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 01:01:48 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ void	sort_three(t_list *stack, char c)
 	tmp = stack;
 	max = max_val(stack);
 	if (tmp->content == max)
-		ra(stack, c);
+		ra(&stack, c);
 	else if (tmp->next->content == max)
-		rra(stack, c);
+		rra(&stack, c);
 	tmp = tmp->next->next;
 	if (tmp->content == max)
 	{
@@ -83,9 +83,9 @@ void	rev_sort_three(t_list *stack, char c)
 	tmp = stack;
 	min = min_val(stack);
 	if (tmp->content == min)
-		ra(stack, c);
+		ra(&stack, c);
 	else if (tmp->next->content == min)
-		rra(stack, c);
+		rra(&stack, c);
 	tmp = tmp->next->next;
 	if (tmp->content == min)
 	{
@@ -127,6 +127,7 @@ void	sort_stack(t_list *stack_a, t_list *stack_b)
 
 void	sort_more(t_list **stack_a, t_list **stack_b)
 {
+
 	while (ft_lstsize(*stack_a) > 3)
 		send_small(stack_a, stack_b, mid_val(*stack_a));
 	// print_stack(*stack_a, NULL);

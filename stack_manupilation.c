@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/02 05:08:02 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 02:32:56 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,31 +28,29 @@ int	*stack_to_arr(t_list *stack)
 		tab[i] = tmp->content;
 		tmp = tmp->next;
 	}
+	print_stack(stack, tmp);
 	return (tab);
 }
 
-void	stack_fast_sort(t_list *stack)
+void	fast_sort(int *tab, t_list *stack)
 {
-	t_list	*tmp;
-	t_list	*tmp1;
-	int		mv;
+	int	i;
+	int	j;
+	int	mv;
 
-	tmp = stack;
-	while (tmp)
+	i = -1;
+	while (++i < ft_lstsize(stack))
 	{
-		if (tmp->next)
-			tmp1 = tmp->next;
-		while (tmp1)
+		j = i;
+		while (++j < ft_lstsize(stack))
 		{
-			if (tmp->content > tmp1->content)
+			if (tab[i] > tab[j])
 			{
-				mv = tmp->content;
-				tmp->content = tmp1->content;
-				tmp1->content = mv;
+				mv = tab[i];
+				tab[i] = tab[j];
+				tab[j] = mv;
 			}
-			tmp1 = tmp1->next;
 		}
-		tmp = tmp->next;
 	}
 }
 
@@ -66,7 +64,7 @@ t_list	*stack_dup(t_list *src)
 	dst = NULL;
 	while (tmp)
 	{
-		new = ft_lstnew(tmp->content);
+		new = ft_lstnew(tmp->content, tmp->idx);
 		ft_lstadd_back(&dst, new);
 		tmp = tmp->next;
 	}
@@ -90,6 +88,22 @@ void	stack_rev(t_list *stack)
 	free(tab);
 }
 
+void	get_idx(t_list **stack, int *tab)
+{
+	int		i;
+	t_list	*tmp;
+
+	i = -1;
+	while (++i < ft_lstsize(*stack))
+	{
+		tmp = (*stack);
+		while (tmp->content != tab[i])
+			tmp = tmp->next;
+		if (tmp->content == tab[i])
+			tmp->idx = i;
+	}	
+}
+
 void	send_small(t_list **stack_a, t_list **stack_b, int med)
 {
 	while (min_val(*stack_a) <= med && ft_lstsize(*stack_a) > 3)
@@ -101,17 +115,17 @@ void	send_small(t_list **stack_a, t_list **stack_b, int med)
 		if (find_position(*stack_a, min_val(*stack_a)) >= find_l_s(*stack_a, med))
 		{
 			while (find_position(*stack_a, min_val(*stack_a)))
-				rra(*stack_a, 'a');
+				rra(stack_a, 'a');
 		}
 		else if (find_f_s(*stack_a, med) < ft_lstsize(*stack_a) / 2)
 		{
 			while ((*stack_a)->content > med)
-				ra(*stack_a, 'a');
+				ra(stack_a, 'a');
 		}
 		else if(find_l_s(*stack_a, med) > ft_lstsize(*stack_a) / 2)
 		{
 			while ((*stack_a)->content > med)
-				rra(*stack_a, 'a');
+				rra(stack_a, 'a');
 		}
 		pa(stack_a, stack_b, 'b');
 	}
@@ -128,13 +142,13 @@ void	send_big(t_list **stack_a, t_list **stack_b, int med)
 		if (max_val(*stack_a) < med)
 			break ;
 		rm = find_prb(*stack_b);
-		rrm = rm + 1;
-		if ((*stack_b)->content > (*stack_b)->next->content)
-			ss(*stack_b, *stack_a);
+		rrm = rm;
+		// if ((*stack_b)->content > (*stack_b)->next->content)
+		// 	ss(*stack_b, *stack_a);
 		if (find_f_b(*stack_a, med) < ft_lstsize(*stack_a) / 2 || rm > 0)
-			do_r_op(*stack_b, *stack_a, rm, find_f_b(*stack_a, med));
+			do_r_op(stack_b, stack_a, rm, find_f_b(*stack_a, med));
 		else if(find_l_b(*stack_a, med) >= ft_lstsize(*stack_a) / 2 || rrm > 0)
-			do_rr_op(*stack_b, *stack_a, rrm, find_l_b(*stack_a, med));
+			do_rr_op(stack_b, stack_a, find_f_b(*stack_b, mid_val(*stack_b)), find_l_b(*stack_a, med));
 		pa(stack_a, stack_b, 'a');
 	}
 	// print_stack(*stack_b, *stack_a);

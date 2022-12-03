@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 21:44:00 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/01 22:44:38 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 00:59:52 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	pa(t_list **sa, t_list **sb, char c)
 	t_list	*tmp;
 
 	tmp = *sa;
-	ft_lstadd_front(sb, ft_lstnew(tmp->content));
+	ft_lstadd_front(sb, ft_lstnew(tmp->content, tmp->idx));
 	*sa = (*sa)->next;
 	ft_lstdelone(tmp);
 	// ft_lstclear(&a);
