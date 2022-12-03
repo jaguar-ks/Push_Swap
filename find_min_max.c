@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 01:06:50 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 14:53:41 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,4 +198,38 @@ void	do_rr_op(t_list **sta, t_list **stb, int i, int j)
 			j--;
 		}
 	}
+}
+
+int	find_next_idx(t_list *stack)
+{
+	int		ps;
+	t_list	*tmp;
+
+	ps = 0;
+	tmp = stack->next;
+	while (tmp)
+	{
+		if (stack->idx == tmp->idx - 1)
+			return (ps);
+		ps++;
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+int	find_prev_idx(t_list *stack)
+{
+	int		ps;
+	t_list	*tmp;
+
+	ps = 0;
+	tmp = stack->next;
+	while (tmp)
+	{
+		if (stack->idx == tmp->idx + 1)
+			return (ps);
+		ps++;
+		tmp = tmp->next;
+	}
+	return (0);
 }

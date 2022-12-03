@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 21:48:05 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 00:59:52 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 17:11:49 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,12 @@ void	rra(t_list **stack, char c)
 	{
 		tmp = ft_lstlast(*stack);
 		ft_lstadd_front(stack, ft_lstnew(tmp->content, tmp->idx));
-		ft_lstdelone(tmp);
+		tmp = *stack;
+		while (tmp->next->next)
+			tmp = tmp->next;
+		ft_lstdelone(tmp->next);
+		tmp->next = NULL;
+		tmp = NULL;
 		if (c == 'a' || c == 'b')
 			ft_printf("rr%c\n", c);
 	}

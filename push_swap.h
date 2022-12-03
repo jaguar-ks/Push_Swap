@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 01:06:39 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 17:04:17 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ra(t_list **stack, char c);
 void	rr(t_list **sa, t_list **sb);
 void	rra(t_list **stack, char c);
 void	rrr(t_list **sa, t_list **sb);
-void	sort_stack(t_list *stack_a, t_list *stack_b);
+void	sort_stack(t_list **stack_a, t_list **stack_b);
 int		check_sort(t_list *stack, int size_tocheck);
 int	    check_rev_sort(t_list *stack, int size_tocheck);
 void	print_stack(t_list *sa, t_list *sb);
@@ -48,5 +48,7 @@ void	send_big(t_list **stack_a, t_list **stack_b, int med);
 void	sort_more(t_list **stack_a, t_list **stack_b);
 void	do_r_op(t_list **sta, t_list **stb, int i, int j);
 void	do_rr_op(t_list **sta, t_list **stb, int i, int j);
+int	    find_next_idx(t_list *stack);
+int	    find_prev_idx(t_list *stack);
 
 #endif

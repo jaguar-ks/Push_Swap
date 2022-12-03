@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 02:32:56 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 16:17:19 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int	*stack_to_arr(t_list *stack)
 		tab[i] = tmp->content;
 		tmp = tmp->next;
 	}
-	print_stack(stack, tmp);
 	return (tab);
 }
 
@@ -101,16 +100,17 @@ void	get_idx(t_list **stack, int *tab)
 			tmp = tmp->next;
 		if (tmp->content == tab[i])
 			tmp->idx = i;
-	}	
+	}
+	free(tab);
 }
 
 void	send_small(t_list **stack_a, t_list **stack_b, int med)
 {
-	while (min_val(*stack_a) <= med && ft_lstsize(*stack_a) > 3)
+	while (min_val(*stack_a) <= med && ft_lstsize(*stack_a))
 	{
 		if (check_sort(*stack_a, ft_lstsize(*stack_a)) || min_val(*stack_a) > med)
 			break ;
-		if (ft_lstsize(*stack_b) && !check_rev_sort(*stack_b, 2) && !check_sort(*stack_a, 2))
+		if ((ft_lstsize(*stack_b) && !check_rev_sort(*stack_b, 2)) || !check_sort(*stack_a, 2))
 			ss(*stack_a, *stack_b);
 		if (find_position(*stack_a, min_val(*stack_a)) >= find_l_s(*stack_a, med))
 		{
@@ -131,26 +131,48 @@ void	send_small(t_list **stack_a, t_list **stack_b, int med)
 	}
 }
 
-void	send_big(t_list **stack_a, t_list **stack_b, int med)
-{
-	int	rm;
-	int	rrm;
-	if (!*stack_a)
-		return ;
-	while (max_val(*stack_a) >= med)
-	{
-		if (max_val(*stack_a) < med)
-			break ;
-		rm = find_prb(*stack_b);
-		rrm = rm;
-		// if ((*stack_b)->content > (*stack_b)->next->content)
-		// 	ss(*stack_b, *stack_a);
-		if (find_f_b(*stack_a, med) < ft_lstsize(*stack_a) / 2 || rm > 0)
-			do_r_op(stack_b, stack_a, rm, find_f_b(*stack_a, med));
-		else if(find_l_b(*stack_a, med) >= ft_lstsize(*stack_a) / 2 || rrm > 0)
-			do_rr_op(stack_b, stack_a, find_f_b(*stack_b, mid_val(*stack_b)), find_l_b(*stack_a, med));
-		pa(stack_a, stack_b, 'a');
-	}
-	// print_stack(*stack_b, *stack_a);
-	// sleep(1);
-}
+// void	send_big(t_list **stack_a, t_list **stack_b, int med)
+// {
+// 	int	rm;
+// 	int	rrm;
+// 	if (!*stack_a)
+// 		return ;
+// 	while (max_val(*stack_a) >= med)
+// 	{
+// 		if (max_val(*stack_a) < med)
+// 			break ;
+// 		// if ((*stack_b)->content > (*stack_b)->next->content)
+// 		// 	ss(*stack_b, *stack_a);
+// 		if (find_f_b(*stack_a, med) < ft_lstsize(*stack_a) / 2 || rm > 0)
+// 			do_r_op(stack_b, stack_a, rm, find_f_b(*stack_a, med));
+// 		else if(find_l_b(*stack_a, med) >= ft_lstsize(*stack_a) / 2 || rrm > 0)
+// 			do_rr_op(stack_b, stack_a, find_f_b(*stack_b, mid_val(*stack_b)), find_l_b(*stack_a, med));
+// 		pa(stack_a, stack_b, 'a');
+// 	}
+// 	// print_stack(*stack_b, *stack_a);
+// 	// sleep(1);
+// }
+
+// void	send_and_put_in_place(t_list **sta, t_list **stb, int med)
+// {
+// 	int		rm;
+// 	int		rrm;
+// 	t_list	*ta;
+// 	t_list	*tb;
+
+// 	while (max_val(*stb) >= med)
+// 	{
+// 		rm = 0;
+// 		rrm = 0;
+// 		ta = (*sta);
+// 		tb = (*stb);
+// 		while (ta->idx != ta->next->idx - 1)
+// 		{
+// 			rm++;
+// 			ta = ta->next;
+// 		}
+// 		 ((*sta)->idx != (*sta)->next->idx - 1)
+// 			rm++;
+		
+// 	}
+// }

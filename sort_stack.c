@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 01:01:48 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 17:12:05 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,30 +44,30 @@ int	check_rev_sort(t_list *stack, int size_tocheck)
 	return (1);
 }
 
-void	sort_two(t_list *stack, char c)
+void	sort_two(t_list **stack, char c)
 {
-	if (stack->content > stack->next->content)
-		sa(stack, c);
+	if ((*stack)->content > (*stack)->next->content)
+		sa(*stack, c);
 }
 
-void	rev_sort_two(t_list *stack, char c)
+void	rev_sort_two(t_list **stack, char c)
 {
-	if (stack->content < stack->next->content)
-		sa(stack, c);
+	if ((*stack)->content < (*stack)->next->content)
+		sa(*stack, c);
 }
 
-void	sort_three(t_list *stack, char c)
+void	sort_three(t_list **stack, char c)
 {
 	int		max;
 	t_list	*tmp;
 
-	tmp = stack;
-	max = max_val(stack);
+	tmp = *stack;
+	max = max_val(*stack);
 	if (tmp->content == max)
-		ra(&stack, c);
+		ra(stack, c);
 	else if (tmp->next->content == max)
-		rra(&stack, c);
-	tmp = tmp->next->next;
+		rra(stack, c);
+	tmp = ft_lstlast(tmp);
 	if (tmp->content == max)
 	{
 		sort_two(stack, c);
@@ -75,17 +75,17 @@ void	sort_three(t_list *stack, char c)
 	}
 }
 
-void	rev_sort_three(t_list *stack, char c)
+void	rev_sort_three(t_list **stack, char c)
 {
 	int		min;
 	t_list	*tmp;
 
-	tmp = stack;
-	min = min_val(stack);
+	tmp = *stack;
+	min = min_val(*stack);
 	if (tmp->content == min)
-		ra(&stack, c);
+		ra(stack, c);
 	else if (tmp->next->content == min)
-		rra(&stack, c);
+		rra(stack, c);
 	tmp = tmp->next->next;
 	if (tmp->content == min)
 	{
@@ -94,34 +94,30 @@ void	rev_sort_three(t_list *stack, char c)
 	}
 }
 
-void	sort_4_to_6(t_list *sa, t_list *sb)
+void	sort_4_to_6(t_list **sa, t_list **sb)
 {
-	int	med;
-
-	med = mid_val(sa);
-	send_small(&sa, &sb, med);
-	if (ft_lstsize(sa) >= 2)
+	send_small(sa, sb, mid_val(*sa));
+	if (ft_lstsize(*sa) == 2)
+		sort_two(sa, 'a');
+	else if (ft_lstsize(*sa) == 3)
 		sort_three(sa, 'a');
-	if (ft_lstsize(sb) >= 2)
+	if (ft_lstsize(*sb) == 2)
+		rev_sort_two(sb, 'b');
+	else if (ft_lstsize(*sb) == 3)
 		rev_sort_three(sb, 'b');
-	while (sb)
-		pa(&sb, &sa, 'a');
+	while (*sb)
+		pa(sb, sa, 'a');
 }
 
-void	sort_stack(t_list *stack_a, t_list *stack_b)
+void	sort_stack(t_list **stack_a, t_list **stack_b)
 {
-	t_list	*tmp;
-	t_list	*tmp1;
-
-	tmp = stack_a;
-	tmp1 = stack_b;
-	if (check_sort(stack_a, ft_lstsize(stack_a)))
+	if (check_sort(*stack_a, ft_lstsize(*stack_a)))
 		return ;
-	if (ft_lstsize(stack_a) == 2)
+	if (ft_lstsize(*stack_a) == 2)
 		sort_two(stack_a, 'a');
-	if (ft_lstsize(stack_a) == 3)
+	else if (ft_lstsize(*stack_a) == 3)
 		sort_three(stack_a, 'a');
-	if (ft_lstsize(stack_a) > 3 && ft_lstsize(stack_a) < 7)
+	else if (ft_lstsize(*stack_a) >= 4 && ft_lstsize(*stack_a) < 7)
 		sort_4_to_6(stack_a, stack_b);
 }
 
@@ -131,10 +127,10 @@ void	sort_more(t_list **stack_a, t_list **stack_b)
 	while (ft_lstsize(*stack_a) > 3)
 		send_small(stack_a, stack_b, mid_val(*stack_a));
 	// print_stack(*stack_a, NULL);
-	sort_three(*stack_a, 'a');
+	sort_three(stack_a, 'a');
 	// print_stack(*stack_a, NULL);
-	while (ft_lstsize(*stack_b) > 3)
-		send_big(stack_b, stack_a, mid_val(*stack_b));
+	// while (ft_lstsize(*stack_b) > 3)
+	// 	send_big(stack_b, stack_a, mid_val(*stack_b));
 	pa(stack_b, stack_a, 'a');
 	print_stack(*stack_a, *stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 01:10:18 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 17:04:24 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,11 @@ void	print_stack(t_list *sa, t_list *sb)
 		}
 		if (tmp1)
 		{
-			ft_printf("\t\t|%d|->%d.", tmp1->content, tmp->idx);
+			ft_printf("\t\t|%d|->%d.", tmp1->content, tmp1->idx);
 			tmp1 = tmp1->next;
 		}
 		ft_printf("\n");
+		sleep(1);
 	}
 	ft_printf("-~-~-~-~--~-~-~-~--~-~-~-~--~-~-~-~-\n");
 	ft_printf("~|size of A[%d]|~\t~|size of B[%d]|~\n", ft_lstsize(sa), ft_lstsize(sb));
@@ -86,8 +87,11 @@ int	main(int ac, char **av)
 	tab = stack_to_arr(stack_a);
 	fast_sort(tab, stack_a);
 	get_idx(&stack_a, tab);
-	// sort_more(&stack_a, &stack_b);
 	print_stack(stack_a, stack_b);
+	ft_printf("The prev idx of |%d| element with idx [%d] is:=>[%d]\n", stack_a->content, stack_a->idx,find_prev_idx(stack_a));
+	sort_stack(&stack_a, &stack_b);
+	print_stack(stack_a, stack_b);
+	ft_printf("The prev idx of |%d| element with idx [%d] is:=>[%d]\n", stack_a->content, stack_a->idx,find_prev_idx(stack_a));
 	// // ft_printf("~~ Sorting with the FORBIDEN method: ~~\n");
 	// // stack_fast_sort(stack_a);
 	// print_stack(stack_a, stack_b);
@@ -95,7 +99,7 @@ int	main(int ac, char **av)
 	// 	printf("stack is sorted\n");
 	// else
 	// 	printf("stack is NOT sorted\n");
-	//ft_lstclear(&stack_a);
+	// ft_lstclear(&stack_a);
 	//ft_lstclear(&stack_b);
 	// print_stack(stack_a, stack_b);
 	//system("leaks push_swap");
