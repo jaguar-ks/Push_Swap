@@ -6,7 +6,7 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/02 23:43:59 by faksouss         ###   ########.fr        #
+#    Updated: 2022/12/03 19:02:06 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ ${NAME} : ${OBJS_MD} ${makelib}
 	${CC} ${FLAGS} $^ -o $@
 
 %.o : %.c ${HEADER}
-	${CC} ${FLAGS} -c $< -o $@
+	${CC} -g ${FLAGS} -c $< -o $@
 
 ${makelib} :
 	cd libtool; make ; cd ..;

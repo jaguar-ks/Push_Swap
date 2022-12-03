@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 17:12:05 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 21:43:06 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ void	sort_three(t_list **stack, char c)
 	t_list	*tmp;
 
 	tmp = *stack;
-	max = max_val(*stack);
+	max = max_val(*stack, 3);
 	if (tmp->content == max)
 		ra(stack, c);
 	else if (tmp->next->content == max)
 		rra(stack, c);
-	tmp = ft_lstlast(tmp);
+	tmp = tmp->next->next;
 	if (tmp->content == max)
 	{
 		sort_two(stack, c);
@@ -123,14 +123,23 @@ void	sort_stack(t_list **stack_a, t_list **stack_b)
 
 void	sort_more(t_list **stack_a, t_list **stack_b)
 {
+	// int	*tab;
 
 	while (ft_lstsize(*stack_a) > 3)
 		send_small(stack_a, stack_b, mid_val(*stack_a));
 	// print_stack(*stack_a, NULL);
 	sort_three(stack_a, 'a');
 	// print_stack(*stack_a, NULL);
-	// while (ft_lstsize(*stack_b) > 3)
-	// 	send_big(stack_b, stack_a, mid_val(*stack_b));
-	pa(stack_b, stack_a, 'a');
+	while (ft_lstsize(*stack_b) > 3)
+		send_and_put_in_place(stack_a, stack_b, mid_val(*stack_b));
+	// send_and_put_in_place(stack_a, stack_b, mid_val(*stack_b));
+	// send_and_put_in_place(stack_a, stack_b, mid_val(*stack_b));
 	print_stack(*stack_a, *stack_b);
+	while (*stack_b)
+	{
+		pa(stack_b, stack_a, 'a');
+	}
+	// send_and_put_in_place(stack_a, stack_b, min_val(*stack_b));
+	//print_stack(*stack_a, *stack_b);
+	
 }

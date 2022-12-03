@@ -6,20 +6,21 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 14:53:41 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/03 21:43:37 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-int	max_val(t_list *stack)
+int	max_val(t_list *stack, int size)
 {
 	int		max;
 	t_list	*tmp;
+	int i = -1;
 
 	tmp = stack;
 	max = INT_MIN;
-	while (tmp)
+	while (tmp && ++i < size)
 	{
 		if (tmp->content > max)
 			max = tmp->content;
@@ -34,7 +35,7 @@ int	min_val(t_list *stack)
 	t_list	*tmp;
 
 	tmp = stack;
-	min = max_val(stack);
+	min = max_val(stack, ft_lstsize(stack));
 	while (tmp)
 	{
 		if (tmp->content < min)
