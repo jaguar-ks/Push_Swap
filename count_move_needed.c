@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 02:31:15 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/06 04:39:21 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/06 05:17:59 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,4 +93,31 @@ int	best_to_stay(t_list *stack)
 		tmp = tmp->next;
 	}
 	return (max);
+}
+
+int	push_or_not(t_list *stk)
+{
+	t_list	*tmp;
+
+	tmp = stk;
+	while (tmp)
+	{
+		if (!tmp->st)
+			return (1);
+		tmp = tmp->next;
+	}
+	return (0);
+}
+
+void	send_a_to_b(t_list **sta, t_list **stb, int cntt)
+{
+	mark_mode_1(sta, cntt);
+	while (push_or_not(*sta))
+	{
+		if (!(*sta)->st)
+			pa(sta, stb, 'b');
+		else
+			ra(sta, 'a');
+		mark_mode_1(sta, cntt);
+	}
 }
