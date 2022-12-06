@@ -1,5 +1,6 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/faksouss/Desktop/Push_Swap'
+<<<<<<< HEAD
 cc -Wall -Wextra -Werror -c take_stack.c -o take_stack.o
  
 cc -Wall -Wextra -Werror -c swap.c -o swap.o
@@ -14,6 +15,10 @@ cc -Wall -Wextra -Werror -c stack_manupilation.c -o stack_manupilation.o
 cc -Wall -Wextra -Werror -c count_move_needed.c -o count_move_needed.o
 cc -Wall -Wextra -Werror -c main.c -o main.o
 cd libtool; make ; cd ..;
+=======
+cc -g -Wall -Wextra -Werror -c stack_manupilation.c -o stack_manupilation.o
+ 
+>>>>>>> 35ffe576ba9539aa304146edf1af1a2092a5bd80
 cc -Wall -Wextra -Werror take_stack.o swap.o push.o rotate.o reverse_rotate.o sort_stack.o find_min_max.o stack_manupilation.o count_move_needed.o main.o libtool/libft.a -o push_swap
 make: Leaving directory `/Users/faksouss/Desktop/Push_Swap'
  

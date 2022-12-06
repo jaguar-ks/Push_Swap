@@ -6,7 +6,11 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/12/06 04:30:09 by faksouss         ###   ########.fr       */
+=======
+/*   Updated: 2022/12/03 21:41:51 by faksouss         ###   ########.fr       */
+>>>>>>> 35ffe576ba9539aa304146edf1af1a2092a5bd80
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +31,7 @@ void	sort_stack(t_list **stack_a, t_list **stack_b);
 int		check_sort(t_list *stack, int size_tocheck);
 int	    check_rev_sort(t_list *stack, int size_tocheck);
 void	print_stack(t_list *sa, t_list *sb);
-int		max_val(t_list *stack);
+int		max_val(t_list *stack, int size);
 int		min_val(t_list *stack);
 int		mid_val(t_list *stack);
 int		find_position(t_list *stack, int elm);
@@ -50,7 +54,12 @@ void	do_r_op(t_list **sta, t_list **stb, int i, int j);
 void	do_rr_op(t_list **sta, t_list **stb, int i, int j);
 int	    find_next_idx(t_list *stack);
 int	    find_prev_idx(t_list *stack);
+<<<<<<< HEAD
 void	mark_mode_1(t_list **stack, int cntt);
 int	    how_many_to_stay(t_list *stack);
+=======
+void	send_and_put_in_place(t_list **sta, t_list **stb, int med);
+void	finish_it(t_list **stack);
+>>>>>>> 35ffe576ba9539aa304146edf1af1a2092a5bd80
 
 #endif

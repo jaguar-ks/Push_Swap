@@ -6,7 +6,11 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/12/06 04:01:54 by faksouss         ###   ########.fr       */
+=======
+/*   Updated: 2022/12/03 22:29:24 by faksouss         ###   ########.fr       */
+>>>>>>> 35ffe576ba9539aa304146edf1af1a2092a5bd80
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,26 +160,86 @@ void	send_small(t_list **stack_a, t_list **stack_b, int med)
 // 	// sleep(1);
 // }
 
-// void	send_and_put_in_place(t_list **sta, t_list **stb, int med)
-// {
-// 	int		rm;
-// 	int		rrm;
-// 	t_list	*ta;
-// 	t_list	*tb;
+void	send_and_put_in_place(t_list **sta, t_list **stb, int med)
+{
+	int		*tab;
 
-// 	while (max_val(*stb) >= med)
-// 	{
-// 		rm = 0;
-// 		rrm = 0;
-// 		ta = (*sta);
-// 		tb = (*stb);
-// 		while (ta->idx != ta->next->idx - 1)
-// 		{
-// 			rm++;
-// 			ta = ta->next;
-// 		}
-// 		 ((*sta)->idx != (*sta)->next->idx - 1)
-// 			rm++;
-		
-// 	}
-// }
+	while (max_val(*stb, ft_lstsize(*stb)) >= med)
+	{
+		// if (max_val(*stb) < med)
+ 		// 	break ;
+		tab = stack_to_arr(*sta);
+		fast_sort(tab, *sta);
+		get_idx(sta, tab);
+		if (find_f_b(*stb, med) < ft_lstsize(*stb) / 2 || (*sta)->idx != (*sta)->next->idx - 1)
+		{
+			while ((*stb)->content < med || ((*sta)->idx + 1 != (*sta)->next->idx))
+			{
+				if ((*sta)->idx + 1 == (*sta)->next->idx && (*stb)->content < med)
+					ra(stb, 'b');
+				else if ((*sta)->idx + 1 != (*sta)->next->idx && (*stb)->content < med)
+				{
+					if ((*sta)->idx + 1 != (*sta)->next->idx)
+						ss(*sta, *stb);
+					if ((*sta)->idx + 1 != (*sta)->next->idx)
+						rr(sta, stb);
+				}
+				else if ((*sta)->idx + 1 != (*sta)->next->idx && (*stb)->content >= med)
+				{
+					if ((*sta)->idx + 1 != (*sta)->next->idx)
+						sa(*sta, 'a');
+					if ((*sta)->idx + 1 != (*sta)->next->idx)
+						ra(sta, 'a');
+				}
+				// else
+				// 	break ;
+				//print_stack(*sta, *stb);
+				// ft_printf("|%d|%d|%d|%d|\n", (*stb)->content, med, (*sta)->idx, (*sta)->next->idx);
+			}
+		}
+		if (find_l_b(*stb, med) > ft_lstsize(*stb) / 2 || !check_sort(*sta, ft_lstsize(*sta)))
+		{
+			while ((*stb)->content < med || (!check_sort(*sta, ft_lstsize(*sta)) && ft_lstlast(*sta)->content == max_val(*sta, ft_lstsize(*sta))))
+			{
+				if (ft_lstlast(*sta)->content == max_val(*sta, ft_lstsize(*sta)) && (check_sort(*sta, ft_lstsize(*sta)) && (*stb)->content < med))
+					rra(stb, 'b');
+				else if (ft_lstlast(*sta)->content != max_val(*sta, ft_lstsize(*sta)) && (!check_sort(*sta, ft_lstsize(*sta)) && (*stb)->content < med))
+				{
+					if ((*sta)->idx > (*sta)->next->idx)
+						ss(*sta, *stb);
+					if (ft_lstlast(*sta)->content != max_val(*sta, ft_lstsize(*sta)) && !check_sort(*sta, ft_lstsize(*sta)))
+						rrr(sta, stb);
+				}
+				else if (ft_lstlast(*sta)->content != max_val(*sta, ft_lstsize(*sta)) && (*stb)->content > med)
+				{
+					if ((*sta)->idx > (*sta)->next->idx)
+						sa(*sta, 'a');
+					if (ft_lstlast(*sta)->content != max_val(*sta, ft_lstsize(*sta)) && !check_sort(*sta, ft_lstsize(*sta)))
+						rra(sta, 'a');
+				}
+			}
+		}
+		pa(stb, sta, 'a');
+		tab = stack_to_arr(*sta);
+		fast_sort(tab, *sta);
+		get_idx(sta, tab);
+	}
+}
+
+void	finish_it(t_list **stack)
+{
+	while ((*stack)->idx + 1 != (*stack)->next->idx)
+	{
+		if ((*stack)->idx + 1 != (*stack)->next->idx)
+			sa(*stack, 'a');
+		if ((*stack)->idx + 1 != (*stack)->next->idx)
+			ra(stack, 'a');
+	}
+	while (ft_lstlast(*stack)->content != max_val(*stack, ft_lstsize(*stack)))
+	{
+		if ((*stack)->idx + 1 != (*stack)->next->idx)
+			sa(*stack, 'a');
+		rra(stack, 'a');
+	}
+	// print_stack(*stack, NULL);
+}
