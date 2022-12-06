@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 20:42:10 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 00:54:16 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/06 04:17:26 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ t_list	*ft_lstnew(long content, int idx)
 		return (NULL);
 	new->content = content;
 	new->idx = idx;
+	new->st = 0;
+	new->st_cnt = 0;
 	new->next = NULL;
 	return (new);
 }

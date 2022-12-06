@@ -1,10 +1,13 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/faksouss/Desktop/Push_Swap'
 cc -Wall -Wextra -Werror -c take_stack.c -o take_stack.o
+ 
 cc -Wall -Wextra -Werror -c swap.c -o swap.o
 cc -Wall -Wextra -Werror -c push.c -o push.o
+ 
 cc -Wall -Wextra -Werror -c rotate.c -o rotate.o
 cc -Wall -Wextra -Werror -c reverse_rotate.c -o reverse_rotate.o
+ 
 cc -Wall -Wextra -Werror -c sort_stack.c -o sort_stack.o
 cc -Wall -Wextra -Werror -c find_min_max.c -o find_min_max.o
 cc -Wall -Wextra -Werror -c stack_manupilation.c -o stack_manupilation.o

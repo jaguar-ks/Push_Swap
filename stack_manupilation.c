@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 16:17:19 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/06 04:01:54 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,12 +87,15 @@ void	stack_rev(t_list *stack)
 	free(tab);
 }
 
-void	get_idx(t_list **stack, int *tab)
+void	get_idx(t_list **stack)
 {
 	int		i;
+	int		*tab;
 	t_list	*tmp;
 
 	i = -1;
+	tab = stack_to_arr(*stack);
+	fast_sort(tab, *stack);
 	while (++i < ft_lstsize(*stack))
 	{
 		tmp = (*stack);

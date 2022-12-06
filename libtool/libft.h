@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 23:51:45 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 00:53:37 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/06 04:17:05 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct s_list
 {
 	long			content;
 	int				idx;
+	int				st;
+	int				st_cnt;
 	struct s_list	*next;
 }	t_list;
 

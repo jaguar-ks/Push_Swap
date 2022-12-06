@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 17:04:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/06 04:30:09 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,7 @@ void	do_r_op(t_list **sta, t_list **stb, int i, int j);
 void	do_rr_op(t_list **sta, t_list **stb, int i, int j);
 int	    find_next_idx(t_list *stack);
 int	    find_prev_idx(t_list *stack);
+void	mark_mode_1(t_list **stack, int cntt);
+int	    how_many_to_stay(t_list *stack);
 
 #endif
