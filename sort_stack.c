@@ -126,7 +126,6 @@ void	sort_stack(t_list **stack_a, t_list **stack_b)
 
 void	sort_more(t_list **stack_a, t_list **stack_b)
 {
-<<<<<<< HEAD
 	t_list	*ta;
 	t_list	*tb;
 
@@ -145,27 +144,4 @@ void	sort_more(t_list **stack_a, t_list **stack_b)
 		ta = ta->next;
 	}
 	send_a_to_b(stack_a, stack_b, ta->content);
-=======
-	// int	*tab;
-
-	while (ft_lstsize(*stack_a) > 2)
-		send_small(stack_a, stack_b, mid_val(*stack_a));
-	// print_stack(*stack_a, NULL);
-	sort_two(stack_a, 'a');
-	// print_stack(*stack_a, NULL);
-	while (ft_lstsize(*stack_b) > 3)
-		send_and_put_in_place(stack_a, stack_b, mid_val(*stack_b));
-	send_and_put_in_place(stack_a, stack_b, mid_val(*stack_b));
-	// send_and_put_in_place(stack_a, stack_b, mid_val(*stack_b));
-	// send_and_put_in_place(stack_a, stack_b, mid_val(*stack_b));
-	//print_stack(*stack_a, *stack_b);
-	finish_it(stack_a);
-	// send_and_put_in_place(stack_a, stack_b, mid_val(*stack_b));
-	//print_stack(*stack_a, *stack_b);
-	while (*stack_b)
-		pa(stack_b, stack_a, 'a');
-	// send_and_put_in_place(stack_a, stack_b, min_val(*stack_b));
-	//print_stack(*stack_a, *stack_b);
-	
->>>>>>> 35ffe576ba9539aa304146edf1af1a2092a5bd80
 }
