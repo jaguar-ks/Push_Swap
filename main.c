@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 22:30:33 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/07 04:47:24 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ int	main(int ac, char **av)
 	t_list	*stack_b;
 	t_list	*tmp;
 	t_list	*tmp1;
-	int		*tab;
 
 	stack_a = take_stack(ac, av);
 	stack_b = NULL;
@@ -83,9 +82,7 @@ int	main(int ac, char **av)
 	// pa(&stack_a, &stack_b, 'a');
 	// print_stack(stack_a, stack_b);
 	// send_small(&stack_a, &stack_b, mid_val(stack_a));
-	tab = stack_to_arr(stack_a);
-	fast_sort(tab, stack_a);
-	get_idx(&stack_a, tab);
+	get_idx(&stack_a);
 	// print_stack(stack_a, stack_b);
 	sort_more(&stack_a, &stack_b);
 	// print_stack(stack_a, stack_b);

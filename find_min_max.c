@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 23:08:18 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 21:43:37 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/07 06:10:22 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	min_val(t_list *stack)
 	return (min);
 }
 
-int	mid_val(t_list *stack)
+int	mid_val(t_list *stack, int size)
 {
 	int		mid;
 	int		*tab;
@@ -54,7 +54,7 @@ int	mid_val(t_list *stack)
 	dup = stack_dup(stack);
 	tab = stack_to_arr(dup);
 	fast_sort(tab, dup);
-	mid = tab[(ft_lstsize(stack) / 2) - 1];
+	mid = tab[ (size / 2) - 1];
 	return (ft_lstclear(&dup), free(tab), mid);
 }
 

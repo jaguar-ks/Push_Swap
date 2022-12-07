@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/06 05:25:21 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/07 06:43:02 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,28 +109,25 @@ void	get_idx(t_list **stack)
 
 void	send_small(t_list **stack_a, t_list **stack_b, int med)
 {
-	while (min_val(*stack_a) <= med && ft_lstsize(*stack_a))
+	while (min_val(*stack_a) < med)
 	{
-		if (check_sort(*stack_a, ft_lstsize(*stack_a)) || min_val(*stack_a) > med)
+		if ( min_val(*stack_a) >= med)
 			break ;
-		if ((ft_lstsize(*stack_b) && !check_rev_sort(*stack_b, 2)) || !check_sort(*stack_a, 2))
+		if ((*stack_a)->next->content <= med)
 			ss(*stack_a, *stack_b);
-		if (find_position(*stack_a, min_val(*stack_a)) >= find_l_s(*stack_a, med))
-		{
-			while (find_position(*stack_a, min_val(*stack_a)))
-				rra(stack_a, 'a');
-		}
-		else if (find_f_s(*stack_a, med) < ft_lstsize(*stack_a) / 2)
+		else if (find_f_s(*stack_a, med) <= ft_lstsize(*stack_a) / 3)
 		{
 			while ((*stack_a)->content > med)
 				ra(stack_a, 'a');
 		}
-		else if(find_l_s(*stack_a, med) > ft_lstsize(*stack_a) / 2)
+		else if(find_l_s(*stack_a, med) > ft_lstsize(*stack_a) / 3 && (*stack_a)->content > med)
 		{
 			while ((*stack_a)->content > med)
 				rra(stack_a, 'a');
 		}
-		pa(stack_a, stack_b, 'b');
+		if ((*stack_a)->content <= med)
+			pa(stack_a, stack_b, 'b');
+		// print_stack(*stack_a, *stack_b);
 	}
 }
 
@@ -156,72 +153,6 @@ void	send_small(t_list **stack_a, t_list **stack_b, int med)
 // 	// sleep(1);
 // }
 
-void	send_and_put_in_place(t_list **sta, t_list **stb, int med)
-{
-	int		*tab;
-
-	while (max_val(*stb, ft_lstsize(*stb)) >= med)
-	{
-		// if (max_val(*stb) < med)
- 		// 	break ;
-		tab = stack_to_arr(*sta);
-		fast_sort(tab, *sta);
-		get_idx(sta, tab);
-		if (find_f_b(*stb, med) < ft_lstsize(*stb) / 2 || (*sta)->idx != (*sta)->next->idx - 1)
-		{
-			while ((*stb)->content < med || ((*sta)->idx + 1 != (*sta)->next->idx))
-			{
-				if ((*sta)->idx + 1 == (*sta)->next->idx && (*stb)->content < med)
-					ra(stb, 'b');
-				else if ((*sta)->idx + 1 != (*sta)->next->idx && (*stb)->content < med)
-				{
-					if ((*sta)->idx + 1 != (*sta)->next->idx)
-						ss(*sta, *stb);
-					if ((*sta)->idx + 1 != (*sta)->next->idx)
-						rr(sta, stb);
-				}
-				else if ((*sta)->idx + 1 != (*sta)->next->idx && (*stb)->content >= med)
-				{
-					if ((*sta)->idx + 1 != (*sta)->next->idx)
-						sa(*sta, 'a');
-					if ((*sta)->idx + 1 != (*sta)->next->idx)
-						ra(sta, 'a');
-				}
-				// else
-				// 	break ;
-				//print_stack(*sta, *stb);
-				// ft_printf("|%d|%d|%d|%d|\n", (*stb)->content, med, (*sta)->idx, (*sta)->next->idx);
-			}
-		}
-		if (find_l_b(*stb, med) > ft_lstsize(*stb) / 2 || !check_sort(*sta, ft_lstsize(*sta)))
-		{
-			while ((*stb)->content < med || (!check_sort(*sta, ft_lstsize(*sta)) && ft_lstlast(*sta)->content == max_val(*sta, ft_lstsize(*sta))))
-			{
-				if (ft_lstlast(*sta)->content == max_val(*sta, ft_lstsize(*sta)) && (check_sort(*sta, ft_lstsize(*sta)) && (*stb)->content < med))
-					rra(stb, 'b');
-				else if (ft_lstlast(*sta)->content != max_val(*sta, ft_lstsize(*sta)) && (!check_sort(*sta, ft_lstsize(*sta)) && (*stb)->content < med))
-				{
-					if ((*sta)->idx > (*sta)->next->idx)
-						ss(*sta, *stb);
-					if (ft_lstlast(*sta)->content != max_val(*sta, ft_lstsize(*sta)) && !check_sort(*sta, ft_lstsize(*sta)))
-						rrr(sta, stb);
-				}
-				else if (ft_lstlast(*sta)->content != max_val(*sta, ft_lstsize(*sta)) && (*stb)->content > med)
-				{
-					if ((*sta)->idx > (*sta)->next->idx)
-						sa(*sta, 'a');
-					if (ft_lstlast(*sta)->content != max_val(*sta, ft_lstsize(*sta)) && !check_sort(*sta, ft_lstsize(*sta)))
-						rra(sta, 'a');
-				}
-			}
-		}
-		pa(stb, sta, 'a');
-		tab = stack_to_arr(*sta);
-		fast_sort(tab, *sta);
-		get_idx(sta, tab);
-	}
-}
-
 void	finish_it(t_list **stack)
 {
 	while ((*stack)->idx + 1 != (*stack)->next->idx)
@@ -238,4 +169,91 @@ void	finish_it(t_list **stack)
 		rra(stack, 'a');
 	}
 	// print_stack(*stack, NULL);
+}
+
+void	execut_r(int ma, int mb, t_list **sta, t_list **stb)
+{
+	while (ma && mb)
+	{
+		rr(sta, stb);
+		mb--;
+		ma = ((*sta)->idx + 1 != (*sta)->next->idx);
+	}
+	if (ma && !mb)
+	{
+		while (((*sta)->idx + 1 != (*sta)->next->idx))
+		{
+			ra(sta, 'a');
+			print_stack(*sta, *stb);
+		}
+	}
+	else if (!ma && mb)
+	{
+		while (mb)
+		{
+			ra(stb, 'b');
+			mb--;
+		}
+	}
+}
+
+void	execut_rr(int ma, int mb, t_list **sta, t_list **stb)
+{
+	while (ma && (mb < ft_lstsize(*stb)))
+	{
+		rrr(sta, stb);
+		mb++;
+		if (ft_lstlast(*sta)->idx + 1 == (*sta)->idx)
+			ma = 1;
+		else
+			ma = 0;
+	}
+	if (ma && (mb >= ft_lstsize(*stb)))
+	{
+		while (ma)
+		{
+			rra(sta, 'a');
+			if (ft_lstlast(*sta)->idx + 1 == (*sta)->idx)
+				ma = 1;
+			else
+				ma = 0;
+		}
+	}
+	else if (!ma && (mb < ft_lstsize(*stb)))
+	{
+		while ((mb < ft_lstsize(*stb)))
+		{
+			rra(stb, 'b');
+			mb++;
+		}
+	}
+}
+
+void	send_back_align(t_list **sta, t_list **stb)
+{
+	int	med;
+
+	while (ft_lstsize(*stb) > 3)
+	{
+		med = mid_val(*stb, ft_lstsize(*stb));
+		if ((*sta)->idx - 1 == (*sta)->next->idx && (*stb)->next->content >= med)
+			ss(*sta, *stb);
+		if ((*sta)->idx + 1 != (*sta)->next->idx || find_f_b(*stb, med) <= ft_lstsize(*stb) / 2)
+		{
+			while ((*sta)->idx + 1 != (*sta)->next->idx)
+				rr(sta, stb);
+			while ((*stb)->content < med)
+				ra(stb, 'b');
+		}
+		if (ft_lstlast(*sta)->idx + 1 == (*sta)->idx)
+		{
+			while (ft_lstlast(*sta)->idx + 1 == (*sta)->idx && find_l_b(*stb, med) > ft_lstsize(*stb) / 2)
+				rrr(sta, stb);
+			while (ft_lstlast(*sta)->idx + 1 == (*sta)->idx)
+				rra(sta, 'a');
+		}
+		if ((*stb)->content >= med)
+			pa(stb, sta, 'a');
+		// sleep(1);
+	}
 }

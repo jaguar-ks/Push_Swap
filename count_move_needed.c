@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 02:31:15 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/06 05:17:59 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/07 00:22:15 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	mark_mode_1(t_list **stack, int cntt)
 			tmp = tmp->next;
 	}
 	tmp = tmp->next;
-	while (tmp && tmp->content != cntt)
+	while (tmp)
 	{
 		if (cntt > tmp->content && tmp->content < tmp->next->content)
 			tmp->st = 1;
@@ -59,6 +59,24 @@ void	mark_mode_1(t_list **stack, int cntt)
 			tmp->st = 0;
 		if (!tmp->next)
 			tmp = (*stack);
+		tmp = tmp->next;
+	}
+}
+
+void	mark_by_idx(t_list **stack)
+{
+	t_list	*tmp;
+	int		idx;
+
+	tmp = (*stack);
+	idx = tmp->idx;
+	while (tmp->next)
+	{
+		if (tmp->idx == idx + 1)
+		{
+			tmp->st = 1;
+			idx++;
+		}
 		tmp = tmp->next;
 	}
 }
@@ -111,13 +129,14 @@ int	push_or_not(t_list *stk)
 
 void	send_a_to_b(t_list **sta, t_list **stb, int cntt)
 {
-	mark_mode_1(sta, cntt);
+	(void)cntt;
+	mark_by_idx(sta);
 	while (push_or_not(*sta))
 	{
 		if (!(*sta)->st)
 			pa(sta, stb, 'b');
 		else
 			ra(sta, 'a');
-		mark_mode_1(sta, cntt);
+		mark_by_idx(sta);
 	}
 }

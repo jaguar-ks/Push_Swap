@@ -6,11 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/12/06 05:18:05 by faksouss         ###   ########.fr       */
-=======
-/*   Updated: 2022/12/03 22:30:20 by faksouss         ###   ########.fr       */
->>>>>>> 35ffe576ba9539aa304146edf1af1a2092a5bd80
+/*   Updated: 2022/12/07 06:34:52 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +67,7 @@ void	sort_three(t_list **stack, char c)
 		ra(stack, c);
 	else if (tmp->next->content == max)
 		rra(stack, c);
-	if (tmp->next->next->content == max)
+	if (ft_lstlast(tmp)->content == max)
 	{
 		sort_two(stack, c);
 		return ;
@@ -99,7 +95,7 @@ void	rev_sort_three(t_list **stack, char c)
 
 void	sort_4_to_6(t_list **sa, t_list **sb)
 {
-	send_small(sa, sb, mid_val(*sa));
+	send_small(sa, sb, mid_val(*sa, ft_lstsize(*sa)));
 	if (ft_lstsize(*sa) == 2)
 		sort_two(sa, 'a');
 	else if (ft_lstsize(*sa) == 3)
@@ -124,24 +120,13 @@ void	sort_stack(t_list **stack_a, t_list **stack_b)
 		sort_4_to_6(stack_a, stack_b);
 }
 
-void	sort_more(t_list **stack_a, t_list **stack_b)
+void	sort_more(t_list **sta, t_list **stb)
 {
-	t_list	*ta;
-	t_list	*tb;
-
-	ta = (*stack_a);
-	while (ta)
-	{
-		mark_mode_1(stack_a, ta->content);
-		ta->st_cnt = how_many_to_stay((*stack_a));
-		ta = ta->next;
-	}
-	ta = (*stack_a);
-	while (ta)
-	{
-		if (ta->st_cnt == best_to_stay(*stack_a))
-			break ;
-		ta = ta->next;
-	}
-	send_a_to_b(stack_a, stack_b, ta->content);
+	while (ft_lstsize(*sta) > 3)
+		send_small(sta, stb, mid_val(*sta, ft_lstsize(*sta)));
+	sort_three(sta, 'a');
+	send_back_align(sta, stb);
+	rev_sort_three(stb, 'b');
+	while (*stb)
+		pa(stb, sta, 'a');
 }

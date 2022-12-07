@@ -6,11 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2022/12/06 04:30:09 by faksouss         ###   ########.fr       */
-=======
-/*   Updated: 2022/12/03 21:41:51 by faksouss         ###   ########.fr       */
->>>>>>> 35ffe576ba9539aa304146edf1af1a2092a5bd80
+/*   Updated: 2022/12/07 06:10:34 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +29,11 @@ int	    check_rev_sort(t_list *stack, int size_tocheck);
 void	print_stack(t_list *sa, t_list *sb);
 int		max_val(t_list *stack, int size);
 int		min_val(t_list *stack);
-int		mid_val(t_list *stack);
+int		mid_val(t_list *stack, int size);
 int		find_position(t_list *stack, int elm);
 int		*stack_to_arr(t_list *stack);
 void	fast_sort(int *tab, t_list *stack);
-void	get_idx(t_list **stack, int *tab);
+void	get_idx(t_list **stack);
 t_list	*stack_dup(t_list *src);
 void	stack_rev(t_list *stack);
 int	    find_f_s(t_list *stack, int to_cmp);
@@ -55,6 +51,10 @@ void	do_rr_op(t_list **sta, t_list **stb, int i, int j);
 int	    find_next_idx(t_list *stack);
 int	    find_prev_idx(t_list *stack);
 void	mark_mode_1(t_list **stack, int cntt);
+void	mark_by_idx(t_list **stack);
 int	    how_many_to_stay(t_list *stack);
+int 	best_to_stay(t_list *stack);
+void	send_a_to_b(t_list **sta, t_list **stb, int cntt);
+void	send_back_align(t_list **sta, t_list **stb);
 
 #endif
