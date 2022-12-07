@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/07 06:10:34 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/07 21:08:26 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		find_position(t_list *stack, int elm);
 int		*stack_to_arr(t_list *stack);
 void	fast_sort(int *tab, t_list *stack);
 void	get_idx(t_list **stack);
-t_list	*stack_dup(t_list *src);
+t_list	*stack_dup(t_list *src, int size);
 void	stack_rev(t_list *stack);
 int	    find_f_s(t_list *stack, int to_cmp);
 int	    find_l_s(t_list *stack, int to_cmp);

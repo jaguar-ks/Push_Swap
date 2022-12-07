@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/07 06:43:02 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/07 21:11:25 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,17 @@ void	fast_sort(int *tab, t_list *stack)
 	}
 }
 
-t_list	*stack_dup(t_list *src)
+t_list	*stack_dup(t_list *src, int size)
 {
 	t_list	*tmp;
 	t_list	*new;
 	t_list	*dst;
+	int		i;
 
 	tmp = src;
 	dst = NULL;
-	while (tmp)
+	i = -1;
+	while (tmp && ++i < size)
 	{
 		new = ft_lstnew(tmp->content, tmp->idx);
 		ft_lstadd_back(&dst, new);
@@ -182,10 +184,7 @@ void	execut_r(int ma, int mb, t_list **sta, t_list **stb)
 	if (ma && !mb)
 	{
 		while (((*sta)->idx + 1 != (*sta)->next->idx))
-		{
 			ra(sta, 'a');
-			print_stack(*sta, *stb);
-		}
 	}
 	else if (!ma && mb)
 	{
@@ -199,24 +198,39 @@ void	execut_r(int ma, int mb, t_list **sta, t_list **stb)
 
 void	execut_rr(int ma, int mb, t_list **sta, t_list **stb)
 {
+	int idx = (*sta)->idx;
 	while (ma && (mb < ft_lstsize(*stb)))
 	{
 		rrr(sta, stb);
 		mb++;
-		if (ft_lstlast(*sta)->idx + 1 == (*sta)->idx)
-			ma = 1;
-		else
+		if ((*sta)->idx == idx - 1)
+		{
+			while ((*sta)->idx + 1 != (*sta)->next->idx)
+			{
+				sa(*sta, 'a');
+				ra(sta, 'a');
+				if ((*sta)->idx + 1 == (*sta)->next->idx)
+					break ;
+			}
 			ma = 0;
+		}
 	}
 	if (ma && (mb >= ft_lstsize(*stb)))
 	{
 		while (ma)
 		{
 			rra(sta, 'a');
-			if (ft_lstlast(*sta)->idx + 1 == (*sta)->idx)
-				ma = 1;
-			else
+			if ((*sta)->idx == idx - 1)
+			{
+				while ((*sta)->idx + 1 != (*sta)->next->idx)
+				{
+					sa(*sta, 'a');
+					ra(sta, 'a');
+					if ((*sta)->idx + 1 == (*sta)->next->idx)
+						break ;
+				}
 				ma = 0;
+			}
 		}
 	}
 	else if (!ma && (mb < ft_lstsize(*stb)))
@@ -235,23 +249,13 @@ void	send_back_align(t_list **sta, t_list **stb)
 
 	while (ft_lstsize(*stb) > 3)
 	{
-		med = mid_val(*stb, ft_lstsize(*stb));
+		med = mid_val(*stb, ft_lstsize(*stb) / 2);
 		if ((*sta)->idx - 1 == (*sta)->next->idx && (*stb)->next->content >= med)
 			ss(*sta, *stb);
-		if ((*sta)->idx + 1 != (*sta)->next->idx || find_f_b(*stb, med) <= ft_lstsize(*stb) / 2)
-		{
-			while ((*sta)->idx + 1 != (*sta)->next->idx)
-				rr(sta, stb);
-			while ((*stb)->content < med)
-				ra(stb, 'b');
-		}
-		if (ft_lstlast(*sta)->idx + 1 == (*sta)->idx)
-		{
-			while (ft_lstlast(*sta)->idx + 1 == (*sta)->idx && find_l_b(*stb, med) > ft_lstsize(*stb) / 2)
-				rrr(sta, stb);
-			while (ft_lstlast(*sta)->idx + 1 == (*sta)->idx)
-				rra(sta, 'a');
-		}
+		if ((*sta)->idx + 1 != (*sta)->next->idx || find_l_b(*stb, med) > ft_lstsize(*stb) / 3)
+			execut_rr(((*sta)->idx + 1 != (*sta)->next->idx), find_l_b(*stb, med), sta, stb);
+		else if ((*sta)->idx + 1 != (*sta)->next->idx || find_f_b(*stb, med) <= ft_lstsize(*stb) / 3)
+			execut_r(((*sta)->idx + 1 != (*sta)->next->idx), find_f_b(*stb, med), sta, stb);
 		if ((*stb)->content >= med)
 			pa(stb, sta, 'a');
 		// sleep(1);
