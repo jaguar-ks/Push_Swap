@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 09:58:31 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 11:00:14 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,8 @@ void	reset_marks(t_list **st);
 void	mark_by_val(t_list **sta, t_list *m_h);
 void	mark_by_idx(t_list **sta, t_list *m_h);
 int		count_to_stay(t_list *st);
+t_list	*max_possible_to_st(t_list **st);
+t_list	*best_to_st(t_list **st);
+void	find_best_mark(t_list **st, void (*f)(t_list **, t_list *));
 
 #endif

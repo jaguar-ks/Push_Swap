@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 09:50:36 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/08 09:59:51 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 10:25:09 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	mark_by_idx(t_list **sta, t_list *m_h)
 	{
 		if (tmp->st)
 			break ;
-		tmp->st = (idx < tmp->idx);
+		tmp->st = (idx + 1 == tmp->idx);
 		if (tmp->st)
 			idx = tmp->idx;
 		if (tmp == ft_lstlast(*sta))

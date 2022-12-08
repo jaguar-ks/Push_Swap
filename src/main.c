@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 09:57:56 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 10:45:28 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,7 @@ int	main(int ac, char **av)
 		exit(1);
 	}
 	get_idx(&stack_a);
-	t_list	*ta = stack_a;
-	while (ta)
-	{
-		mark_by_idx(&stack_a, ta);
-		ta->st_cnt = count_to_stay(stack_a);
-		printf("|[%d] elements gonna stay in stack A|\n", ta->st_cnt);
-		ta = ta->next;
-	}
+	find_best_mark(&stack_a, &mark_by_val);
 	// sort_small(&stack_a, &stack_b);
 	print_stack(stack_a, stack_b);
 	// if (check_sort(stack_a, ft_lstsize(stack_a)))
