@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 05:29:12 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 05:45:37 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,9 @@ void	get_idx(t_list **stack)
 
 void	send_small(t_list **stack_a, t_list **stack_b, int med)
 {
-	while (min_val(*stack_a) < med)
+	while (min_val(*stack_a) <= med)
 	{
-		if ( min_val(*stack_a) >= med)
+		if ( min_val(*stack_a) > med)
 			break ;
 		if ((*stack_a)->next->content <= med)
 			ss(*stack_a, *stack_b);
@@ -110,8 +110,7 @@ void	send_small(t_list **stack_a, t_list **stack_b, int med)
 			while ((*stack_a)->content > med)
 				rra(stack_a, 'a');
 		}
-		if ((*stack_a)->content <= med)
-			pa(stack_a, stack_b, 'b');
+		pa(stack_a, stack_b, 'b');
 		// print_stack(*stack_a, *stack_b);
 	}
 }
