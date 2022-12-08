@@ -1,16 +1,19 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/faksouss/Desktop/Push_Swap'
-cc -g -Wall -Wextra -Werror -c take_stack.c -o take_stack.o
-cc -g -Wall -Wextra -Werror -c swap.c -o swap.o
-cc -g -Wall -Wextra -Werror -c push.c -o push.o
-cc -g -Wall -Wextra -Werror -c rotate.c -o rotate.o
-cc -g -Wall -Wextra -Werror -c reverse_rotate.c -o reverse_rotate.o
-cc -g -Wall -Wextra -Werror -c sort_stack.c -o sort_stack.o
-cc -g -Wall -Wextra -Werror -c find_min_max.c -o find_min_max.o
-cc -g -Wall -Wextra -Werror -c stack_manupilation.c -o stack_manupilation.o
-cc -g -Wall -Wextra -Werror -c count_move_needed.c -o count_move_needed.o
-cc -g -Wall -Wextra -Werror -c main.c -o main.o
-cd libtool; make ; cd ..;
-cc -Wall -Wextra -Werror take_stack.o swap.o push.o rotate.o reverse_rotate.o sort_stack.o find_min_max.o stack_manupilation.o count_move_needed.o main.o libtool/libft.a -o push_swap
-make: Leaving directory `/Users/faksouss/Desktop/Push_Swap'
+make: Entering directory '/home/deman_wolf/Desktop/Push_Swap'
+cc -g -Wall -Wextra -Werror -c src/take_stack.c -o src/take_stack.o
+cc -g -Wall -Wextra -Werror -c src/checks.c -o src/checks.o
+cc -g -Wall -Wextra -Werror -c src/swap.c -o src/swap.o
+cc -g -Wall -Wextra -Werror -c src/push.c -o src/push.o
+cc -g -Wall -Wextra -Werror -c src/rotate.c -o src/rotate.o
+cc -g -Wall -Wextra -Werror -c src/reverse_rotate.c -o src/reverse_rotate.o
+cc -g -Wall -Wextra -Werror -c src/sort_small.c -o src/sort_small.o
+cc -g -Wall -Wextra -Werror -c src/sort.c -o src/sort.o
+cc -g -Wall -Wextra -Werror -c src/find_val.c -o src/find_val.o
+cc -g -Wall -Wextra -Werror -c src/find_idx.c -o src/find_idx.o
+cc -g -Wall -Wextra -Werror -c src/find_position.c -o src/find_position.o
+cc -g -Wall -Wextra -Werror -c src/stack_manupilation.c -o src/stack_manupilation.o
+cc -g -Wall -Wextra -Werror -c src/main.c -o src/main.o
+make -C ./libtool
+cc -Wall -Wextra -Werror src/take_stack.o src/checks.o src/swap.o src/push.o src/rotate.o src/reverse_rotate.o src/sort_small.o src/sort.o src/find_val.o src/find_idx.o src/find_position.o src/stack_manupilation.o src/main.o ./libtool/libft.a -o push_swap
+make: Leaving directory '/home/deman_wolf/Desktop/Push_Swap'
  

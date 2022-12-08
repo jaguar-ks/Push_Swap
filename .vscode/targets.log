@@ -1,160 +1,241 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 3.81
-# Copyright (C) 2006  Free Software Foundation, Inc.
-# This is free software; see the source for copying conditions.
-# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
-# PARTICULAR PURPOSE.
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
 
-# This program built for i386-apple-darwin11.3.0
-
-# Make data base, printed on Wed Dec  7 20:38:44 2022
+# Make data base, printed on Thu Dec  8 07:37:38 2022
 
 # Variables
 
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# automatic
-?F = $(notdir $?)
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
-# makefile (from `Makefile', line 37)
-makelib = libtool/libft.a
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# environment
+VSCODE_CWD = /home/deman_wolf
+# environment
+WINDOWPATH = 2
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+GDM_LANG = en_US.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
-# automatic
-@F = $(notdir $@)
-# makefile
-CURDIR := /Users/faksouss/Desktop/Push_Swap
-# makefile
-SHELL = /bin/sh
-# makefile (from `Makefile', line 35)
-RM = rm -f
-# environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
-# environment
-_ = /usr/bin/make
-# makefile (from `Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 29)
-OBJS_MD = ${SRCS_MD:.c=.o}
-# environment
-VSCODE_CWD = /
-# environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.qWYVEVA7wF/Render
-# environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands
-# environment
-LSCOLORS = Gxfxcxdxbxegedabagacad
-# environment
-ELECTRON_RUN_AS_NODE = 1
-# default
-.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
-# environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.i226R0AhGC/Listeners
-# automatic
-%F = $(notdir $%)
-# environment
-PWD = /Users/faksouss/Desktop/Push_Swap
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = undefined
-# environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
-# environment
-HOME = /Users/faksouss
-# default
-MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
-# environment
-VSCODE_CODE_CACHE_PATH = /Users/faksouss/Library/Application Support/Code/CachedData/64bbfbf67ada9953918d72e1df2f4d8e537d340e
-# environment
-LOGNAME = faksouss
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# environment
-ZSH = /Users/faksouss/.oh-my-zsh
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# automatic
-^D = $(patsubst %/,%,$(dir $^))
-# environment
-XPC_FLAGS = 0x0
-# default
-MAKE = $(MAKE_COMMAND)
-# default
-MAKECMDGOALS := all
-# environment
-SHLVL = 1
-# makefile (from `Makefile', line 27)
-CC = cc
-# default
-MAKE_VERSION := 3.81
-# environment
-USER = faksouss
-# makefile
-.DEFAULT_GOAL := all
-# makefile (from `Makefile', line 33)
-NAME = push_swap
-# environment
-LESS = -R
-# automatic
-%D = $(patsubst %/,%,$(dir $%))
-# default
-MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
 # environment
-TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cfvw0033pz/T/
+PWD = /home/deman_wolf/Desktop/Push_Swap
 # automatic
-*F = $(notdir $*)
+%D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_IPC_HOOK = /Users/faksouss/Library/Application Support/Code/1.72.0-main.sock
+XDG_DATA_DIRS = /usr/share/gnome:/home/deman_wolf/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
 # environment
-MallocNanoZone = 0
-# makefile
-MAKEFLAGS = Rrqp
-# environment
-MFLAGS = -Rrqp
+OLDPWD = /home/deman_wolf
 # automatic
-*D = $(patsubst %/,%,$(dir $*))
-# environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
+^D = $(patsubst %/,%,$(dir $^))
 # automatic
-+D = $(patsubst %/,%,$(dir $+))
-# automatic
-+F = $(notdir $+)
-# makefile (from `Makefile', line 14)
-SRCS_MD = take_stack.c swap.c push.c rotate.c reverse_rotate.c sort_stack.c find_min_max.c stack_manupilation.c count_move_needed.c main.c 
+%F = $(notdir $%)
 # environment
-__CF_USER_TEXT_ENCODING = 0x18EDF:0x0:0x0
-# environment
-COMMAND_MODE = unix2003
-# default
-MAKEFILES := 
-# automatic
-<F = $(notdir $<)
-# environment
-PAGER = less
-# environment
-LC_ALL = C
-# makefile (from `Makefile', line 31)
-HEADER = push_swap.h
-# environment
-SECURITYSESSIONID = 186a8
-# automatic
-^F = $(notdir $^)
-# default
-SUFFIXES := 
-# makefile (from `Makefile', line 25)
-FLAGS = -Wall -Wextra -Werror
-# default
-.INCLUDE_DIRS = /usr/local/include
-# environment
-MAKELEVEL := 0
+VSCODE_CODE_CACHE_PATH = /home/deman_wolf/.config/Code/CachedData/5235c6bb189b60b01b1f49062f4ffa42384f8c91
+# makefile (from 'Makefile', line 14)
+SRCS_MD = src/take_stack.c src/checks.c src/swap.c src/push.c src/rotate.c src/reverse_rotate.c src/sort_small.c src/sort.c src/find_val.c src/find_idx.c src/find_position.c src/stack_manupilation.c src/main.c 
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1360
+POWERSHELL_UPDATECHECK = Off
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# default
+.LOADED := 
+# environment
+LESS_TERMCAP_md = [1;36m
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+LESS_TERMCAP_so = [01;33m
+# makefile
+CURDIR := /home/deman_wolf/Desktop/Push_Swap
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# makefile (from 'Makefile', line 32)
+OBJS_MD = ${SRCS_MD:.c=.o}
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = gnome
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 22200
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 28)
+FLAGS = -Wall -Wextra -Werror
+# environment
+SESSION_MANAGER = local/jaguar:@/tmp/.ICE-unix/1548,unix/jaguar:/tmp/.ICE-unix/1548
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# environment
+LESS_TERMCAP_us = [1;32m
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/deman_wolf/.dotnet/tools
+# environment
+LESS_TERMCAP_se = [0m
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_US:en
+# automatic
+^F = $(notdir $^)
+# environment
+COMMAND_NOT_FOUND_INSTALL_PROMPT = 1
+# makefile (from 'Makefile', line 34)
+HEADER = inc/push_swap.h
+# environment
+LESS_TERMCAP_mb = [1;31m
+# environment
+INVOCATION_ID = f8b7c8fd9f7f4eb2ad142eb558fac148
+# environment
+USERNAME = deman_wolf
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 36)
+NAME = push_swap
+# environment
+XDG_CURRENT_DESKTOP = GNOME
+# environment
+LS_COLORS = :ow=30;44:
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = gnome
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = deman_wolf
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 1574
+# makefile (from 'Makefile', line 38)
+RM = rm -f
+# environment
+DISPLAY = :1
+# environment
+USER = deman_wolf
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+MANAGERPID = 1339
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 22200
+# environment
+SSH_AGENT_PID = 1504
+# environment
+_ = /usr/share/code/code
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+POWERSHELL_TELEMETRY_OPTOUT = 1
+# environment
+JOURNAL_STREAM = 8:23233
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/deman_wolf
+# environment
+QT_IM_MODULE = ibus
+# environment
+_JAVA_OPTIONS = -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-518d13f2-1.74.0-main.sock
+# environment
+DOTNET_CLI_TELEMETRY_OPTOUT = 1
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 30)
+CC = cc
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+GDMSESSION = gnome
 # variable set hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=1/107=1%
+# Load=112/1024=11%, Rehash=0, Collisions=11/153=7%
 
 # Pattern-specific Variable Values
 
@@ -162,92 +243,88 @@ VSCODE_PID = 1360
 
 # Directories
 
-# . (device 16777227, inode 1429682): 24 files, no impossibilities.
+# inc (device 66311, inode 1338591): 1 files, no impossibilities so far.
+# src (device 66311, inode 1196510): 2 files, no impossibilities so far.
+# . (device 66311, inode 2387393): 13 files, no impossibilities.
 
-# 24 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
-%.o: %.c push_swap.h
-#  commands to execute (from `Makefile', line 45):
+%.o: %.c inc/push_swap.h
+#  recipe to execute (from 'Makefile', line 47):
 	${CC} -g ${FLAGS} -c $< -o $@
-	
 
 # 1 implicit rules, 0 (0.0%) terminal.
-
 # Files
 
 # Not a target:
-reverse_rotate.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-all: push_swap
-#  Phony target (prerequisite of .PHONY).
-#  Command-line target.
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-
-.PHONY: all clean fclean re
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-take_stack.o: take_stack.c push_swap.h
+inc/push_swap.h:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: `take_stack'
+#  Last modified 2022-12-08 06:27:40.928537374
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/find_val.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/stack_manupilation.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+ 
+src/sort.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/take_stack.o: src/take_stack.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/take_stack'
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
-# @ := take_stack.o
+# @ := src/take_stack.o
+# automatic
+# * := src/take_stack
+# automatic
+# < := src/take_stack.c
+# automatic
+# + := src/take_stack.c inc/push_swap.h
 # automatic
 # % := 
 # automatic
-# * := take_stack
+# ^ := src/take_stack.c inc/push_swap.h
 # automatic
-# + := take_stack.c push_swap.h
+# ? := src/take_stack.c inc/push_swap.h
 # automatic
 # | := 
-# automatic
-# < := take_stack.c
-# automatic
-# ^ := take_stack.c push_swap.h
-# automatic
-# ? := take_stack.c push_swap.h
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  commands to execute (from `Makefile', line 45):
+# Load=8/32=25%, Rehash=0, Collisions=2/15=13%
+#  recipe to execute (from 'Makefile', line 47):
 	${CC} -g ${FLAGS} -c $< -o $@
-	
 
 # Not a target:
-rotate.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-libtool/libft.a:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 48):
-	cd libtool; make ; cd ..;
-	
-
-# Not a target:
-.SUFFIXES:
+src/push.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-push.o:
+src/find_position.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/swap.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -255,60 +332,19 @@ push.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-12-06 05:21:22
+#  Last modified 2022-12-08 06:35:00.536549784
 #  File has been updated.
 #  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-push_swap.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-07 06:10:34
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-stack_manupilation.o:
+src/rotate.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-fclean: clean
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 54):
-	${RM} ${NAME} libtool/*.a
-	
-
-.SILENT: libtool/libft.a clean fclean
+.SILENT: push_swap clean fclean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-take_stack.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-03 00:59:40
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-.DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-re: fclean all
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
 #  File has not been updated.
 
 clean:
@@ -316,65 +352,106 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 51):
+#  recipe to execute (from 'Makefile', line 50):
 	${RM} ${OBJS_MD} libtool/*.o
-	
 
-push_swap: take_stack.o swap.o push.o rotate.o reverse_rotate.o sort_stack.o find_min_max.o stack_manupilation.o count_move_needed.o main.o libtool/libft.a
- 
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Last modified 2022-12-07 06:43:05
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+src/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: push_swap
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  commands to execute (from `Makefile', line 42):
-	${CC} ${FLAGS} $^ -o $@
-	
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 53):
+	${RM} ${NAME} libtool/*.a
+
+push_swap: src/take_stack.o src/checks.o src/swap.o src/push.o src/rotate.o src/reverse_rotate.o src/sort_small.o src/sort.o src/find_val.o src/find_idx.o src/find_position.o src/stack_manupilation.o src/main.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-12-08 06:38:26.336555593
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'Makefile', line 43):
+	make -C ./libtool
+	${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
 
 # Not a target:
-find_min_max.o:
+src/checks.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-count_move_needed.o:
+src/find_idx.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-swap.o:
+src/take_stack.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/sort_small.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-main.o:
+src/reverse_rotate.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-sort_stack.o:
+.PHONY: all clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=23/1024=2%, Rehash=0, Collisions=3/63=5%
+# Load=25/1024=2%, Rehash=0, Collisions=1/66=2%
 # VPATH Search Paths
 
-# No `vpath' search paths.
+# No 'vpath' search paths.
 
-# No general (`VPATH' variable) search path.
+# No general ('VPATH' variable) search path.
 
-# # of strings in strcache: 1
-# # of strcache buffers: 1
-# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
-# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+# strcache buffers: 1 (0) / strings = 44 / storage = 472 B / avg = 10 B
+# current buf: size = 8162 B / used = 472 B / count = 44 / avg = 10 B
 
-# Finished Make data base on Wed Dec  7 20:38:44 2022
+# strcache performance: lookups = 73 / hit rate = 39%
+# hash-table stats:
+# Load=44/8192=1%, Rehash=0, Collisions=0/73=0%
+# Finished Make data base on Thu Dec  8 07:37:38 2022
 
  
