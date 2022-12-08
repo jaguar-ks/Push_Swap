@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 00:58:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 05:45:37 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 05:50:33 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	send_small(t_list **stack_a, t_list **stack_b, int med)
 {
 	while (min_val(*stack_a) <= med)
 	{
-		if ( min_val(*stack_a) > med)
+		if (min_val(*stack_a) > med)
 			break ;
 		if ((*stack_a)->next->content <= med)
 			ss(*stack_a, *stack_b);
@@ -105,12 +105,12 @@ void	send_small(t_list **stack_a, t_list **stack_b, int med)
 			while ((*stack_a)->content > med)
 				ra(stack_a, 'a');
 		}
-		else if(find_l_s(*stack_a, med) > ft_lstsize(*stack_a) / 2 && (*stack_a)->content > med)
+		else if (find_l_s(*stack_a, med) > ft_lstsize(*stack_a) / 2
+			&& (*stack_a)->content > med)
 		{
 			while ((*stack_a)->content > med)
 				rra(stack_a, 'a');
 		}
 		pa(stack_a, stack_b, 'b');
-		// print_stack(*stack_a, *stack_b);
 	}
 }

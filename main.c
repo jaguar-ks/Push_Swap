@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 05:42:31 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 06:00:01 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ int	main(int ac, char **av)
 	// send_small(&stack_a, &stack_b, mid_val(stack_a));
 	get_idx(&stack_a);
 	// print_stack(stack_a, stack_b);
-	sort_stack(&stack_a, &stack_b);
+	sort_small(&stack_a, &stack_b);
 	// print_stack(stack_a, stack_b);
 	// // ft_printf("~~ Sorting with the FORBIDEN method: ~~\n");
 	// // stack_fast_sort(stack_a);

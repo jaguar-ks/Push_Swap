@@ -6,18 +6,22 @@
 #    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/08 05:35:18 by deman_wolf       ###   ########.fr        #
+#    Updated: 2022/12/08 06:14:17 by deman_wolf       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 SRCS_MD = take_stack.c\
+				checks.c\
  				swap.c\
 				push.c\
 				rotate.c\
 				reverse_rotate.c\
-				sort_stack.c\
-				find_min_max.c\
+				sort_small.c\
+				sort.c\
+				find_val.c\
+				find_idx.c\
+				find_position.c\
 				stack_manupilation.c\
 				main.c\
 

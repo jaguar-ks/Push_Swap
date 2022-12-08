@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/27 21:44:00 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 05:48:57 by deman_wolf       ###   ########.fr       */
+/*   Created: 2022/12/08 06:06:21 by deman_wolf        #+#    #+#             */
+/*   Updated: 2022/12/08 06:06:50 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"push_swap.h"
 
-void	pa(t_list **sa, t_list **sb, char c)
+void	sort_small(t_list **stack_a, t_list **stack_b)
 {
-	t_list	*tmp;
-
-	tmp = *sa;
-	ft_lstadd_front(sb, ft_lstnew((*sa)->content, (*sa)->idx));
-	*sa = (*sa)->next;
-	ft_lstdelone(tmp);
-	ft_printf("p%c\n", c);
+	if (check_sort(*stack_a, ft_lstsize(*stack_a)))
+		return ;
+	if (ft_lstsize(*stack_a) == 2)
+		sort_two(stack_a, 'a');
+	else if (ft_lstsize(*stack_a) == 3)
+		sort_three(stack_a, 'a');
+	else if (ft_lstsize(*stack_a) >= 4 && ft_lstsize(*stack_a) < 7)
+		sort_4_to_6(stack_a, stack_b);
 }
