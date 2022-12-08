@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/07 21:13:27 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/08 05:33:35 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	sort_three(t_list **stack, char c)
 	t_list	*tmp;
 
 	tmp = *stack;
-	max = max_val(*stack, 3);
+	max = max_val(*stack);
 	if (tmp->content == max)
 		ra(stack, c);
 	else if (tmp->next->content == max)
@@ -95,7 +95,7 @@ void	rev_sort_three(t_list **stack, char c)
 
 void	sort_4_to_6(t_list **sa, t_list **sb)
 {
-	send_small(sa, sb, mid_val(*sa, ft_lstsize(*sa)));
+	send_small(sa, sb, mid_val(*sa));
 	if (ft_lstsize(*sa) == 2)
 		sort_two(sa, 'a');
 	else if (ft_lstsize(*sa) == 3)
@@ -118,15 +118,4 @@ void	sort_stack(t_list **stack_a, t_list **stack_b)
 		sort_three(stack_a, 'a');
 	else if (ft_lstsize(*stack_a) >= 4 && ft_lstsize(*stack_a) < 7)
 		sort_4_to_6(stack_a, stack_b);
-}
-
-void	sort_more(t_list **sta, t_list **stb)
-{
-	while (ft_lstsize(*sta) > 3)
-		send_small(sta, stb, mid_val(*sta, ft_lstsize(*sta) / 5));
-	sort_three(sta, 'a');
-	send_back_align(sta, stb);
-	rev_sort_three(stb, 'b');
-	while (*stb)
-		pa(stb, sta, 'a');
 }

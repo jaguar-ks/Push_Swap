@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/07 04:47:24 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/08 05:38:18 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,9 @@ int	main(int ac, char **av)
 {
 	t_list	*stack_a;
 	t_list	*stack_b;
-	t_list	*tmp;
-	t_list	*tmp1;
 
 	stack_a = take_stack(ac, av);
 	stack_b = NULL;
-	tmp = stack_a;
-	tmp1 = stack_b;
 	if (!stack_a || ac < 2)
 	{
 		ft_putstr_fd("Error\n", 2);
@@ -84,15 +80,15 @@ int	main(int ac, char **av)
 	// send_small(&stack_a, &stack_b, mid_val(stack_a));
 	get_idx(&stack_a);
 	// print_stack(stack_a, stack_b);
-	sort_more(&stack_a, &stack_b);
+	sort_stack(&stack_a, &stack_b);
 	// print_stack(stack_a, stack_b);
 	// // ft_printf("~~ Sorting with the FORBIDEN method: ~~\n");
 	// // stack_fast_sort(stack_a);
 	// print_stack(stack_a, stack_b);
-	// if (check_sort(stack_a, ft_lstsize(stack_a)))
-	// 	printf("stack is sorted\n");
-	// else
-	// 	printf("stack is NOT sorted\n");
+	if (check_sort(stack_a, ft_lstsize(stack_a)))
+		printf("stack is sorted\n");
+	else
+		printf("stack is NOT sorted\n");
 	// ft_lstclear(&stack_a);
 	//ft_lstclear(&stack_b);
 	//print_stack(stack_a, stack_b);

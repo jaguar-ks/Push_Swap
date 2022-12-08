@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/07 21:08:26 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/08 05:32:34 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,34 +27,18 @@ void	sort_stack(t_list **stack_a, t_list **stack_b);
 int		check_sort(t_list *stack, int size_tocheck);
 int	    check_rev_sort(t_list *stack, int size_tocheck);
 void	print_stack(t_list *sa, t_list *sb);
-int		max_val(t_list *stack, int size);
+int		max_val(t_list *stack);
 int		min_val(t_list *stack);
-int		mid_val(t_list *stack, int size);
+int		mid_val(t_list *stack);
 int		find_position(t_list *stack, int elm);
 int		*stack_to_arr(t_list *stack);
 void	fast_sort(int *tab, t_list *stack);
 void	get_idx(t_list **stack);
 t_list	*stack_dup(t_list *src, int size);
-void	stack_rev(t_list *stack);
 int	    find_f_s(t_list *stack, int to_cmp);
 int	    find_l_s(t_list *stack, int to_cmp);
-int	    find_f_b(t_list *stack, int to_cmp);
-int	    find_l_b(t_list *stack, int to_cmp);
-int 	find_prb(t_list *stack);
-int	    how_many_rr(t_list *stack, int ps);
-int	    how_many_r(int ps);
 void	send_small(t_list **sa, t_list **sb, int med);
-void	send_big(t_list **stack_a, t_list **stack_b, int med);
-void	sort_more(t_list **stack_a, t_list **stack_b);
-void	do_r_op(t_list **sta, t_list **stb, int i, int j);
-void	do_rr_op(t_list **sta, t_list **stb, int i, int j);
 int	    find_next_idx(t_list *stack);
 int	    find_prev_idx(t_list *stack);
-void	mark_mode_1(t_list **stack, int cntt);
-void	mark_by_idx(t_list **stack);
-int	    how_many_to_stay(t_list *stack);
-int 	best_to_stay(t_list *stack);
-void	send_a_to_b(t_list **sta, t_list **stb, int cntt);
-void	send_back_align(t_list **sta, t_list **stb);
 
 #endif

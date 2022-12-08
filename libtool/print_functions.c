@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_functions.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 02:14:46 by faksouss          #+#    #+#             */
-/*   Updated: 2022/11/26 22:57:19 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/08 05:37:00 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_putun(unsigned int n)
 	unsigned int	nb;
 
 	nb = n;
-	if (nb >= 0 && nb <= 9)
+	if (nb <= 9)
 		ft_putchar_fd(nb + 48, 1);
 	if (nb > 9)
 	{
@@ -54,7 +54,7 @@ int	ft_put_hex(unsigned long n, char frm)
 		hex = "0123456789abcdef";
 	else if (frm == 'X')
 		hex = "0123456789ABCDEF";
-	if (nb >= 0 && nb <= 15)
+	if (nb <= 15)
 		ft_putchar_fd(hex[nb], 1);
 	if (nb > 15)
 	{

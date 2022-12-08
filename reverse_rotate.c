@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 21:48:05 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/03 17:11:49 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/08 05:34:36 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	rra(t_list **stack, char c)
 {
-	int	i;
 	t_list	*tmp;
 
-	i = -1;
 	if (*stack)
 	{
 		tmp = ft_lstlast(*stack);

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
+#    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/03 19:02:06 by faksouss         ###   ########.fr        #
+#    Updated: 2022/12/08 05:35:18 by deman_wolf       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ SRCS_MD = take_stack.c\
 				sort_stack.c\
 				find_min_max.c\
 				stack_manupilation.c\
-				count_move_needed.c\
 				main.c\
 
 FLAGS = -Wall -Wextra -Werror
