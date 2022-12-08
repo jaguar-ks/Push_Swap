@@ -6,11 +6,11 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 06:01:42 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/08 06:09:52 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 06:26:20 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include"../inc/push_swap.h"
 
 int	check_dup_range(t_list *tab)
 {

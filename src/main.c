@@ -6,11 +6,11 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 06:00:01 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 06:26:20 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include"../inc/push_swap.h"
 
 int	walo(int t)
 {

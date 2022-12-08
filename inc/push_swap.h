@@ -6,14 +6,14 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 06:09:09 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 06:27:40 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libtool/libft.h"
+# include "../libtool/libft.h"
 //parssing
 t_list	*take_stack(int ac, char **av);
 //actions

@@ -6,11 +6,11 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 21:48:05 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 05:34:36 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 06:26:20 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include"../inc/push_swap.h"
 
 void	rra(t_list **stack, char c)
 {

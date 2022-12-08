@@ -6,11 +6,11 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 06:06:21 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/08 06:06:50 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 06:26:20 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include"../inc/push_swap.h"
 
 void	sort_small(t_list **stack_a, t_list **stack_b)
 {
