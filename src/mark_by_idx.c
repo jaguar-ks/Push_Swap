@@ -1,48 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mark_by_val.c                                      :+:      :+:    :+:   */
+/*   mark_by_idx.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 07:01:56 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/08 09:53:08 by deman_wolf       ###   ########.fr       */
+/*   Created: 2022/12/08 09:50:36 by deman_wolf        #+#    #+#             */
+/*   Updated: 2022/12/08 09:59:51 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/push_swap.h"
 
-void	reset_marks(t_list **st)
-{
-	t_list	*tmp;
-
-	tmp = (*st);
-	while (tmp)
-	{
-		tmp->st = 0;
-		tmp = tmp->next;
-	}
-}
-
-t_list	*move_to_val(t_list *st, int cnt)
+t_list	*move_to_idx(t_list *st, int idx)
 {
 	t_list	*tmp;
 
 	tmp = st;
-	while (tmp && tmp->content != cnt)
+	while (tmp && tmp->idx != idx)
 		tmp = tmp->next;
 	return (tmp);
 }
 
-void	mark_by_val(t_list **sta, t_list *m_h)
+void	mark_by_idx(t_list **sta, t_list *m_h)
 {
 	t_list	*tmp;
-	int		cnt;
+	int		idx;
 
 	reset_marks(sta);
 	tmp = (*sta);
-	cnt = m_h->content;
-	tmp = move_to_val(*sta, cnt);
+	idx = m_h->idx;
+	tmp = move_to_idx(*sta, idx);
 	tmp->st = 1;
 	if (tmp == ft_lstlast(*sta))
 		tmp = (*sta);
@@ -52,28 +40,12 @@ void	mark_by_val(t_list **sta, t_list *m_h)
 	{
 		if (tmp->st)
 			break ;
-		tmp->st = (cnt < tmp->content);
+		tmp->st = (idx < tmp->idx);
 		if (tmp->st)
-			cnt = tmp->content;
+			idx = tmp->idx;
 		if (tmp == ft_lstlast(*sta))
 			tmp = (*sta);
 		else
 			tmp = tmp->next;
 	}
-}
-
-int	count_to_stay(t_list *st)
-{
-	t_list	*tmp;
-	int		i;
-
-	tmp = st;
-	i = 0;
-	while (tmp)
-	{
-		if (tmp->st)
-			i++;
-		tmp = tmp->next;
-	}
-	return (i);
 }

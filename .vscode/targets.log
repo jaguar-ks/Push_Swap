@@ -6,10 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Dec  8 07:37:38 2022
+# Make data base, printed on Thu Dec  8 09:59:22 2022
 
 # Variables
 
+ 
 # environment
 GDK_BACKEND = x11
 # environment
@@ -49,7 +50,7 @@ OLDPWD = /home/deman_wolf
 # environment
 VSCODE_CODE_CACHE_PATH = /home/deman_wolf/.config/Code/CachedData/5235c6bb189b60b01b1f49062f4ffa42384f8c91
 # makefile (from 'Makefile', line 14)
-SRCS_MD = src/take_stack.c src/checks.c src/swap.c src/push.c src/rotate.c src/reverse_rotate.c src/sort_small.c src/sort.c src/find_val.c src/find_idx.c src/find_position.c src/stack_manupilation.c src/main.c 
+SRCS_MD = src/take_stack.c src/checks.c src/swap.c src/push.c src/rotate.c src/reverse_rotate.c src/sort_small.c src/sort.c src/find_val.c src/find_idx.c src/find_position.c src/stack_manupilation.c src/mark_by_val.c src/mark_by_idx.c src/main.c 
 # environment
 LANG = C
 # environment
@@ -80,7 +81,7 @@ MFLAGS = -pqrR
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # default
 .SHELLFLAGS := -c
-# makefile (from 'Makefile', line 32)
+# makefile (from 'Makefile', line 34)
 OBJS_MD = ${SRCS_MD:.c=.o}
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -96,7 +97,7 @@ VSCODE_PID = 22200
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from 'Makefile', line 28)
+# makefile (from 'Makefile', line 30)
 FLAGS = -Wall -Wextra -Werror
 # environment
 SESSION_MANAGER = local/jaguar:@/tmp/.ICE-unix/1548,unix/jaguar:/tmp/.ICE-unix/1548
@@ -144,7 +145,7 @@ LANGUAGE = en_US:en
 ^F = $(notdir $^)
 # environment
 COMMAND_NOT_FOUND_INSTALL_PROMPT = 1
-# makefile (from 'Makefile', line 34)
+# makefile (from 'Makefile', line 36)
 HEADER = inc/push_swap.h
 # environment
 LESS_TERMCAP_mb = [1;31m
@@ -154,7 +155,7 @@ INVOCATION_ID = f8b7c8fd9f7f4eb2ad142eb558fac148
 USERNAME = deman_wolf
 # automatic
 ?F = $(notdir $?)
-# makefile (from 'Makefile', line 36)
+# makefile (from 'Makefile', line 38)
 NAME = push_swap
 # environment
 XDG_CURRENT_DESKTOP = GNOME
@@ -176,7 +177,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 .DEFAULT_GOAL := all
 # environment
 SYSTEMD_EXEC_PID = 1574
-# makefile (from 'Makefile', line 38)
+# makefile (from 'Makefile', line 40)
 RM = rm -f
 # environment
 DISPLAY = :1
@@ -228,14 +229,14 @@ SUFFIXES :=
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
-# makefile (from 'Makefile', line 30)
+# makefile (from 'Makefile', line 32)
 CC = cc
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = gnome
 # variable set hash-table stats:
-# Load=112/1024=11%, Rehash=0, Collisions=11/153=7%
+# Load=112/1024=11%, Rehash=0, Collisions=11/148=7%
 
 # Pattern-specific Variable Values
 
@@ -244,15 +245,15 @@ GDMSESSION = gnome
 # Directories
 
 # inc (device 66311, inode 1338591): 1 files, no impossibilities so far.
-# src (device 66311, inode 1196510): 2 files, no impossibilities so far.
-# . (device 66311, inode 2387393): 13 files, no impossibilities.
+# src (device 66311, inode 1196510): 32 files, no impossibilities so far.
+# . (device 66311, inode 2387393): 11 files, no impossibilities.
 
-# 16 files, no impossibilities in 3 directories.
+# 44 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 %.o: %.c inc/push_swap.h
-#  recipe to execute (from 'Makefile', line 47):
+#  recipe to execute (from 'Makefile', line 49):
 	${CC} -g ${FLAGS} -c $< -o $@
 
 # 1 implicit rules, 0 (0.0%) terminal.
@@ -261,99 +262,146 @@ GDMSESSION = gnome
 # Not a target:
 inc/push_swap.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:27:40.928537374
+#  Last modified 2022-12-08 09:58:31.760894492
 #  File has been updated.
 #  Successfully updated.
 
-# Not a target:
-src/find_val.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/find_val.o: src/find_val.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/find_val'
+#  Last modified 2022-12-08 09:58:37.160894644
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+src/stack_manupilation.o: src/stack_manupilation.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/stack_manupilation'
+#  Last modified 2022-12-08 09:58:37.220894646
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+src/sort.o: src/sort.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/sort'
+#  Last modified 2022-12-08 09:58:37.144894644
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
-src/stack_manupilation.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
- 
-src/sort.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/mark_by_idx.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 09:57:47.744893249
+#  File has been updated.
+#  Successfully updated.
 
 src/take_stack.o: src/take_stack.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'src/take_stack'
-#  File does not exist.
+#  Last modified 2022-12-08 09:58:37.00889464
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := src/take_stack.o
-# automatic
-# * := src/take_stack
-# automatic
-# < := src/take_stack.c
-# automatic
-# + := src/take_stack.c inc/push_swap.h
-# automatic
-# % := 
-# automatic
-# ^ := src/take_stack.c inc/push_swap.h
-# automatic
-# ? := src/take_stack.c inc/push_swap.h
-# automatic
-# | := 
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/15=13%
-#  recipe to execute (from 'Makefile', line 47):
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+src/push.o: src/push.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/push'
+#  Last modified 2022-12-08 09:58:37.068894641
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+src/find_position.o: src/find_position.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/find_position'
+#  Last modified 2022-12-08 09:58:37.200894645
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
 	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
-src/push.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/find_position.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-src/swap.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-Makefile:
+src/mark_by_val.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:35:00.536549784
+#  Last modified 2022-12-08 09:53:08.256885359
+#  File has been updated.
+#  Successfully updated.
+
+src/swap.o: src/swap.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/swap'
+#  Last modified 2022-12-08 09:58:37.048894641
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+# Not a target:
+src/find_position.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-src/rotate.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 09:59:07.072895488
+#  File has been updated.
+#  Successfully updated.
+
+src/rotate.o: src/rotate.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/rotate'
+#  Last modified 2022-12-08 09:58:37.084894642
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+# Not a target:
+src/checks.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.316535099
+#  File has been updated.
+#  Successfully updated.
 
 .SILENT: push_swap clean fclean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 50):
+#  recipe to execute (from 'Makefile', line 52):
 	${RM} ${OBJS_MD} libtool/*.o
+
+src/mark_by_val.o: src/mark_by_val.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/mark_by_val'
+#  Last modified 2022-12-08 09:58:37.240894646
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 09:57:56.780893504
+#  File has been updated.
+#  Successfully updated.
 
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
@@ -362,10 +410,34 @@ re: fclean all
 #  File has not been updated.
 
 # Not a target:
-src/main.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/sort.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 09:13:05.728817539
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/find_val.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/find_idx.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
+
+src/main.o: src/main.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/main'
+#  Last modified 2022-12-08 09:58:37.260894647
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
 .DEFAULT:
@@ -379,40 +451,58 @@ all: push_swap
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  Successfully updated.
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 53):
+#  recipe to execute (from 'Makefile', line 55):
 	${RM} ${NAME} libtool/*.a
 
-push_swap: src/take_stack.o src/checks.o src/swap.o src/push.o src/rotate.o src/reverse_rotate.o src/sort_small.o src/sort.o src/find_val.o src/find_idx.o src/find_position.o src/stack_manupilation.o src/main.o
+push_swap: src/take_stack.o src/checks.o src/swap.o src/push.o src/rotate.o src/reverse_rotate.o src/sort_small.o src/sort.o src/find_val.o src/find_idx.o src/find_position.o src/stack_manupilation.o src/mark_by_val.o src/mark_by_idx.o src/main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-12-08 06:38:26.336555593
+#  Last modified 2022-12-08 09:59:08.612895532
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
-#  recipe to execute (from 'Makefile', line 43):
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 45):
 	make -C ./libtool
 	${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
 
-# Not a target:
-src/checks.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/mark_by_idx.o: src/mark_by_idx.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/mark_by_idx'
+#  Last modified 2022-12-08 09:59:08.588895531
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+src/checks.o: src/checks.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/checks'
+#  Last modified 2022-12-08 09:58:37.02889464
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
-src/find_idx.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/reverse_rotate.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
+
+src/find_idx.o: src/find_idx.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/find_idx'
+#  Last modified 2022-12-08 09:58:37.180894645
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
 src/take_stack.c:
@@ -422,36 +512,77 @@ src/take_stack.c:
 #  Successfully updated.
 
 # Not a target:
-src/sort_small.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/swap.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
-src/reverse_rotate.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/stack_manupilation.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/sort_small.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
+
+src/sort_small.o: src/sort_small.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/sort_small'
+#  Last modified 2022-12-08 09:58:37.124894643
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+src/reverse_rotate.o: src/reverse_rotate.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/reverse_rotate'
+#  Last modified 2022-12-08 09:58:37.104894642
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 49):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+# Not a target:
+src/rotate.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
 
 .PHONY: all clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+src/push.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535098
+#  File has been updated.
+#  Successfully updated.
+
 # files hash-table stats:
-# Load=25/1024=2%, Rehash=0, Collisions=1/66=2%
+# Load=41/1024=4%, Rehash=0, Collisions=1/154=1%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 44 / storage = 472 B / avg = 10 B
-# current buf: size = 8162 B / used = 472 B / count = 44 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 100 / storage = 1225 B / avg = 12 B
+# current buf: size = 8162 B / used = 1225 B / count = 100 / avg = 12 B
 
-# strcache performance: lookups = 73 / hit rate = 39%
+# strcache performance: lookups = 173 / hit rate = 42%
 # hash-table stats:
-# Load=44/8192=1%, Rehash=0, Collisions=0/73=0%
-# Finished Make data base on Thu Dec  8 07:37:38 2022
+# Load=100/8192=1%, Rehash=0, Collisions=0/173=0%
+# Finished Make data base on Thu Dec  8 09:59:22 2022
 
  

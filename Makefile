@@ -6,7 +6,7 @@
 #    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/08 06:35:00 by deman_wolf       ###   ########.fr        #
+#    Updated: 2022/12/08 09:59:07 by deman_wolf       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,8 @@ SRCS_MD = src/take_stack.c\
 				src/find_idx.c\
 				src/find_position.c\
 				src/stack_manupilation.c\
+				src/mark_by_val.c\
+				src/mark_by_idx.c\
 				src/main.c\
 
 FLAGS = -Wall -Wextra -Werror

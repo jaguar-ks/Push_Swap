@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 06:06:21 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/08 07:04:51 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 09:13:05 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sort_small(t_list **stack_a, t_list **stack_b)
 		sort_4_to_6(stack_a, stack_b);
 }
 
-void	sort_100(t_list **sta, t_list **stb)
-{
-	get_idx(sta);
-}
+// void	sort_100(t_list **sta, t_list **stb)
+// {
+// 	get_idx(sta);
+// }

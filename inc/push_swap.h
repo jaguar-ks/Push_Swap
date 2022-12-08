@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 06:27:40 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 09:58:31 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int		*stack_to_arr(t_list *stack);
 void	fast_sort(int *tab, t_list *stack);
 void	get_idx(t_list **stack);
 t_list	*stack_dup(t_list *src, int size);
+t_list	*move_to_val(t_list *st, int cnt);
+t_list	*move_to_idx(t_list *st, int idx);
 //find position of some elements
 int		find_f_s(t_list *stack, int to_cmp);
 int		find_l_s(t_list *stack, int to_cmp);
@@ -57,5 +59,10 @@ void	send_small(t_list **sa, t_list **sb, int med);
 //find position of indexs
 int		find_next_idx(t_list *stack);
 int		find_prev_idx(t_list *stack);
+//mark functions
+void	reset_marks(t_list **st);
+void	mark_by_val(t_list **sta, t_list *m_h);
+void	mark_by_idx(t_list **sta, t_list *m_h);
+int		count_to_stay(t_list *st);
 
 #endif
