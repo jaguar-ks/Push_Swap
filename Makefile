@@ -6,15 +6,15 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/09 01:20:51 by faksouss         ###   ########.fr        #
+#    Updated: 2022/12/09 01:52:33 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 SRCS_MD = take_stack.c\
-				checks_par.c\
-				checks_sort.c\
-				checks_need_of_act.c\
+				check_par.c\
+				check_sort.c\
+				check_need_of_act.c\
  				swap.c\
 				push.c\
 				rotate.c\
@@ -28,6 +28,7 @@ SRCS_MD = take_stack.c\
 				mark_by_val.c\
 				mark_by_idx.c\
 				find_best_mark.c\
+				send_a_to_b.c\
 				main.c\
 
 FLAGS = -Wall -Wextra -Werror

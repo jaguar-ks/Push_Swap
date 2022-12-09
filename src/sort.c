@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 06:06:21 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/08 09:13:05 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/09 01:49:38 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ void	sort_small(t_list **stack_a, t_list **stack_b)
 		sort_4_to_6(stack_a, stack_b);
 }
 
-// void	sort_100(t_list **sta, t_list **stb)
-// {
-// 	get_idx(sta);
-// }
+void	sort_by_val(t_list **sta, t_list **stb)
+{
+	get_idx(sta);
+	find_best_mark(sta, &mark_by_val);
+	send_a_to_b(sta, stb, &mark_by_val);
+}

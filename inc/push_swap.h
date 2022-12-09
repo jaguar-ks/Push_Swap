@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/09 01:10:22 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/09 01:50:23 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int		check_arg(char *r);
 int		check_sort(t_list *stack, int size_tocheck);
 int		check_rev_sort(t_list *stack, int size_tocheck);
 int		check_to_push(t_list *st);
+int		check_sa_need(t_list *st, void (*f)(t_list **, t_list *));
 //print stack content index and size
 void	print_stack(t_list *sa, t_list *sb);
 //find max min and med valeurs
@@ -68,5 +69,8 @@ int		count_to_stay(t_list *st);
 t_list	*max_possible_to_st(t_list **st);
 t_list	*best_to_st(t_list **st);
 void	find_best_mark(t_list **st, void (*f)(t_list **, t_list *));
+//sort more than 10 nb
+void	sort_by_val(t_list **sta, t_list **stb);
+void	send_a_to_b(t_list **sta, t_list **stb, void (*f)(t_list **, t_list *));
 
 #endif

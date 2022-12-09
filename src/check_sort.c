@@ -6,12 +6,11 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 01:18:48 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/09 01:19:17 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/09 01:33:45 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/push_swap.h"
-
 
 int	check_sort(t_list *stack, int size_tocheck)
 {

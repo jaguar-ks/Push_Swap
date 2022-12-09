@@ -8,12 +8,13 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Fri Dec  9 01:20:58 2022
+# Make data base, printed on Fri Dec  9 01:52:50 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
+ 
 # automatic
 ?F = $(notdir $?)
 # automatic
@@ -26,24 +27,23 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 CURDIR := /Users/faksouss/Desktop/Push_Swap
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 48)
+# makefile (from `Makefile', line 49)
 RM = rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
- 
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 37)
+# makefile (from `Makefile', line 38)
 OBJS_MD = $(addprefix $(OBJ_DIR)/,${SRCS_MD:.c=.o})
-# makefile (from `Makefile', line 42)
+# makefile (from `Makefile', line 43)
 OBJ_DIR = obj
 # environment
 VSCODE_CWD = /
 # environment
 Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.PfoeY135s9/Render
-# makefile (from `Makefile', line 38)
+# makefile (from `Makefile', line 39)
 SRC_MD = $(addprefix $(SRC_DIR)/,$(SRCS_MD))
 # environment
 PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
@@ -83,7 +83,7 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 35)
+# makefile (from `Makefile', line 36)
 CC = cc
 # default
 MAKE_VERSION := 3.81
@@ -91,7 +91,7 @@ MAKE_VERSION := 3.81
 USER = faksouss
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 46)
+# makefile (from `Makefile', line 47)
 NAME = push_swap
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -120,20 +120,20 @@ XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
 # automatic
 +F = $(notdir $+)
 # makefile (from `Makefile', line 14)
-SRCS_MD = take_stack.c checks_par.c checks_sort.c checks_need_of_act.c swap.c push.c rotate.c reverse_rotate.c sort_small.c sort.c find_val.c find_idx.c find_position.c stack_manupilation.c mark_by_val.c mark_by_idx.c find_best_mark.c main.c 
+SRCS_MD = take_stack.c check_par.c check_sort.c check_need_of_act.c swap.c push.c rotate.c reverse_rotate.c sort_small.c sort.c find_val.c find_idx.c find_position.c stack_manupilation.c mark_by_val.c mark_by_idx.c find_best_mark.c send_a_to_b.c main.c 
 # environment
 __CF_USER_TEXT_ENCODING = 0x18EDF:0x0:0x0
 # environment
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
-# makefile (from `Makefile', line 40)
+# makefile (from `Makefile', line 41)
 SRC_DIR = src
 # automatic
 <F = $(notdir $<)
 # environment
 LC_ALL = C
-# makefile (from `Makefile', line 44)
+# makefile (from `Makefile', line 45)
 HEADER = inc/push_swap.h
 # environment
 SECURITYSESSIONID = 186a8
@@ -141,7 +141,7 @@ SECURITYSESSIONID = 186a8
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# makefile (from `Makefile', line 33)
+# makefile (from `Makefile', line 34)
 FLAGS = -Wall -Wextra -Werror
 # default
 .INCLUDE_DIRS = /usr/local/include
@@ -160,16 +160,16 @@ VSCODE_PID = 5208
 
 # Directories
 
-# . (device 16777224, inode 1429682): 14 files, no impossibilities.
+# . (device 16777224, inode 1429682): 13 files, no impossibilities.
 # src (device 16777224, inode 1648326): 21 files, no impossibilities so far.
 # inc (device 16777224, inode 1648320): 3 files, no impossibilities so far.
 
-# 38 files, no impossibilities in 3 directories.
+# 37 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
 obj/%.o: src/%.c inc/push_swap.h
-#  commands to execute (from `Makefile', line 57):
+#  commands to execute (from `Makefile', line 58):
 	@${CC} -g ${FLAGS} -c $< -o $@
 	
 
@@ -178,10 +178,43 @@ obj/%.o: src/%.c inc/push_swap.h
 # Files
 
 # Not a target:
-obj/sort_small.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/push.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/find_best_mark.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/sort_small.o: src/sort_small.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `sort_small'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
+# Not a target:
+src/rotate.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 all: obj push_swap
 #  Phony target (prerequisite of .PHONY).
@@ -196,40 +229,40 @@ all: obj push_swap
 # Not a target:
 inc/push_swap.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-12-09 01:10:22
+#  Last modified 2022-12-09 01:50:23
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-obj/sort.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/sort.o: src/sort.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `sort'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 .PHONY: all clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-obj/checks_need_of_act.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-obj/stack_manupilation.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-obj/checks_par.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/stack_manupilation.o: src/stack_manupilation.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `stack_manupilation'
+#  Last modified 2022-12-09 01:52:03
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 # Not a target:
 obj/main.o:
@@ -243,75 +276,160 @@ obj/main.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+obj/send_a_to_b.o: src/send_a_to_b.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `send_a_to_b'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/send_a_to_b.o
+# automatic
+# % := 
+# automatic
+# * := send_a_to_b
+# automatic
+# + := src/send_a_to_b.c inc/push_swap.h
+# automatic
+# | := 
+# automatic
+# < := src/send_a_to_b.c
+# automatic
+# ^ := src/send_a_to_b.c inc/push_swap.h
+# automatic
+# ? := src/send_a_to_b.c inc/push_swap.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-12-09 01:20:51
+#  Last modified 2022-12-09 01:52:33
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-obj/find_position.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/check_need_of_act.o: src/check_need_of_act.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `check_need_of_act'
+#  Last modified 2022-12-09 01:52:02
+ 
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
+obj/find_position.o: src/find_position.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `find_position'
+#  Last modified 2022-12-09 01:52:03
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 # Not a target:
-obj/find_idx.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/sort_small.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-obj/find_val.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/find_idx.o: src/find_idx.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `find_idx'
+#  Last modified 2022-12-09 01:52:03
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
+obj/find_val.o: src/find_val.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `find_val'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 obj/take_stack.o: src/take_stack.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `take_stack'
-#  Last modified 2022-12-09 01:03:52
+#  Last modified 2022-12-09 01:51:24
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/take_stack.o
-# automatic
-# % := 
-# automatic
-# * := take_stack
-# automatic
-# + := src/take_stack.c inc/push_swap.h
-# automatic
-# | := 
-# automatic
-# < := src/take_stack.c
-# automatic
-# ^ := src/take_stack.c inc/push_swap.h
-# automatic
-# ? := inc/push_swap.h
+#  Successfully updated.
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  commands to execute (from `Makefile', line 57):
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
 	@${CC} -g ${FLAGS} -c $< -o $@
 	
+
+# Not a target:
+src/sort.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-09 01:49:38
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/check_par.o: src/check_par.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `check_par'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
+# Not a target:
+src/stack_manupilation.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 66):
+#  commands to execute (from `Makefile', line 67):
 	${RM} ${NAME} libtool/*.a
 	
 
 # Not a target:
-obj/checks_sort.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/send_a_to_b.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-09 01:47:04
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 .SILENT: push_swap clean fclean obj re
 #  Implicit rule search has not been done.
@@ -320,12 +438,39 @@ obj/checks_sort.o:
 
 obj:
 #  Implicit rule search has not been done.
-#  Last modified 2022-12-09 01:03:52
+#  Last modified 2022-12-09 01:52:34
 #  File has been updated.
 #  Successfully updated.
-#  commands to execute (from `Makefile', line 60):
+#  commands to execute (from `Makefile', line 61):
 	mkdir ${OBJ_DIR}
 	
+
+# Not a target:
+src/check_need_of_act.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-09 01:36:27
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/find_position.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/find_idx.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .DEFAULT:
@@ -333,11 +478,26 @@ obj:
 #  Modification time never checked.
 #  File has not been updated.
 
+obj/swap.o: src/swap.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `swap'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
 # Not a target:
-obj/swap.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/find_val.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 src/take_stack.c:
@@ -348,18 +508,50 @@ src/take_stack.c:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-obj/reverse_rotate.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
- 
-#  File has not been updated.
+obj/reverse_rotate.o: src/reverse_rotate.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `reverse_rotate'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 # Not a target:
-obj/mark_by_idx.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/check_par.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-09 01:17:23
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/mark_by_idx.o: src/mark_by_idx.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `mark_by_idx'
+#  Last modified 2022-12-09 01:52:03
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
+obj/check_sort.o: src/check_sort.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `check_sort'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
@@ -367,53 +559,123 @@ re: fclean all
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-obj/mark_by_val.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/mark_by_val.o: src/mark_by_val.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `mark_by_val'
+#  Last modified 2022-12-09 01:52:03
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 63):
+#  commands to execute (from `Makefile', line 64):
 	${RM} ${OBJ_DIR} libtool/*.o
 	
 
-push_swap: obj/take_stack.o obj/checks_par.o obj/checks_sort.o obj/checks_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/mark_by_idx.o obj/find_best_mark.o obj/main.o
+push_swap: obj/take_stack.o obj/check_par.o obj/check_sort.o obj/check_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/mark_by_idx.o obj/find_best_mark.o obj/send_a_to_b.o obj/main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-12-09 01:03:55
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  commands to execute (from `Makefile', line 53):
+#  commands to execute (from `Makefile', line 54):
+ 
 	@make -C ./libtool
 	@${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
 	
 
-# Not a target:
-obj/push.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+obj/push.o: src/push.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `push'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
+obj/find_best_mark.o: src/find_best_mark.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `find_best_mark'
+#  Last modified 2022-12-09 01:52:03
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
+obj/rotate.o: src/rotate.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `rotate'
+#  Last modified 2022-12-09 01:52:02
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 58):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 # Not a target:
-obj/find_best_mark.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/swap.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-obj/rotate.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/reverse_rotate.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/mark_by_idx.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/check_sort.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-09 01:33:45
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/mark_by_val.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=31/1024=3%, Rehash=0, Collisions=0/81=0%
+# Load=49/1024=5%, Rehash=0, Collisions=0/185=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -425,6 +687,6 @@ obj/rotate.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Dec  9 01:20:58 2022
+# Finished Make data base on Fri Dec  9 01:52:50 2022
 
  

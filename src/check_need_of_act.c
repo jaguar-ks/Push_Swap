@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 06:01:42 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/09 01:26:20 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/09 01:36:27 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	check_to_push(t_list *st)
 {
-	t_list *tmp;
+	t_list	*tmp;
 
 	tmp = st;
 	while (tmp)
@@ -28,5 +28,13 @@ int	check_to_push(t_list *st)
 
 int	check_sa_need(t_list *st, void (*f)(t_list **, t_list *))
 {
-	find_best_mark(&st, (f));
+	t_list	*swpd;
+
+	swpd = stack_dup(st, ft_lstsize(st));
+	sa(swpd, 'l');
+	find_best_mark(&swpd, f);
+	if (count_to_stay(swpd) > count_to_stay(st))
+		return (ft_lstclear(&swpd), 1);
+	else
+		return (ft_lstclear(&swpd), 0);
 }
