@@ -6,7 +6,7 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/09 01:52:33 by faksouss         ###   ########.fr        #
+#    Updated: 2022/12/09 02:47:45 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS_MD = take_stack.c\
 				mark_by_idx.c\
 				find_best_mark.c\
 				send_a_to_b.c\
+				send_b_to_a.c\
 				main.c\
 
 FLAGS = -Wall -Wextra -Werror
