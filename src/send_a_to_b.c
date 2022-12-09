@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 23:50:49 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/09 01:52:57 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/09 02:02:32 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	recover_st(t_list **st, t_list *svd)
 void	send_a_to_b(t_list **sta, t_list **stb, void (*f)(t_list **, t_list *))
 {
 	t_list	*rec;
+
 	while (check_to_push(*sta))
 	{
 		rec = stack_dup(*sta, ft_lstsize(*sta));
