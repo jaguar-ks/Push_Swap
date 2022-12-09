@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checks.c                                           :+:      :+:    :+:   */
+/*   check_par.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 06:01:42 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/08 06:26:20 by deman_wolf       ###   ########.fr       */
+/*   Created: 2022/12/09 01:16:45 by faksouss          #+#    #+#             */
+/*   Updated: 2022/12/09 01:17:23 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,37 +44,5 @@ int	check_arg(char *r)
 	while (r[++i])
 		if (!ft_isdigit(r[i]))
 			return (0);
-	return (1);
-}
-
-int	check_sort(t_list *stack, int size_tocheck)
-{
-	t_list	*tmp;
-	int		i;
-
-	tmp = stack;
-	i = -1;
-	while (tmp->next && ++i < size_tocheck)
-	{
-		if (tmp->content > tmp->next->content)
-			return (0);
-		tmp = tmp->next;
-	}
-	return (1);
-}
-
-int	check_rev_sort(t_list *stack, int size_tocheck)
-{
-	t_list	*tmp;
-	int		i;
-
-	tmp = stack;
-	i = -1;
-	while (tmp->next && ++i < size_tocheck)
-	{
-		if (tmp->content < tmp->next->content)
-			return (0);
-		tmp = tmp->next;
-	}
 	return (1);
 }

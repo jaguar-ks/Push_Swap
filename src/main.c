@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 10:45:28 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/08 23:56:30 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(int ac, char **av)
 		exit(1);
 	}
 	get_idx(&stack_a);
-	find_best_mark(&stack_a, &mark_by_val);
+	find_best_mark(&stack_a, &mark_by_idx);
 	// sort_small(&stack_a, &stack_b);
 	print_stack(stack_a, stack_b);
 	// if (check_sort(stack_a, ft_lstsize(stack_a)))

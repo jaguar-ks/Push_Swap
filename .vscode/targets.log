@@ -1,242 +1,158 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 4.3
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2020 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
 
-# Make data base, printed on Thu Dec  8 09:59:22 2022
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Fri Dec  9 01:20:58 2022
 
 # Variables
 
- 
-# environment
-GDK_BACKEND = x11
-# environment
-LC_ALL = C
-# environment
-GJS_DEBUG_OUTPUT = stderr
-# environment
-VSCODE_CWD = /home/deman_wolf
-# environment
-WINDOWPATH = 2
-# environment
-LESS_TERMCAP_me = [0m
-# environment
-GDM_LANG = en_US.UTF-8
-# default
-MAKE_COMMAND := make
-# environment
-QT_ACCESSIBILITY = 1
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/faksouss/Desktop/Push_Swap
+# makefile
+SHELL = /bin/sh
+# makefile (from `Makefile', line 48)
+RM = rm -rf
 # environment
-VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
+ 
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 37)
+OBJS_MD = $(addprefix $(OBJ_DIR)/,${SRCS_MD:.c=.o})
+# makefile (from `Makefile', line 42)
+OBJ_DIR = obj
+# environment
+VSCODE_CWD = /
+# environment
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.PfoeY135s9/Render
+# makefile (from `Makefile', line 38)
+SRC_MD = $(addprefix $(SRC_DIR)/,$(SRCS_MD))
+# environment
+PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+# environment
+ELECTRON_RUN_AS_NODE = 1
 # default
-.VARIABLES := 
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-PWD = /home/deman_wolf/Desktop/Push_Swap
-# automatic
-%D = $(patsubst %/,%,$(dir $%))
-# environment
-XDG_DATA_DIRS = /usr/share/gnome:/home/deman_wolf/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/
-# environment
-OLDPWD = /home/deman_wolf
-# automatic
-^D = $(patsubst %/,%,$(dir $^))
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Ycle5Nk2dE/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/deman_wolf/.config/Code/CachedData/5235c6bb189b60b01b1f49062f4ffa42384f8c91
-# makefile (from 'Makefile', line 14)
-SRCS_MD = src/take_stack.c src/checks.c src/swap.c src/push.c src/rotate.c src/reverse_rotate.c src/sort_small.c src/sort.c src/find_val.c src/find_idx.c src/find_position.c src/stack_manupilation.c src/mark_by_val.c src/mark_by_idx.c src/main.c 
+PWD = /Users/faksouss/Desktop/Push_Swap
 # environment
-LANG = C
-# environment
-POWERSHELL_UPDATECHECK = Off
-# environment
-XAUTHORITY = /run/user/1000/gdm/Xauthority
-# default
-.LOADED := 
-# environment
-LESS_TERMCAP_md = [1;36m
-# default
-.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
-# makefile
-MAKEFLAGS = pqrR
-# environment
-LESS_TERMCAP_so = [01;33m
-# makefile
-CURDIR := /home/deman_wolf/Desktop/Push_Swap
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# automatic
-*D = $(patsubst %/,%,$(dir $*))
-# environment
-LESS_TERMCAP_ue = [0m
-# environment
-MFLAGS = -pqrR
-# environment
-SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
-# default
-.SHELLFLAGS := -c
-# makefile (from 'Makefile', line 34)
-OBJS_MD = ${SRCS_MD:.c=.o}
-# automatic
-+D = $(patsubst %/,%,$(dir $+))
-# environment
-XDG_SESSION_DESKTOP = gnome
-# makefile (from 'Makefile', line 1)
-MAKEFILE_LIST := Makefile
-# automatic
-@F = $(notdir $@)
-# environment
-VSCODE_PID = 22200
-# environment
-XDG_SESSION_TYPE = x11
-# automatic
-?D = $(patsubst %/,%,$(dir $?))
-# makefile (from 'Makefile', line 30)
-FLAGS = -Wall -Wextra -Werror
-# environment
-SESSION_MANAGER = local/jaguar:@/tmp/.ICE-unix/1548,unix/jaguar:/tmp/.ICE-unix/1548
-# automatic
-*F = $(notdir $*)
-# environment
-QT_QPA_PLATFORMTHEME = qt5ct
-# environment
-CHROME_DESKTOP = code-url-handler.desktop
-# environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
-# automatic
-<D = $(patsubst %/,%,$(dir $<))
-# environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
-# default
-MAKE_HOST := x86_64-pc-linux-gnu
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
-# makefile
-SHELL = /bin/sh
-# environment
-LESS_TERMCAP_us = [1;32m
-# default
-MAKECMDGOALS := all
-# environment
-XMODIFIERS = @im=ibus
-# environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# environment
-SHLVL = 0
-# environment
-MAKELEVEL := 0
-# default
-MAKE = $(MAKE_COMMAND)
-# environment
-PATH = /usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/deman_wolf/.dotnet/tools
-# environment
-LESS_TERMCAP_se = [0m
-# default
-MAKEFILES := 
-# environment
-LANGUAGE = en_US:en
-# automatic
-^F = $(notdir $^)
-# environment
-COMMAND_NOT_FOUND_INSTALL_PROMPT = 1
-# makefile (from 'Makefile', line 36)
-HEADER = inc/push_swap.h
-# environment
-LESS_TERMCAP_mb = [1;31m
-# environment
-INVOCATION_ID = f8b7c8fd9f7f4eb2ad142eb558fac148
-# environment
-USERNAME = deman_wolf
-# automatic
-?F = $(notdir $?)
-# makefile (from 'Makefile', line 38)
-NAME = push_swap
-# environment
-XDG_CURRENT_DESKTOP = GNOME
-# environment
-LS_COLORS = :ow=30;44:
-# automatic
-+F = $(notdir $+)
-# environment
-DESKTOP_SESSION = gnome
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = GNOME
-# 'override' directive
-GNUMAKEFLAGS := 
-# environment
-LOGNAME = deman_wolf
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
-# makefile
-.DEFAULT_GOAL := all
-# environment
-SYSTEMD_EXEC_PID = 1574
-# makefile (from 'Makefile', line 40)
-RM = rm -f
-# environment
-DISPLAY = :1
-# environment
-USER = deman_wolf
-# environment
-GTK_MODULES = gail:atk-bridge
-# default
-MAKE_VERSION := 4.3
-# environment
-MANAGERPID = 1339
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 22200
-# environment
-SSH_AGENT_PID = 1504
-# environment
-_ = /usr/share/code/code
-# environment
-XDG_RUNTIME_DIR = /run/user/1000
-# environment
-GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
-# environment
-POWERSHELL_TELEMETRY_OPTOUT = 1
-# environment
-JOURNAL_STREAM = 8:23233
-# environment
-XDG_SESSION_CLASS = user
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /home/deman_wolf
-# environment
-QT_IM_MODULE = ibus
-# environment
-_JAVA_OPTIONS = -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
-# environment
-ELECTRON_RUN_AS_NODE = 1
-# environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-518d13f2-1.74.0-main.sock
-# environment
-DOTNET_CLI_TELEMETRY_OPTOUT = 1
+HOME = /Users/faksouss
 # default
-.RECIPEPREFIX := 
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/faksouss/Library/Application Support/Code/CachedData/64bbfbf67ada9953918d72e1df2f4d8e537d340e
+# environment
+LOGNAME = faksouss
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 35)
+CC = cc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = faksouss
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 46)
+NAME = push_swap
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cfvw0033pz/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/faksouss/Library/Application Support/Code/1.72.0-main.sock
+# environment
+MallocNanoZone = 0
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# makefile (from `Makefile', line 14)
+SRCS_MD = take_stack.c checks_par.c checks_sort.c checks_need_of_act.c swap.c push.c rotate.c reverse_rotate.c sort_small.c sort.c find_val.c find_idx.c find_position.c stack_manupilation.c mark_by_val.c mark_by_idx.c find_best_mark.c main.c 
+# environment
+__CF_USER_TEXT_ENCODING = 0x18EDF:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# makefile (from `Makefile', line 40)
+SRC_DIR = src
 # automatic
 <F = $(notdir $<)
+# environment
+LC_ALL = C
+# makefile (from `Makefile', line 44)
+HEADER = inc/push_swap.h
+# environment
+SECURITYSESSIONID = 186a8
+# automatic
+^F = $(notdir $^)
 # default
 SUFFIXES := 
-# environment
-QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# makefile (from `Makefile', line 33)
+FLAGS = -Wall -Wextra -Werror
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
-# makefile (from 'Makefile', line 32)
-CC = cc
+.INCLUDE_DIRS = /usr/local/include
 # environment
-XDG_MENU_PREFIX = gnome-
+MAKELEVEL := 0
 # environment
-GDMSESSION = gnome
+LANG = C
+# environment
+VSCODE_PID = 5208
 # variable set hash-table stats:
-# Load=112/1024=11%, Rehash=0, Collisions=11/148=7%
+# Load=69/1024=7%, Rehash=0, Collisions=1/109=1%
 
 # Pattern-specific Variable Values
 
@@ -244,164 +160,206 @@ GDMSESSION = gnome
 
 # Directories
 
-# inc (device 66311, inode 1338591): 1 files, no impossibilities so far.
-# src (device 66311, inode 1196510): 32 files, no impossibilities so far.
-# . (device 66311, inode 2387393): 11 files, no impossibilities.
+# . (device 16777224, inode 1429682): 14 files, no impossibilities.
+# src (device 16777224, inode 1648326): 21 files, no impossibilities so far.
+# inc (device 16777224, inode 1648320): 3 files, no impossibilities so far.
 
-# 44 files, no impossibilities in 3 directories.
+# 38 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
-%.o: %.c inc/push_swap.h
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
+obj/%.o: src/%.c inc/push_swap.h
+#  commands to execute (from `Makefile', line 57):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
 
 # 1 implicit rules, 0 (0.0%) terminal.
+
 # Files
 
 # Not a target:
-inc/push_swap.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 09:58:31.760894492
-#  File has been updated.
-#  Successfully updated.
-
-src/find_val.o: src/find_val.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/find_val'
-#  Last modified 2022-12-08 09:58:37.160894644
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-src/stack_manupilation.o: src/stack_manupilation.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/stack_manupilation'
-#  Last modified 2022-12-08 09:58:37.220894646
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-src/sort.o: src/sort.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/sort'
-#  Last modified 2022-12-08 09:58:37.144894644
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-# Not a target:
-src/mark_by_idx.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 09:57:47.744893249
-#  File has been updated.
-#  Successfully updated.
-
-src/take_stack.o: src/take_stack.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/take_stack'
-#  Last modified 2022-12-08 09:58:37.00889464
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-src/push.o: src/push.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/push'
-#  Last modified 2022-12-08 09:58:37.068894641
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-src/find_position.o: src/find_position.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/find_position'
-#  Last modified 2022-12-08 09:58:37.200894645
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-# Not a target:
-src/mark_by_val.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 09:53:08.256885359
-#  File has been updated.
-#  Successfully updated.
-
-src/swap.o: src/swap.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/swap'
-#  Last modified 2022-12-08 09:58:37.048894641
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-# Not a target:
-src/find_position.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 09:59:07.072895488
-#  File has been updated.
-#  Successfully updated.
-
-src/rotate.o: src/rotate.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/rotate'
-#  Last modified 2022-12-08 09:58:37.084894642
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-# Not a target:
-src/checks.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.316535099
-#  File has been updated.
-#  Successfully updated.
-
-.SILENT: push_swap clean fclean
+obj/sort_small.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
- 
-clean:
+all: obj push_swap
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+# Not a target:
+inc/push_swap.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-09 01:10:22
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/sort.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/checks_need_of_act.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/stack_manupilation.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/checks_par.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-09 01:20:51
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/find_position.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/find_idx.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/find_val.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj/take_stack.o: src/take_stack.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `take_stack'
+#  Last modified 2022-12-09 01:03:52
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/take_stack.o
+# automatic
+# % := 
+# automatic
+# * := take_stack
+# automatic
+# + := src/take_stack.c inc/push_swap.h
+# automatic
+# | := 
+# automatic
+# < := src/take_stack.c
+# automatic
+# ^ := src/take_stack.c inc/push_swap.h
+# automatic
+# ? := inc/push_swap.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  commands to execute (from `Makefile', line 57):
+	@${CC} -g ${FLAGS} -c $< -o $@
+	
+
+fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 52):
-	${RM} ${OBJS_MD} libtool/*.o
-
-src/mark_by_val.o: src/mark_by_val.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/mark_by_val'
-#  Last modified 2022-12-08 09:58:37.240894646
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
+#  commands to execute (from `Makefile', line 66):
+	${RM} ${NAME} libtool/*.a
+	
 
 # Not a target:
-src/main.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 09:57:56.780893504
+obj/checks_sort.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.SILENT: push_swap clean fclean obj re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj:
+#  Implicit rule search has not been done.
+#  Last modified 2022-12-09 01:03:52
 #  File has been updated.
 #  Successfully updated.
+#  commands to execute (from `Makefile', line 60):
+	mkdir ${OBJ_DIR}
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/swap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/take_stack.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 23:18:49
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/reverse_rotate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+ 
+#  File has not been updated.
+
+# Not a target:
+obj/mark_by_idx.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
@@ -410,179 +368,63 @@ re: fclean all
 #  File has not been updated.
 
 # Not a target:
-src/sort.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 09:13:05.728817539
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/find_val.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/find_idx.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-src/main.o: src/main.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/main'
-#  Last modified 2022-12-08 09:58:37.260894647
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-# Not a target:
-.DEFAULT:
+obj/mark_by_val.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-all: push_swap
-#  Phony target (prerequisite of .PHONY).
-#  Command line target.
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has been updated.
-#  Successfully updated.
-
-fclean: clean
+clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 55):
-	${RM} ${NAME} libtool/*.a
+#  commands to execute (from `Makefile', line 63):
+	${RM} ${OBJ_DIR} libtool/*.o
+	
 
-push_swap: src/take_stack.o src/checks.o src/swap.o src/push.o src/rotate.o src/reverse_rotate.o src/sort_small.o src/sort.o src/find_val.o src/find_idx.o src/find_position.o src/stack_manupilation.o src/mark_by_val.o src/mark_by_idx.o src/main.o
+push_swap: obj/take_stack.o obj/checks_par.o obj/checks_sort.o obj/checks_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/mark_by_idx.o obj/find_best_mark.o obj/main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-12-08 09:59:08.612895532
+#  Last modified 2022-12-09 01:03:55
 #  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 45):
-	make -C ./libtool
-	${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
-
-src/mark_by_idx.o: src/mark_by_idx.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/mark_by_idx'
-#  Last modified 2022-12-08 09:59:08.588895531
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-src/checks.o: src/checks.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/checks'
-#  Last modified 2022-12-08 09:58:37.02889464
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  commands to execute (from `Makefile', line 53):
+	@make -C ./libtool
+	@${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
+	
 
 # Not a target:
-src/reverse_rotate.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-src/find_idx.o: src/find_idx.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/find_idx'
-#  Last modified 2022-12-08 09:58:37.180894645
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-# Not a target:
-src/take_stack.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/swap.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/stack_manupilation.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/sort_small.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-src/sort_small.o: src/sort_small.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/sort_small'
-#  Last modified 2022-12-08 09:58:37.124894643
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-src/reverse_rotate.o: src/reverse_rotate.c inc/push_swap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'src/reverse_rotate'
-#  Last modified 2022-12-08 09:58:37.104894642
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 49):
-	${CC} -g ${FLAGS} -c $< -o $@
-
-# Not a target:
-src/rotate.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
-
-.PHONY: all clean fclean re
+obj/push.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/push.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-12-08 06:26:20.296535098
-#  File has been updated.
-#  Successfully updated.
+obj/find_best_mark.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/rotate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=41/1024=4%, Rehash=0, Collisions=1/154=1%
+# Load=31/1024=3%, Rehash=0, Collisions=0/81=0%
 # VPATH Search Paths
 
-# No 'vpath' search paths.
+# No `vpath' search paths.
 
-# No general ('VPATH' variable) search path.
+# No general (`VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 100 / storage = 1225 B / avg = 12 B
-# current buf: size = 8162 B / used = 1225 B / count = 100 / avg = 12 B
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# strcache performance: lookups = 173 / hit rate = 42%
-# hash-table stats:
-# Load=100/8192=1%, Rehash=0, Collisions=0/173=0%
-# Finished Make data base on Thu Dec  8 09:59:22 2022
+# Finished Make data base on Fri Dec  9 01:20:58 2022
 
  

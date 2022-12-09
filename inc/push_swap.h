@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 11:00:14 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/09 01:10:22 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int		check_dup_range(t_list *tab);
 int		check_arg(char *r);
 int		check_sort(t_list *stack, int size_tocheck);
 int		check_rev_sort(t_list *stack, int size_tocheck);
+int		check_to_push(t_list *st);
 //print stack content index and size
 void	print_stack(t_list *sa, t_list *sb);
 //find max min and med valeurs
