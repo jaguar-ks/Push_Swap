@@ -2,3 +2,4 @@
 .vscode
 checker_mac
 visualizer
+src/print_stack.c

@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Fri Dec  9 23:55:58 2022
+# Make data base, printed on Sat Dec 10 03:45:07 2022
 
 # Variables
 
@@ -25,8 +25,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # makefile
 CURDIR := /Users/faksouss/Desktop/Push_Swap
 # makefile
+ 
 SHELL = /bin/sh
-# makefile (from `Makefile', line 51)
+# makefile (from `Makefile', line 52)
 RM = rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
@@ -34,15 +35,15 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 40)
+# makefile (from `Makefile', line 41)
 OBJS_MD = $(addprefix $(OBJ_DIR)/,${SRCS_MD:.c=.o})
-# makefile (from `Makefile', line 45)
+# makefile (from `Makefile', line 46)
 OBJ_DIR = obj
 # environment
 VSCODE_CWD = /
 # environment
 Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.CL8LA5lY2u/Render
-# makefile (from `Makefile', line 41)
+# makefile (from `Makefile', line 42)
 SRC_MD = $(addprefix $(SRC_DIR)/,$(SRCS_MD))
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands
@@ -86,7 +87,7 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 38)
+# makefile (from `Makefile', line 39)
 CC = cc
 # default
 MAKE_VERSION := 3.81
@@ -94,7 +95,7 @@ MAKE_VERSION := 3.81
 USER = faksouss
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 49)
+# makefile (from `Makefile', line 50)
 NAME = push_swap
 # environment
 LESS = -R
@@ -125,12 +126,12 @@ XPC_SERVICE_NAME = com.microsoft.VSCode.1380
 # automatic
 +F = $(notdir $+)
 # makefile (from `Makefile', line 14)
-SRCS_MD = take_stack.c check_par.c check_sort.c check_need_of_act.c swap.c push.c rotate.c reverse_rotate.c sort_small.c sort.c find_val.c find_idx.c find_position.c stack_manupilation.c mark_by_val.c mark_by_idx.c find_best_mark.c send_a_to_b.c send_b_to_a.c to_the_top_and_align.c main.c 
+SRCS_MD = take_stack.c check_par.c check_sort.c check_need_of_act.c swap.c push.c rotate.c reverse_rotate.c sort_small.c sort.c find_val.c find_idx.c find_position.c stack_manupilation.c mark_by_val.c mark_by_idx.c find_best_mark.c send_a_to_b.c send_b_to_a.c to_the_top_and_align.c print_stack.c main.c 
 # environment
 __CF_USER_TEXT_ENCODING = 0x18EDF:0x0:0x0
 # default
 MAKEFILES := 
-# makefile (from `Makefile', line 43)
+# makefile (from `Makefile', line 44)
 SRC_DIR = src
 # automatic
 <F = $(notdir $<)
@@ -138,14 +139,13 @@ SRC_DIR = src
 PAGER = less
 # environment
 LC_ALL = C
- 
-# makefile (from `Makefile', line 47)
+# makefile (from `Makefile', line 48)
 HEADER = inc/push_swap.h
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# makefile (from `Makefile', line 36)
+# makefile (from `Makefile', line 37)
 FLAGS = -Wall -Wextra -Werror
 # default
 .INCLUDE_DIRS = /usr/local/include
@@ -156,6 +156,7 @@ LANG = C
 # environment
 VSCODE_PID = 5704
 # variable set hash-table stats:
+ 
 # Load=71/1024=7%, Rehash=0, Collisions=1/110=1%
 
 # Pattern-specific Variable Values
@@ -164,14 +165,14 @@ VSCODE_PID = 5704
 
 # Directories
 
-# . (device 16777227, inode 1429682): 14 files, no impossibilities.
+# . (device 16777227, inode 1429682): 15 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 obj/%.o: src/%.c inc/push_swap.h
-#  commands to execute (from `Makefile', line 60):
+#  commands to execute (from `Makefile', line 61):
 	@${CC} -g ${FLAGS} -c $< -o $@
 	
 
@@ -231,9 +232,15 @@ obj/send_a_to_b.o:
 #  File has not been updated.
 
 # Not a target:
+obj/print_stack.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-12-09 23:54:35
+#  Last modified 2022-12-10 03:44:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -286,7 +293,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 69):
+#  commands to execute (from `Makefile', line 70):
 	${RM} ${NAME} libtool/*.a
 	
 
@@ -319,7 +326,7 @@ obj:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/11=9%
-#  commands to execute (from `Makefile', line 63):
+#  commands to execute (from `Makefile', line 64):
 	mkdir ${OBJ_DIR}
 	
 
@@ -357,7 +364,6 @@ re: fclean all
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
- 
 #  File has not been updated.
 
 # Not a target:
@@ -371,15 +377,15 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 66):
+#  commands to execute (from `Makefile', line 67):
 	${RM} ${OBJ_DIR} libtool/*.o
 	
 
-push_swap: obj/take_stack.o obj/check_par.o obj/check_sort.o obj/check_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/mark_by_idx.o obj/find_best_mark.o obj/send_a_to_b.o obj/send_b_to_a.o obj/to_the_top_and_align.o obj/main.o
+push_swap: obj/take_stack.o obj/check_par.o obj/check_sort.o obj/check_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/mark_by_idx.o obj/find_best_mark.o obj/send_a_to_b.o obj/send_b_to_a.o obj/to_the_top_and_align.o obj/print_stack.o obj/main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 56):
+#  commands to execute (from `Makefile', line 57):
 	@make -C ./libtool
 	@${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
 	
@@ -409,7 +415,7 @@ obj/rotate.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=32/1024=3%, Rehash=0, Collisions=2/81=2%
+# Load=33/1024=3%, Rehash=0, Collisions=2/83=2%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -421,6 +427,6 @@ obj/rotate.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Dec  9 23:55:58 2022
+# Finished Make data base on Sat Dec 10 03:45:07 2022
 
  
