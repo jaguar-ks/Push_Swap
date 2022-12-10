@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/10 04:11:30 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/10 04:46:11 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,5 @@ int	main(int ac, char **av)
 	else
 		sort_by_val(&stack_a, &stack_b);
 	ft_lstclear(&stack_a);
-	//system("leaks push_swap");
 	exit(0);
 }
