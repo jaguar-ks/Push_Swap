@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_small.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 03:46:59 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 06:26:20 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/10 02:31:46 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,7 @@ void	rev_sort_three(t_list **stack, char c)
 		ra(stack, c);
 	else if (tmp->next->content == min)
 		rra(stack, c);
-	tmp = tmp->next->next;
-	if (tmp->content == min)
+	if (ft_lstlast(tmp)->content == min)
 	{
 		rev_sort_two(stack, c);
 		return ;

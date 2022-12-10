@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Fri Dec  9 02:47:46 2022
+# Make data base, printed on Fri Dec  9 23:55:58 2022
 
 # Variables
 
@@ -26,7 +26,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 CURDIR := /Users/faksouss/Desktop/Push_Swap
 # makefile
 SHELL = /bin/sh
-# makefile (from `Makefile', line 50)
+# makefile (from `Makefile', line 51)
 RM = rm -rf
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
@@ -34,24 +34,26 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# makefile (from `Makefile', line 39)
+# makefile (from `Makefile', line 40)
 OBJS_MD = $(addprefix $(OBJ_DIR)/,${SRCS_MD:.c=.o})
-# makefile (from `Makefile', line 44)
+# makefile (from `Makefile', line 45)
 OBJ_DIR = obj
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.PfoeY135s9/Render
-# makefile (from `Makefile', line 40)
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.CL8LA5lY2u/Render
+# makefile (from `Makefile', line 41)
 SRC_MD = $(addprefix $(SRC_DIR)/,$(SRCS_MD))
 # environment
-PATH = /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Ycle5Nk2dE/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.0hah7e4pND/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -71,7 +73,8 @@ LOGNAME = faksouss
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
- 
+ZSH = /Users/faksouss/.oh-my-zsh
+# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
@@ -83,7 +86,7 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 37)
+# makefile (from `Makefile', line 38)
 CC = cc
 # default
 MAKE_VERSION := 3.81
@@ -91,8 +94,10 @@ MAKE_VERSION := 3.81
 USER = faksouss
 # makefile
 .DEFAULT_GOAL := all
-# makefile (from `Makefile', line 48)
+# makefile (from `Makefile', line 49)
 NAME = push_swap
+# environment
+LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -114,34 +119,33 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
+XPC_SERVICE_NAME = com.microsoft.VSCode.1380
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # makefile (from `Makefile', line 14)
-SRCS_MD = take_stack.c check_par.c check_sort.c check_need_of_act.c swap.c push.c rotate.c reverse_rotate.c sort_small.c sort.c find_val.c find_idx.c find_position.c stack_manupilation.c mark_by_val.c mark_by_idx.c find_best_mark.c send_a_to_b.c send_b_to_a.c main.c 
+SRCS_MD = take_stack.c check_par.c check_sort.c check_need_of_act.c swap.c push.c rotate.c reverse_rotate.c sort_small.c sort.c find_val.c find_idx.c find_position.c stack_manupilation.c mark_by_val.c mark_by_idx.c find_best_mark.c send_a_to_b.c send_b_to_a.c to_the_top_and_align.c main.c 
 # environment
 __CF_USER_TEXT_ENCODING = 0x18EDF:0x0:0x0
-# environment
-COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
-# makefile (from `Makefile', line 42)
+# makefile (from `Makefile', line 43)
 SRC_DIR = src
 # automatic
 <F = $(notdir $<)
 # environment
-LC_ALL = C
-# makefile (from `Makefile', line 46)
-HEADER = inc/push_swap.h
+PAGER = less
 # environment
-SECURITYSESSIONID = 186a8
+LC_ALL = C
+ 
+# makefile (from `Makefile', line 47)
+HEADER = inc/push_swap.h
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# makefile (from `Makefile', line 35)
+# makefile (from `Makefile', line 36)
 FLAGS = -Wall -Wextra -Werror
 # default
 .INCLUDE_DIRS = /usr/local/include
@@ -150,9 +154,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 5208
+VSCODE_PID = 5704
 # variable set hash-table stats:
-# Load=69/1024=7%, Rehash=0, Collisions=1/108=1%
+# Load=71/1024=7%, Rehash=0, Collisions=1/110=1%
 
 # Pattern-specific Variable Values
 
@@ -160,14 +164,14 @@ VSCODE_PID = 5208
 
 # Directories
 
-# . (device 16777224, inode 1429682): 14 files, no impossibilities.
+# . (device 16777227, inode 1429682): 14 files, no impossibilities.
 
 # 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 obj/%.o: src/%.c inc/push_swap.h
-#  commands to execute (from `Makefile', line 59):
+#  commands to execute (from `Makefile', line 60):
 	@${CC} -g ${FLAGS} -c $< -o $@
 	
 
@@ -229,7 +233,7 @@ obj/send_a_to_b.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-12-09 02:47:45
+#  Last modified 2022-12-09 23:54:35
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -282,7 +286,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 68):
+#  commands to execute (from `Makefile', line 69):
 	${RM} ${NAME} libtool/*.a
 	
 
@@ -315,7 +319,7 @@ obj:
 # ? := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/11=9%
-#  commands to execute (from `Makefile', line 62):
+#  commands to execute (from `Makefile', line 63):
 	mkdir ${OBJ_DIR}
 	
 
@@ -353,6 +357,7 @@ re: fclean all
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 
 # Not a target:
@@ -366,15 +371,15 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 65):
+#  commands to execute (from `Makefile', line 66):
 	${RM} ${OBJ_DIR} libtool/*.o
 	
 
-push_swap: obj/take_stack.o obj/check_par.o obj/check_sort.o obj/check_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/mark_by_idx.o obj/find_best_mark.o obj/send_a_to_b.o obj/send_b_to_a.o obj/main.o
+push_swap: obj/take_stack.o obj/check_par.o obj/check_sort.o obj/check_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/mark_by_idx.o obj/find_best_mark.o obj/send_a_to_b.o obj/send_b_to_a.o obj/to_the_top_and_align.o obj/main.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 55):
+#  commands to execute (from `Makefile', line 56):
 	@make -C ./libtool
 	@${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
 	
@@ -392,18 +397,23 @@ obj/find_best_mark.o:
 #  File has not been updated.
 
 # Not a target:
+obj/to_the_top_and_align.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 obj/rotate.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=31/1024=3%, Rehash=0, Collisions=2/79=3%
+# Load=32/1024=3%, Rehash=0, Collisions=2/81=2%
 # VPATH Search Paths
 
 # No `vpath' search paths.
 
- 
 # No general (`VPATH' variable) search path.
 
 # # of strings in strcache: 1
@@ -411,6 +421,6 @@ obj/rotate.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Dec  9 02:47:46 2022
+# Finished Make data base on Fri Dec  9 23:55:58 2022
 
  

@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/09 01:50:23 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/10 01:47:57 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 # define PUSH_SWAP_H
 
 # include "../libtool/libft.h"
+
+typedef struct action_needed
+{
+	int				rm_a;
+	int				rm_b;
+	int				rrm_a;
+	int				rrm_b;
+}	acts;
+
 //parssing
 t_list	*take_stack(int ac, char **av);
 //actions
@@ -59,7 +68,7 @@ int		find_l_s(t_list *stack, int to_cmp);
 //send small elements (below med valeur) to stack B
 void	send_small(t_list **sa, t_list **sb, int med);
 //find position of indexs
-int		find_next_idx(t_list *stack);
+int		find_next_idx(t_list *stack, int idx);
 int		find_prev_idx(t_list *stack);
 //mark functions
 void	reset_marks(t_list **st);
@@ -72,5 +81,11 @@ void	find_best_mark(t_list **st, void (*f)(t_list **, t_list *));
 //sort more than 10 nb
 void	sort_by_val(t_list **sta, t_list **stb);
 void	send_a_to_b(t_list **sta, t_list **stb, void (*f)(t_list **, t_list *));
+void	send_b_to_a(t_list **sta, t_list **stb);
+//count the move needed
+int		to_the_top_by_r(t_list *st, int cntt);
+int		to_the_top_by_rr(t_list *st, int cntt);
+int		align_by_r(t_list *st, int idx);
+int		align_by_rr(t_list *st, int idx);
 
 #endif

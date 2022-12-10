@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:49:04 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/09 01:54:15 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/10 02:34:23 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,11 @@ int	main(int ac, char **av)
 		ft_putstr_fd("Error\n", 2);
 		exit(1);
 	}
-	sort_by_val(&stack_a, &stack_b);
-	// print_stack(stack_a, stack_b);
+	if (ac > 2 && ac < 8)
+		sort_small(&stack_a, &stack_b);
+	else
+		sort_by_val(&stack_a, &stack_b);
+	//print_stack(stack_a, stack_b);
 	// if (check_sort(stack_a, ft_lstsize(stack_a)))
 	// 	printf("stack is sorted\n");
 	// else

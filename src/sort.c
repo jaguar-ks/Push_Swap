@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 06:06:21 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/09 02:00:30 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/10 00:54:48 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ void	sort_by_val(t_list **sta, t_list **stb)
 	get_idx(sta);
 	find_best_mark(sta, &mark_by_val);
 	send_a_to_b(sta, stb, &mark_by_val);
+	send_b_to_a(sta, stb);
 }
