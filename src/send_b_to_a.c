@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   send_b_to_a.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 02:48:01 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/10 04:11:06 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/10 05:34:34 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/push_swap.h"
 
-acts	*what_is_the_cost(t_list *sta, t_list *stb, int cntt)
+t_acts	*what_is_the_cost(t_list *sta, t_list *stb, int cntt)
 {
-	acts	*cost;
+	t_acts	*cost;
 	t_list	*tmp;
 
-	cost = (acts *)malloc(sizeof(acts));
+	cost = (t_acts *)malloc(sizeof(t_acts));
 	cost->rm_b = to_the_top_by_r(stb, cntt);
 	cost->rrm_b = to_the_top_by_rr(stb, cntt);
 	if (cost->rm_b <= cost->rrm_b)
@@ -37,7 +37,7 @@ acts	*what_is_the_cost(t_list *sta, t_list *stb, int cntt)
 int	find_cheapest_cost(t_list *sta, t_list *stb)
 {
 	t_list	*tmp;
-	acts	*cost;
+	t_acts	*cost;
 	int		chp;
 	int		sm;
 
@@ -55,7 +55,7 @@ int	find_cheapest_cost(t_list *sta, t_list *stb)
 	return (chp);
 }
 
-void	do_r_op(t_list **sta, t_list **stb, acts *cost)
+void	do_r_op(t_list **sta, t_list **stb, t_acts *cost)
 {
 	if (cost->rm_a || cost->rm_b)
 	{
@@ -78,7 +78,7 @@ void	do_r_op(t_list **sta, t_list **stb, acts *cost)
 	}
 }
 
-void	do_rr_op(t_list **sta, t_list **stb, acts *cost)
+void	do_rr_op(t_list **sta, t_list **stb, t_acts *cost)
 {
 	if (cost->rrm_a || cost->rrm_b)
 	{
@@ -103,7 +103,7 @@ void	do_rr_op(t_list **sta, t_list **stb, acts *cost)
 
 void	send_b_to_a(t_list **sta, t_list **stb)
 {
-	acts	*cost;
+	t_acts	*cost;
 	t_list	*tb;
 	int		cst;
 	int		sm;
