@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 02:48:01 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/10 02:19:41 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/10 04:11:06 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	find_cheapest_cost(t_list *sta, t_list *stb)
 		if (sm < chp)
 			chp = sm;
 		tmp = tmp->next;
+		free(cost);
 	}
 	return (chp);
 }
@@ -118,9 +119,11 @@ void	send_b_to_a(t_list **sta, t_list **stb)
 			if (sm == cst)
 				break ;
 			tb = tb->next;
+			free(cost);
 		}
 		do_r_op(sta, stb, cost);
 		do_rr_op(sta, stb, cost);
 		pa(stb, sta, 'a');
+		free(cost);
 	}
 }
