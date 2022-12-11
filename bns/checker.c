@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 08:49:24 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/11 09:37:12 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/11 12:46:31 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ int	main(int ac, char **av)
 
 	sta = take_stack(ac, av);
 	stb = NULL;
-	if (!sta || ac < 2)
+	if (ac < 2)
+		exit(0);
+	if (!sta)
 	{
 		ft_putstr_fd("Error\n", 2);
 		exit(1);
