@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   take_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 22:07:17 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/08 06:26:20 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/11 15:49:18 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_list	*take_stack(int ac, char **av)
 			return (ft_lstclear(&head), deallocate(r), NULL);
 		deallocate(r);
 	}
-	if (ft_lstsize(head) < 2)
+	if (!ft_lstsize(head))
 		return (NULL);
 	return (head);
 }

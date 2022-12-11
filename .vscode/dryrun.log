@@ -1,5 +1,42 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/faksouss/Desktop/Push_Swap'
-make: Nothing to be done for `all'.
+mkdir obj
+mkdir obj_b
+ 
+cc -g -Wall -Wextra -Werror -c src/take_stack.c -o obj/take_stack.o
+cc -g -Wall -Wextra -Werror -c src/check_par.c -o obj/check_par.o
+cc -g -Wall -Wextra -Werror -c src/check_sort.c -o obj/check_sort.o
+ 
+cc -g -Wall -Wextra -Werror -c src/check_need_of_act.c -o obj/check_need_of_act.o
+cc -g -Wall -Wextra -Werror -c src/swap.c -o obj/swap.o
+cc -g -Wall -Wextra -Werror -c src/push.c -o obj/push.o
+cc -g -Wall -Wextra -Werror -c src/rotate.c -o obj/rotate.o
+cc -g -Wall -Wextra -Werror -c src/reverse_rotate.c -o obj/reverse_rotate.o
+cc -g -Wall -Wextra -Werror -c src/sort_small.c -o obj/sort_small.o
+cc -g -Wall -Wextra -Werror -c src/sort.c -o obj/sort.o
+cc -g -Wall -Wextra -Werror -c src/find_val.c -o obj/find_val.o
+cc -g -Wall -Wextra -Werror -c src/find_idx.c -o obj/find_idx.o
+cc -g -Wall -Wextra -Werror -c src/find_position.c -o obj/find_position.o
+cc -g -Wall -Wextra -Werror -c src/stack_manupilation.c -o obj/stack_manupilation.o
+cc -g -Wall -Wextra -Werror -c src/mark_by_val.c -o obj/mark_by_val.o
+cc -g -Wall -Wextra -Werror -c src/find_best_mark.c -o obj/find_best_mark.o
+cc -g -Wall -Wextra -Werror -c src/send_a_to_b.c -o obj/send_a_to_b.o
+cc -g -Wall -Wextra -Werror -c src/send_b_to_a.c -o obj/send_b_to_a.o
+cc -g -Wall -Wextra -Werror -c src/to_the_top_and_align.c -o obj/to_the_top_and_align.o
+cc -g -Wall -Wextra -Werror -c src/main.c -o obj/main.o
+make -C ./libtool
+cc -Wall -Wextra -Werror obj/take_stack.o obj/check_par.o obj/check_sort.o obj/check_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/find_best_mark.o obj/send_a_to_b.o obj/send_b_to_a.o obj/to_the_top_and_align.o obj/main.o ./libtool/libft.a -o push_swap
+cc -g -Wall -Wextra -Werror -c bns/checker.c -o obj_b/checker.o
+cc -g -Wall -Wextra -Werror -c bns/get_next_line.c -o obj_b/get_next_line.o
+cc -g -Wall -Wextra -Werror -c bns/get_next_line_utils.c -o obj_b/get_next_line_utils.o
+cc -g -Wall -Wextra -Werror -c bns/swap_ch.c -o obj_b/swap_ch.o
+cc -g -Wall -Wextra -Werror -c bns/rotate_ch.c -o obj_b/rotate_ch.o
+cc -g -Wall -Wextra -Werror -c bns/reverse_rotate_ch.c -o obj_b/reverse_rotate_ch.o
+cc -g -Wall -Wextra -Werror -c bns/push_ch.c -o obj_b/push_ch.o
+cc -g -Wall -Wextra -Werror -c bns/read_and_do.c -o obj_b/read_and_do.o
+cc -g -Wall -Wextra -Werror -c bns/take_stack.c -o obj_b/take_stack.o
+cc -g -Wall -Wextra -Werror -c bns/check_sort.c -o obj_b/check_sort.o
+cc -g -Wall -Wextra -Werror -c bns/check_par.c -o obj_b/check_par.o
+cc -Wall -Wextra -Werror obj_b/checker.o obj_b/get_next_line.o obj_b/get_next_line_utils.o obj_b/swap_ch.o obj_b/rotate_ch.o obj_b/reverse_rotate_ch.o obj_b/push_ch.o obj_b/read_and_do.o obj_b/take_stack.o obj_b/check_sort.o obj_b/check_par.o ./libtool/libft.a -o checker
 make: Leaving directory `/Users/faksouss/Desktop/Push_Swap'
  
