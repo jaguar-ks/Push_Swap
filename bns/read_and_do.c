@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_and_do.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
+/*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 09:22:15 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/11 10:37:23 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/11 16:16:59 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	read_and_do(t_list **sta, t_list **stb)
 	while (act)
 	{
 		exec_opr(act, sta, stb);
+		free(act);
 		act = get_next_line(0);
 	}
 }
