@@ -6,17 +6,19 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Dec 10 05:36:35 2022
+# Make data base, printed on Sun Dec 11 10:19:14 2022
 
 # Variables
 
+# makefile (from 'Makefile', line 67)
+OBJS_BN = ${addprefix ${OBJ_B_DIR}/,${BNS:.c=.o}}
 # environment
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
 # environment
 GJS_DEBUG_OUTPUT = stderr
-# makefile (from 'Makefile', line 44)
+# makefile (from 'Makefile', line 53)
 SRC_DIR = src
 # environment
 VSCODE_CWD = /home/deman_wolf
@@ -32,7 +34,7 @@ MAKE_COMMAND := make
 QT_ACCESSIBILITY = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
-# makefile (from 'Makefile', line 46)
+# makefile (from 'Makefile', line 57)
 OBJ_DIR = obj
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
@@ -58,6 +60,8 @@ SRCS_MD = take_stack.c check_par.c check_sort.c check_need_of_act.c swap.c push.
 LANG = C
 # environment
 POWERSHELL_UPDATECHECK = Off
+# makefile (from 'Makefile', line 61)
+BNS_DIR = bns
 # environment
 XAUTHORITY = /run/user/1000/gdm/Xauthority
 # default
@@ -73,7 +77,7 @@ LESS_TERMCAP_so = [01;33m
 # makefile
 CURDIR := /home/deman_wolf/Desktop/Push_Swap
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -84,7 +88,9 @@ MFLAGS = -pqrR
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # default
 .SHELLFLAGS := -c
-# makefile (from 'Makefile', line 41)
+# makefile (from 'Makefile', line 37)
+BNS = checker.c get_next_line.c get_next_line_utils.c swap_ch.c rotate_ch.c reverse_rotate_ch.c push_ch.c read_and_do.c take_stack.c check_sort.c check_par.c 
+# makefile (from 'Makefile', line 59)
 OBJS_MD = $(addprefix $(OBJ_DIR)/,${SRCS_MD:.c=.o})
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -95,15 +101,15 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 22200
+VSCODE_PID = 3691
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from 'Makefile', line 37)
+# makefile (from 'Makefile', line 49)
 FLAGS = -Wall -Wextra -Werror
 # environment
-SESSION_MANAGER = local/jaguar:@/tmp/.ICE-unix/1548,unix/jaguar:/tmp/.ICE-unix/1548
+SESSION_MANAGER = local/jaguar:@/tmp/.ICE-unix/1617,unix/jaguar:/tmp/.ICE-unix/1617
 # automatic
 *F = $(notdir $*)
 # environment
@@ -128,13 +134,14 @@ LESS_TERMCAP_us = [1;32m
 MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
-# makefile (from 'Makefile', line 42)
+# makefile (from 'Makefile', line 55)
 SRC_MD = $(addprefix $(SRC_DIR)/,$(SRCS_MD))
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
 SHLVL = 0
 # environment
+ 
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
@@ -150,17 +157,17 @@ LANGUAGE = en_US:en
 ^F = $(notdir $^)
 # environment
 COMMAND_NOT_FOUND_INSTALL_PROMPT = 1
-# makefile (from 'Makefile', line 48)
+# makefile (from 'Makefile', line 69)
 HEADER = inc/push_swap.h
 # environment
 LESS_TERMCAP_mb = [1;31m
 # environment
-INVOCATION_ID = f8b7c8fd9f7f4eb2ad142eb558fac148
+INVOCATION_ID = 9035f6bafed349dbb97a196b29e2d858
 # environment
 USERNAME = deman_wolf
 # automatic
 ?F = $(notdir $?)
-# makefile (from 'Makefile', line 50)
+# makefile (from 'Makefile', line 73)
 NAME = push_swap
 # environment
 XDG_CURRENT_DESKTOP = GNOME
@@ -178,11 +185,13 @@ GNUMAKEFLAGS :=
 LOGNAME = deman_wolf
 # environment
 GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# makefile (from 'Makefile', line 65)
+BNS_S = $(addprefix ${BNS_DIR}/,${BNS})
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1574
-# makefile (from 'Makefile', line 52)
+SYSTEMD_EXEC_PID = 1643
+# makefile (from 'Makefile', line 77)
 RM = rm -rf
 # environment
 DISPLAY = :1
@@ -193,11 +202,11 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 1339
+MANAGERPID = 1407
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 22200
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3691
 # environment
-SSH_AGENT_PID = 1504
+SSH_AGENT_PID = 1579
 # environment
 _ = /usr/share/code/code
 # environment
@@ -207,7 +216,7 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
 POWERSHELL_TELEMETRY_OPTOUT = 1
 # environment
-JOURNAL_STREAM = 8:23233
+JOURNAL_STREAM = 8:29728
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -222,6 +231,8 @@ _JAVA_OPTIONS = -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
 ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-518d13f2-1.74.0-main.sock
+# makefile (from 'Makefile', line 75)
+BNS_NAME = checker
 # environment
 DOTNET_CLI_TELEMETRY_OPTOUT = 1
 # default
@@ -232,16 +243,20 @@ DOTNET_CLI_TELEMETRY_OPTOUT = 1
 SUFFIXES := 
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# makefile (from 'Makefile', line 63)
+OBJ_B_DIR = obj_b
+# makefile (from 'Makefile', line 71)
+BNS_H = inc/checker.h
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
-# makefile (from 'Makefile', line 39)
+# makefile (from 'Makefile', line 51)
 CC = cc
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = gnome
 # variable set hash-table stats:
-# Load=115/1024=11%, Rehash=0, Collisions=11/157=7%
+# Load=122/1024=12%, Rehash=0, Collisions=15/173=9%
 
 # Pattern-specific Variable Values
 
@@ -249,36 +264,56 @@ GDMSESSION = gnome
 
 # Directories
 
-# inc (device 66311, inode 1338591): 1 files, no impossibilities so far.
+# inc (device 66311, inode 1338591): 3 files, no impossibilities so far.
 # src (device 66311, inode 1196510): 23 files, no impossibilities so far.
-# . (device 66311, inode 2387393): 13 files, no impossibilities.
+# . (device 66311, inode 2387393): 16 files, no impossibilities.
+# bns (device 66311, inode 2236819): 13 files, no impossibilities so far.
 
-# 37 files, no impossibilities in 3 directories.
+# 55 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
+obj_b/%.o: bns/%.c inc/checker.h inc/push_swap.h
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
+
 obj/%.o: src/%.c inc/push_swap.h
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
-# 1 implicit rules, 0 (0.0%) terminal.
+# 2 implicit rules, 0 (0.0%) terminal.
 # Files
+
+# Not a target:
+bns/rotate_ch.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 10:09:35.545627091
+#  File has been updated.
+#  Successfully updated.
 
 obj/take_stack.o: src/take_stack.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'take_stack'
-#  Last modified 2022-12-10 05:34:52.69600575
+#  Last modified 2022-12-11 10:18:53.726362256
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
+
+obj_b/push_ch.o: bns/push_ch.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'push_ch'
+#  Last modified 2022-12-11 10:18:55.006369694
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
 inc/push_swap.h:
 #  Implicit rule search has been done.
 #  Last modified 2022-12-10 05:34:40.2960054
 #  File has been updated.
- 
 #  Successfully updated.
 
 # Not a target:
@@ -288,13 +323,22 @@ src/send_b_to_a.c:
 #  File has been updated.
 #  Successfully updated.
 
+obj_b/check_sort.o: bns/check_sort.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'check_sort'
+#  Last modified 2022-12-11 10:18:55.066370041
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
+
 obj/sort_small.o: src/sort_small.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'sort_small'
-#  Last modified 2022-12-10 05:34:52.844005755
+#  Last modified 2022-12-11 10:18:53.882363163
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
@@ -304,6 +348,24 @@ src/to_the_top_and_align.c:
 #  File has been updated.
 #  Successfully updated.
 
+obj_b/get_next_line.o: bns/get_next_line.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'get_next_line'
+#  Last modified 2022-12-11 10:18:54.910369135
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+obj_b/read_and_do.o: bns/read_and_do.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'read_and_do'
+#  Last modified 2022-12-11 10:18:55.030369832
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
+
 # Not a target:
 src/mark_by_idx.c:
 #  Implicit rule search has been done.
@@ -311,14 +373,35 @@ src/mark_by_idx.c:
 #  File has been updated.
 #  Successfully updated.
 
+# Not a target:
+bns/checker.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 09:37:12.828308598
+#  File has been updated.
+#  Successfully updated.
+
 obj/main.o: src/main.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-12-10 05:36:16.612008119
+#  Last modified 2022-12-11 10:18:54.102364442
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
+
+# Not a target:
+inc/checker.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 10:14:29.168554947
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+bns/check_par.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-10 05:32:15.268001
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/mark_by_val.c:
@@ -330,10 +413,10 @@ src/mark_by_val.c:
 obj/to_the_top_and_align.o: src/to_the_top_and_align.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'to_the_top_and_align'
-#  Last modified 2022-12-10 05:34:53.04800576
+#  Last modified 2022-12-11 10:18:54.082364326
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
@@ -346,18 +429,28 @@ src/find_position.c:
 obj/check_need_of_act.o: src/check_need_of_act.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'check_need_of_act'
-#  Last modified 2022-12-10 05:34:52.752005752
+#  Last modified 2022-12-11 10:18:53.782362582
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-12-10 05:36:15.256008081
+#  Last modified 2022-12-11 10:18:52.774356718
 #  File has been updated.
 #  Successfully updated.
+
+obj_b/swap_ch.o: bns/swap_ch.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'swap_ch'
+ 
+#  Last modified 2022-12-11 10:18:54.950369368
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
 src/send_a_to_b.c:
@@ -371,21 +464,44 @@ src/send_a_to_b.c:
 #  Modification time never checked.
 #  File has not been updated.
 
+obj_b/reverse_rotate_ch.o: bns/reverse_rotate_ch.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'reverse_rotate_ch'
+#  Last modified 2022-12-11 10:18:54.9903696
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
+
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 67):
-	${RM} ${OBJ_DIR} libtool/*.o
+#  recipe to execute (from 'Makefile', line 99):
+	${RM} ${OBJ_DIR} ${OBJ_B_DIR} libtool/*.o
+
+# Not a target:
+bns/take_stack.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-08 06:26:20.296535
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+bns/reverse_rotate_ch.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 10:10:13.510080998
+#  File has been updated.
+#  Successfully updated.
 
 obj/rotate.o: src/rotate.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'rotate'
-#  Last modified 2022-12-10 05:34:52.808005754
+#  Last modified 2022-12-11 10:18:53.838362907
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
@@ -398,11 +514,20 @@ src/check_need_of_act.c:
 obj/stack_manupilation.o: src/stack_manupilation.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'stack_manupilation'
-#  Last modified 2022-12-10 05:34:52.936005757
+#  Last modified 2022-12-11 10:18:53.978363721
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
+
+obj_b/check_par.o: bns/check_par.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'check_par'
+#  Last modified 2022-12-11 10:18:55.086370158
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
 src/main.c:
@@ -419,11 +544,12 @@ re: fclean all
 
 obj:
 #  Implicit rule search has not been done.
-#  Last modified 2022-12-10 05:36:16.612008119
+#  Last modified 2022-12-11 10:18:54.102364442
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 64):
+#  recipe to execute (from 'Makefile', line 95):
 	mkdir ${OBJ_DIR}
+	mkdir ${OBJ_B_DIR}
 
 # Not a target:
 src/sort.c:
@@ -440,6 +566,13 @@ src/find_val.c:
 #  Successfully updated.
 
 # Not a target:
+bns/swap_ch.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 10:09:15.033370499
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 src/find_idx.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-12-10 05:32:15.268001306
@@ -449,19 +582,19 @@ src/find_idx.c:
 obj/mark_by_val.o: src/mark_by_val.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'mark_by_val'
-#  Last modified 2022-12-10 05:34:52.956005758
+#  Last modified 2022-12-11 10:18:53.998363837
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 obj/find_best_mark.o: src/find_best_mark.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'find_best_mark'
-#  Last modified 2022-12-10 05:34:52.992005759
+#  Last modified 2022-12-11 10:18:54.030364023
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
@@ -470,7 +603,14 @@ obj/find_best_mark.o: src/find_best_mark.c inc/push_swap.h
 #  Modification time never checked.
 #  File has not been updated.
 
-all: obj push_swap
+# Not a target:
+bns/read_and_do.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 10:15:02.584817695
+#  File has been updated.
+#  Successfully updated.
+
+all: obj push_swap checker
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
 #  Implicit rule search has not been done.
@@ -481,19 +621,19 @@ all: obj push_swap
 obj/mark_by_idx.o: src/mark_by_idx.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'mark_by_idx'
-#  Last modified 2022-12-10 05:34:52.972005758
+#  Last modified 2022-12-11 10:18:54.014363931
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 obj/reverse_rotate.o: src/reverse_rotate.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'reverse_rotate'
-#  Last modified 2022-12-10 05:34:52.824005754
+#  Last modified 2022-12-11 10:18:53.858363023
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 fclean: clean
@@ -501,33 +641,40 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 70):
-	${RM} ${NAME} libtool/*.a
+#  recipe to execute (from 'Makefile', line 102):
+	${RM} ${NAME} ${BNS_NAME} libtool/*.a
 
 obj/check_sort.o: src/check_sort.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'check_sort'
-#  Last modified 2022-12-10 05:34:52.736005751
+#  Last modified 2022-12-11 10:18:53.766362488
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
+
+# Not a target:
+bns/get_next_line_utils.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 09:14:28.229716733
+#  File has been updated.
+#  Successfully updated.
 
 obj/send_b_to_a.o: src/send_b_to_a.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'send_b_to_a'
-#  Last modified 2022-12-10 05:34:53.02800576
+#  Last modified 2022-12-11 10:18:54.066364232
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 push_swap: obj/take_stack.o obj/check_par.o obj/check_sort.o obj/check_need_of_act.o obj/swap.o obj/push.o obj/rotate.o obj/reverse_rotate.o obj/sort_small.o obj/sort.o obj/find_val.o obj/find_idx.o obj/find_position.o obj/stack_manupilation.o obj/mark_by_val.o obj/mark_by_idx.o obj/find_best_mark.o obj/send_a_to_b.o obj/send_b_to_a.o obj/to_the_top_and_align.o obj/main.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-12-10 05:36:17.416008142
+#  Last modified 2022-12-11 10:18:54.86636888
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 57):
+#  recipe to execute (from 'Makefile', line 82):
 	@make -C ./libtool
 	@${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
 
@@ -541,26 +688,51 @@ src/reverse_rotate.c:
 obj/push.o: src/push.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'push'
-#  Last modified 2022-12-10 05:34:52.788005753
+#  Last modified 2022-12-11 10:18:53.822362814
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
+
+obj_b/checker.o: bns/checker.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'checker'
+#  Last modified 2022-12-11 10:18:54.890369019
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
+
+# Not a target:
+bns/get_next_line.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 09:14:23.097537936
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/take_stack.c:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-12-08 06:26:20.296535098
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/find_best_mark.c:
- 
 #  Implicit rule search has been done.
 #  Last modified 2022-12-08 11:00:59.329000281
 #  File has been updated.
 #  Successfully updated.
+
+obj_b/rotate_ch.o: bns/rotate_ch.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'rotate_ch'
+#  Last modified 2022-12-11 10:18:54.970369484
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
 src/swap.c:
@@ -569,31 +741,39 @@ src/swap.c:
 #  File has been updated.
 #  Successfully updated.
 
+checker: obj_b/checker.o obj_b/get_next_line.o obj_b/get_next_line_utils.o obj_b/swap_ch.o obj_b/rotate_ch.o obj_b/reverse_rotate_ch.o obj_b/push_ch.o obj_b/read_and_do.o obj_b/take_stack.o obj_b/check_sort.o obj_b/check_par.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-12-11 10:18:55.10237025
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 86):
+	${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
+
 obj/find_val.o: src/find_val.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'find_val'
-#  Last modified 2022-12-10 05:34:52.880005756
+#  Last modified 2022-12-11 10:18:53.918363372
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 obj/swap.o: src/swap.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'swap'
-#  Last modified 2022-12-10 05:34:52.772005752
+#  Last modified 2022-12-11 10:18:53.802362698
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 obj/check_par.o: src/check_par.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'check_par'
-#  Last modified 2022-12-10 05:34:52.716005751
+#  Last modified 2022-12-11 10:18:53.750362395
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
@@ -610,31 +790,47 @@ src/sort_small.c:
 #  File has been updated.
 #  Successfully updated.
 
+# Not a target:
+bns/check_sort.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-10 05:32:15.268001
+#  File has been updated.
+#  Successfully updated.
+
 obj/send_a_to_b.o: src/send_a_to_b.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'send_a_to_b'
-#  Last modified 2022-12-10 05:34:53.008005759
+#  Last modified 2022-12-11 10:18:54.046364116
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 obj/find_position.o: src/find_position.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'find_position'
-#  Last modified 2022-12-10 05:34:52.916005757
+#  Last modified 2022-12-11 10:18:53.954363581
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
+
+obj_b/get_next_line_utils.o: bns/get_next_line_utils.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'get_next_line_utils'
+#  Last modified 2022-12-11 10:18:54.930369252
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 obj/sort.o: src/sort.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'sort'
-#  Last modified 2022-12-10 05:34:52.864005755
+#  Last modified 2022-12-11 10:18:53.902363279
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
@@ -647,10 +843,10 @@ src/rotate.c:
 obj/find_idx.o: src/find_idx.c inc/push_swap.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'find_idx'
-#  Last modified 2022-12-10 05:34:52.900005756
+#  Last modified 2022-12-11 10:18:53.934363465
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 61):
+#  recipe to execute (from 'Makefile', line 92):
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 .PHONY: all clean fclean re
@@ -664,6 +860,15 @@ src/push.c:
 #  Last modified 2022-12-08 06:26:20.296535098
 #  File has been updated.
 #  Successfully updated.
+
+obj_b/take_stack.o: bns/take_stack.c inc/checker.h inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'take_stack'
+#  Last modified 2022-12-11 10:18:55.050369949
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 89):
+	${CC} -g ${FLAGS} -c $< -o $@
 
 # Not a target:
 src/check_par.c:
@@ -679,20 +884,27 @@ src/check_sort.c:
 #  File has been updated.
 #  Successfully updated.
 
+# Not a target:
+bns/push_ch.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-12-11 10:05:08.461521312
+#  File has been updated.
+#  Successfully updated.
+
 # files hash-table stats:
-# Load=54/1024=5%, Rehash=0, Collisions=10/207=5%
+# Load=78/1024=8%, Rehash=0, Collisions=12/321=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 111 / storage = 1467 B / avg = 13 B
-# current buf: size = 8162 B / used = 1467 B / count = 111 / avg = 13 B
+# strcache buffers: 1 (0) / strings = 155 / storage = 2145 B / avg = 13 B
+# current buf: size = 8162 B / used = 2145 B / count = 155 / avg = 13 B
 
-# strcache performance: lookups = 207 / hit rate = 46%
+# strcache performance: lookups = 321 / hit rate = 51%
 # hash-table stats:
-# Load=111/8192=1%, Rehash=0, Collisions=0/207=0%
-# Finished Make data base on Sat Dec 10 05:36:35 2022
+# Load=155/8192=2%, Rehash=0, Collisions=2/321=1%
+# Finished Make data base on Sun Dec 11 10:19:14 2022
 
  

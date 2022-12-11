@@ -6,7 +6,7 @@
 #    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/10 05:36:15 by deman_wolf       ###   ########.fr        #
+#    Updated: 2022/12/11 10:18:52 by deman_wolf       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,40 +34,72 @@ SRCS_MD = take_stack.c\
 				main.c\
 				#print_stack.c\#
 
+BNS = checker.c\
+		get_next_line.c\
+		get_next_line_utils.c\
+		swap_ch.c\
+		rotate_ch.c\
+		reverse_rotate_ch.c\
+		push_ch.c\
+		read_and_do.c\
+		take_stack.c\
+		check_sort.c\
+		check_par.c\
+
 FLAGS = -Wall -Wextra -Werror
 
 CC = cc
 
-OBJS_MD = $(addprefix $(OBJ_DIR)/,${SRCS_MD:.c=.o})
-SRC_MD = $(addprefix $(SRC_DIR)/,$(SRCS_MD))
-
 SRC_DIR = src
+
+SRC_MD = $(addprefix $(SRC_DIR)/,$(SRCS_MD))
 
 OBJ_DIR = obj
 
+OBJS_MD = $(addprefix $(OBJ_DIR)/,${SRCS_MD:.c=.o})
+
+BNS_DIR = bns
+
+OBJ_B_DIR = obj_b
+
+BNS_S = $(addprefix ${BNS_DIR}/,${BNS})
+
+OBJS_BN = ${addprefix ${OBJ_B_DIR}/,${BNS:.c=.o}}
+
 HEADER = inc/push_swap.h
+
+BNS_H = inc/checker.h
 
 NAME = push_swap
 
+BNS_NAME = checker
+
 RM = rm -rf
 
-all : ${OBJ_DIR} ${NAME}
+all : ${OBJ_DIR} ${NAME} ${BNS_NAME}
 
 ${NAME} : ${OBJS_MD}
 	@make -C ./libtool
 	@${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
+
+${BNS_NAME} : ${OBJS_BN}
+	${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
+
+${OBJ_B_DIR}/%.o : ${BNS_DIR}/%.c ${BNS_H} ${HEADER}
+	${CC} -g ${FLAGS} -c $< -o $@
 
 ${OBJ_DIR}/%.o : ${SRC_DIR}/%.c ${HEADER}
 	@${CC} -g ${FLAGS} -c $< -o $@
 
 $(OBJ_DIR) :
 	mkdir ${OBJ_DIR}
+	mkdir ${OBJ_B_DIR}
 
 clean :
-	${RM} ${OBJ_DIR} libtool/*.o
+	${RM} ${OBJ_DIR} ${OBJ_B_DIR} libtool/*.o
 
 fclean : clean
-	${RM} ${NAME} libtool/*.a
+	${RM} ${NAME} ${BNS_NAME} libtool/*.a
 
 re : fclean all
 
