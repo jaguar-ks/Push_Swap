@@ -6,15 +6,15 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 08:40:18 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/11 10:14:29 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/11 11:01:08 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
-#define CHECKER_H
+# define CHECKER_H
 
-#include"push_swap.h"
-#include"get_next_line.h"
+# include"push_swap.h"
+# include"get_next_line.h"
 
 void	read_and_do(t_list **sta, t_list **stb);
 void	sa_ch(t_list *stack);
