@@ -6,7 +6,7 @@
 #    By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/11 10:18:52 by deman_wolf       ###   ########.fr        #
+#    Updated: 2022/12/11 11:05:26 by deman_wolf       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ SRCS_MD = take_stack.c\
 				find_position.c\
 				stack_manupilation.c\
 				mark_by_val.c\
-				mark_by_idx.c\
 				find_best_mark.c\
 				send_a_to_b.c\
 				send_b_to_a.c\
@@ -79,14 +78,14 @@ RM = rm -rf
 all : ${OBJ_DIR} ${NAME} ${BNS_NAME}
 
 ${NAME} : ${OBJS_MD}
-	@make -C ./libtool
-	@${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
+	make -C ./libtool
+	${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
 
 ${BNS_NAME} : ${OBJS_BN}
 	${CC} ${FLAGS} $^ ./libtool/libft.a -o $@
 
 ${OBJ_B_DIR}/%.o : ${BNS_DIR}/%.c ${BNS_H} ${HEADER}
-	${CC} -g ${FLAGS} -c $< -o $@
+	@${CC} -g ${FLAGS} -c $< -o $@
 
 ${OBJ_DIR}/%.o : ${SRC_DIR}/%.c ${HEADER}
 	@${CC} -g ${FLAGS} -c $< -o $@
@@ -105,4 +104,4 @@ re : fclean all
 
 .PHONY : all clean fclean re
 
-.SILENT : ${NAME} clean fclean $(OBJ_DIR) re 
+.SILENT : ${NAME} ${BNS_NAME} clean fclean $(OBJ_DIR) re 

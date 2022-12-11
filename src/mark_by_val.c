@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 07:01:56 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/08 09:53:08 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/11 11:03:12 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,16 @@ t_list	*move_to_val(t_list *st, int cnt)
 
 	tmp = st;
 	while (tmp && tmp->content != cnt)
+		tmp = tmp->next;
+	return (tmp);
+}
+
+t_list	*move_to_idx(t_list *st, int idx)
+{
+	t_list	*tmp;
+
+	tmp = st;
+	while (tmp && tmp->idx != idx)
 		tmp = tmp->next;
 	return (tmp);
 }

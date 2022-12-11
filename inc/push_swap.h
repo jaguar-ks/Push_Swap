@@ -6,7 +6,7 @@
 /*   By: deman_wolf <deman_wolf@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:50:06 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/10 05:34:40 by deman_wolf       ###   ########.fr       */
+/*   Updated: 2022/12/11 11:04:08 by deman_wolf       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ int		find_prev_idx(t_list *stack);
 //mark functions
 void	reset_marks(t_list **st);
 void	mark_by_val(t_list **sta, t_list *m_h);
-void	mark_by_idx(t_list **sta, t_list *m_h);
 int		count_to_stay(t_list *st);
 t_list	*max_possible_to_st(t_list **st);
 t_list	*best_to_st(t_list **st);
