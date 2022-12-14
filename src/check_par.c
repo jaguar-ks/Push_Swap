@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 01:16:45 by faksouss          #+#    #+#             */
-/*   Updated: 2022/12/11 16:16:42 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/14 15:07:13 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ int	check_dup_range(t_list *tab)
 	cr = tmp->next;
 	while (tmp)
 	{
+		if (tmp->content < INT_MIN || tmp->content > INT_MAX)
+			return (0);
 		cr = tmp->next;
 		while (cr)
 		{
-			if ((tmp->content < INT_MIN || tmp->content > INT_MAX)
-				|| (tmp->content == cr->content))
+			if (tmp->content == cr->content)
 				return (0);
 			cr = cr->next;
 		}

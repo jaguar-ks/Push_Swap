@@ -6,7 +6,7 @@
 #    By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/24 19:48:40 by deman_wolf        #+#    #+#              #
-#    Updated: 2022/12/11 12:39:28 by faksouss         ###   ########.fr        #
+#    Updated: 2022/12/14 15:10:22 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,8 @@ SRCS_MD = take_stack.c\
 				send_a_to_b.c\
 				send_b_to_a.c\
 				to_the_top_and_align.c\
+				print_stack.c\
 				main.c\
-				#print_stack.c\#
 
 BNS = checker.c\
 		get_next_line.c\
@@ -43,6 +43,7 @@ BNS = checker.c\
 		read_and_do.c\
 		take_stack.c\
 		check_sort.c\
+		print_stack.c\
 		check_par.c\
 
 FLAGS = -Wall -Wextra -Werror
@@ -75,7 +76,9 @@ BNS_NAME = checker
 
 RM = rm -rf
 
-all : ${OBJ_DIR} ${NAME} ${BNS_NAME}
+all : ${OBJ_DIR} ${NAME}
+
+bonus : ${BNS_NAME}
 
 ${NAME} : ${OBJS_MD}
 	make -C ./libtool

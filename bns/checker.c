@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 08:49:24 by deman_wolf        #+#    #+#             */
-/*   Updated: 2022/12/11 12:46:31 by faksouss         ###   ########.fr       */
+/*   Updated: 2022/12/14 15:17:25 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(int ac, char **av)
 
 	sta = take_stack(ac, av);
 	stb = NULL;
-	if (ac < 2)
+	if (ac <= 1)
 		exit(0);
 	if (!sta)
 	{
