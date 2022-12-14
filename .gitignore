@@ -4,4 +4,5 @@ checker_mac
 checker_linux
 visualizer
 src/print_stack.c
+bns/print_stack.c
 PSD.tldr
